@@ -33,7 +33,7 @@ function mockAuth() {
     user = MOCK_USERS[n % MOCK_USERS.length];
   }
   try { sessionStorage.setItem('wow-user', JSON.stringify(user)); } catch (e) { /* ignore */ }
-  return { user, room: 'mock-room', guildId: 'mock-guild', accessToken: null };
+  return { user, room: CONFIG.mockRoom, guildId: 'mock-guild', accessToken: null };
 }
 
 /**

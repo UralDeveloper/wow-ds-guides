@@ -22,14 +22,17 @@ python3 -m http.server 8080
 
 ## Режимы
 
-| | mock (по умолчанию) | live (`?mode=live`) |
+| | mock (вне Discord) | live (в Discord или `?mode=live`) |
 |---|---|---|
 | Пользователь | тестовый (`auth.js`) | Discord Embedded App SDK |
 | Контент | `data/content.json` | WordPress `GET /wow/v1/content` |
 | Планы | `localStorage` браузера | WordPress REST `/wow/v1/plans` |
-| Синхронизация | `BroadcastChannel` между вкладками | WebSocket, комната = `instanceId` |
 
-Переключение одним параметром: код интерфейса от режима не зависит.
+Синхронизация выбирается отдельно (`config.js`):
+- на `localhost` — `BroadcastChannel` между вкладками;
+- на опубликованном адресе — WebSocket-комнаты Worker (`/ws`), комната задаётся `?room=`, в Discord — `instanceId`.
+
+Код интерфейса от режима не зависит.
 
 ## Структура
 
@@ -91,20 +94,16 @@ WebSocket-серверу достаточно пересылать сообще�
 ## Подключение к Discord (режим live)
 
 1. Developer Portal → приложение → включить Activities.
-2. URL Mappings:
-   - `/` → домен фронта
-   - `/wp` → WordPress
-   - `/ws` → WebSocket-сервер
-   - `/api` → сервер обмена токена
-3. В `js/config.js` указать `discordClientId`.
+2. URL Mappings: `/` → адрес Worker (фронт и `/ws` там же), `/wp` → WordPress.
+3. В `js/config.js` указать `discordClientId` и адрес WordPress.
 4. Положить ESM-сборку `@discord/embedded-app-sdk` в `vendor/discord-sdk.js`.
 5. Шрифты скачать в `/fonts` и подключить локально: внешние CDN в Activity блокируются.
-6. Сервер `/api/token`: принимает `{ code }`, меняет его на `access_token` через
-   `https://discord.com/api/oauth2/token` с client secret, возвращает `{ access_token }`.
+6. Эндпоинт `/wp-json/wow/v1/token` в плагине WordPress: принимает `{ code }`, меняет его на
+   `access_token` через `https://discord.com/api/oauth2/token` с client secret, возвращает `{ access_token }`.
 
 ## Что дальше
 
-- Бэк: WebSocket-сервер с комнатами и плагин WordPress с эндпоинтами `content` и `plans`.
+- Плагин WordPress с эндпоинтами `content`, `plans`, `token`.
 - Экраны: ошибка соединения внутри интерфейса, «нет прав», пустой гайд.
 - Режим M+ для подземелий (маршрут пулов вместо фаз).
 - Мобильная раскладка рисовалки под тач.

@@ -30,7 +30,7 @@ export function handleMessage(msg) {
   switch (msg.t) {
     case 'hello':
     case 'here': {
-      set({ peers: { ...s.peers, [u.id]: { ...u, mode: msg.p.mode } } });
+      set({ peers: { ...s.peers, [msg.from]: { ...u, mode: msg.p.mode } } });
       // Пришли в канал, где РЛ уже ведёт показ — становимся зрителем
       if (msg.t === 'here' && msg.p.mode === 'rl' && s.mode === 'rl' && Date.now() - s.joinedAt < 2500) {
         set({ mode: 'viewer', tool: 'ping' });
@@ -44,12 +44,12 @@ export function handleMessage(msg) {
       break;
     }
     case 'mode': {
-      set({ peers: { ...s.peers, [u.id]: { ...u, mode: msg.p.mode } } });
+      set({ peers: { ...s.peers, [msg.from]: { ...u, mode: msg.p.mode } } });
       break;
     }
     case 'bye': {
       const peers = { ...s.peers };
-      delete peers[u.id];
+      delete peers[msg.from];
       set({ peers });
       break;
     }

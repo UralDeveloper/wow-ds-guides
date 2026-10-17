@@ -1,7 +1,12 @@
+# Cloudflare Worker: фронт Activity (статика) + комнаты синхронизации (/ws)
 name = "wow-rooms"
-main = "src/index.js"
+main = "worker/src/index.js"
 compatibility_date = "2025-06-01"
 workers_dev = true
+
+[assets]
+directory = "./front"
+binding = "ASSETS"
 
 [[durable_objects.bindings]]
 name = "ROOMS"

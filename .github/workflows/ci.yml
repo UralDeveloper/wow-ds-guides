@@ -1,0 +1,19 @@
+name: Check
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Синтаксис фронта и Worker
+        run: |
+          for f in front/js/*.js front/js/ui/*.js worker/src/*.js; do
+            node --input-type=module --check < "$f" || exit 1
+          done
+      - name: JSON контента
+        run: node -e "JSON.parse(require('fs').readFileSync('front/data/content.json','utf8'))"

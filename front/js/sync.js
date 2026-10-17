@@ -1,7 +1,7 @@
 import { CONFIG } from './config.js';
 
-// Транспорт синхронизации. mock — BroadcastChannel между вкладками одного браузера,
-// live — WebSocket-сервер с комнатами (room = instanceId Activity).
+// Транспорт синхронизации. broadcast — BroadcastChannel между вкладками одного браузера,
+// ws — WebSocket-комнаты на Cloudflare (room = instanceId Activity или ?room= в демо).
 // Формат сообщения одинаковый: { t, p, from, user, ts }
 
 let channel = null;
@@ -14,6 +14,8 @@ const queue = [];
 let boardTimer = null;
 let pendingBoard = null;
 let retry = 1000;
+// Уникальный id вкладки: по нему отсеиваются свои же сообщения
+const clientId = Math.random().toString(36).slice(2, 10) + Date.now().toString(36);
 
 export function connect(r, user, onMessage, onStatus) {
   room = r;
@@ -21,7 +23,7 @@ export function connect(r, user, onMessage, onStatus) {
   handler = onMessage;
   statusCb = onStatus || (() => {});
 
-  if (CONFIG.mode === 'mock') {
+  if (CONFIG.sync === 'broadcast') {
     if (typeof BroadcastChannel === 'undefined') { statusCb('offline'); return; }
     channel = new BroadcastChannel('wow-activity:' + room);
     channel.onmessage = (e) => receive(e.data);
@@ -54,13 +56,13 @@ function openSocket() {
 }
 
 function receive(msg) {
-  if (!msg || !me || msg.from === me.id) return;
+  if (!msg || !me || msg.from === clientId) return;
   handler(msg);
 }
 
 export function send(t, p) {
   if (!me) return;
-  const msg = { t, p, from: me.id, user: me, ts: Date.now() };
+  const msg = { t, p, from: clientId, user: me, ts: Date.now() };
   if (channel) {
     channel.postMessage(msg);
   } else if (ws) {

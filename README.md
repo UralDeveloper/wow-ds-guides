@@ -2,22 +2,49 @@
 
 Discord Activity «WoW справочник»: брифинг рейда с совместной рисовалкой.
 
-| Папка | Что это | Где работает |
-|---|---|---|
-| `front/` | Фронт Activity (HTML/CSS/JS без сборки) | GitHub Pages |
-| `worker/` | Комнаты синхронизации (WebSocket, Durable Objects) | Cloudflare Workers, бесплатный тариф |
-| `wordpress-plugin/` | Контент, планы, обмен токена Discord | WordPress (в работе) |
+| Папка | Что это |
+|---|---|
+| `front/` | Фронт Activity: HTML/CSS/JS без сборки |
+| `worker/` | Cloudflare Worker: раздаёт `front/` и держит комнаты синхронизации на `/ws` |
+| `wrangler.toml` | Конфиг Worker (в корне, чтобы Cloudflare собирал всё из репозитория) |
 
-## Фронт
+Всё работает на бесплатном тарифе Cloudflare Workers.
 
-Локально: `cd front && python3 -m http.server 8080`, открыть две вкладки `http://localhost:8080`.
-Подробности — `front/README.md`.
+## Деплой на Cloudflare (один раз)
 
-Деплой: при пуше в `main` workflow `.github/workflows/pages.yml` публикует `front/` на GitHub Pages.
-Один раз включить: Settings → Pages → Source: **GitHub Actions**.
+1. Cloudflare → Workers & Pages → Create → **Connect GitHub**.
+2. Выбрать репозиторий `wow-ds-guides`. Root directory оставить пустым (корень репозитория).
+3. Команду сборки не указывать, команда деплоя по умолчанию: `npx wrangler deploy`.
+4. Готово: каждый пуш в `main` обновляет сайт и комнаты.
 
-## Worker
+Адрес: `https://wow-rooms.<поддомен>.workers.dev`
 
-Деплой из Cloudflare: Workers & Pages → Create → Connect GitHub → этот репозиторий,
-Root directory: `worker`. Либо вручную: `cd worker && npx wrangler deploy`.
-Подробности — `worker/README.md`.
+- `/` — фронт
+- `/ws` — без WebSocket показывает `WoW rooms: OK`
+
+Вручную с компьютера: `npx wrangler login`, затем `npx wrangler deploy` в корне репозитория.
+
+## Демо до подключения Discord
+
+Откройте адрес Worker на двух устройствах с одинаковым `?room=`, например
+`https://wow-rooms.<поддомен>.workers.dev/?room=test`. Первый станет РЛ, второй — зрителем.
+Рисование, пинги, фазы и «Проиграть» синхронизируются через Cloudflare.
+
+## Локальная разработка
+
+```bash
+cd front && python3 -m http.server 8080      # только фронт, синхронизация вкладок через BroadcastChannel
+npx wrangler dev                              # фронт + настоящие комнаты на http://localhost:8787
+```
+
+## Подключение к Discord
+
+Developer Portal → приложение → Activities → URL Mappings:
+
+| Prefix | Target |
+|---|---|
+| `/` | `wow-rooms.<поддомен>.workers.dev` |
+| `/wp` | домен WordPress |
+
+Фронт сам определяет, что запущен в Discord, и ходит через `/.proxy`.
+Подробности фронта — `front/README.md`.
