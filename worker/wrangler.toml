@@ -1,0 +1,13 @@
+name = "wow-rooms"
+main = "src/index.js"
+compatibility_date = "2025-06-01"
+workers_dev = true
+
+[[durable_objects.bindings]]
+name = "ROOMS"
+class_name = "Room"
+
+# Бесплатный тариф поддерживает только Durable Objects на SQLite
+[[migrations]]
+tag = "v1"
+new_sqlite_classes = ["Room"]

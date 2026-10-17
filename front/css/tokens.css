@@ -1,0 +1,37 @@
+:root {
+  --bg: #0B0E14;
+  --surface-1: #11161F;
+  --surface-2: #151B27;
+  --surface-3: #1A2231;
+  --surface-4: #1F2839;
+  --line: #1C2433;
+  --line-2: #2C3850;
+  --line-3: #36425A;
+
+  --text: #E8E4DA;
+  --text-strong: #F2EEE4;
+  --text-2: #AEB6C4;
+  --text-3: #9AA3B2;
+  --text-4: #7C8698;
+  --text-5: #586276;
+
+  --acc: #E8B04B;
+  --acc-ink: #1A1406;
+
+  --tank: #7FA8FF;   --tank-bg: #24365C;  --tank-ink: #A9C4FF;
+  --heal: #6FD69A;   --heal-bg: #1D3B2B;  --heal-ink: #9DEBB9;
+  --dd: #FF8A6B;     --dd-bg: #4A2420;    --dd-ink: #FFB4A0;
+  --stack: #E8B04B;  --stack-bg: #3B3115; --stack-ink: #F6D58A;
+  --void: #B07CFF;
+  --danger: #FF6B5E;
+
+  --font-display: 'Prata', Georgia, serif;
+  --font-body: 'Onest', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, Menlo, monospace;
+
+  --r-sm: 8px;
+  --r-md: 10px;
+  --r-lg: 12px;
+  --r-xl: 16px;
+  --ease: cubic-bezier(.2, .7, .2, 1);
+}

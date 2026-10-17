@@ -1,0 +1,29 @@
+const svg = (body, size = 18, extra = '') =>
+  `<svg width="${size}" height="${size}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" ${extra}>${body}</svg>`;
+
+export const I = {
+  logo: `<svg width="34" height="34" viewBox="0 0 34 34" aria-hidden="true"><rect x="1" y="1" width="32" height="32" rx="9" fill="#141B27" stroke="#2C3850"></rect><path d="M17 7 L25 17 L17 27 L9 17 Z" fill="none" stroke="var(--acc)" stroke-width="2"></path><circle cx="17" cy="17" r="3" fill="var(--acc)"></circle></svg>`,
+  pointer: svg('<path d="M5 3 L19 11 L12 13 L9 20 Z"></path>'),
+  brush: svg('<path d="M3 21c3 0 6-1 6-4a3 3 0 0 0-3-3c-2 0-3 2-3 4"></path><path d="M9 17 L20 6a2 2 0 0 0-3-3L6 14"></path>'),
+  route: svg('<circle cx="6" cy="19" r="2"></circle><circle cx="18" cy="5" r="2"></circle><path d="M8 19h6a3 3 0 0 0 0-6h-4a3 3 0 0 1 0-6h6"></path>'),
+  roles: svg('<circle cx="8" cy="8" r="3"></circle><circle cx="16" cy="8" r="3"></circle><path d="M3 20c0-3 2.2-5 5-5s5 2 5 5"></path><path d="M11 20c0-3 2.2-5 5-5s5 2 5 5"></path>'),
+  mark: svg('<path d="M12 21s-7-6.5-7-12a7 7 0 0 1 14 0c0 5.5-7 12-7 12z"></path><circle cx="12" cy="9" r="2.5"></circle>'),
+  text: svg('<path d="M5 6V4h14v2"></path><path d="M12 4v16"></path><path d="M9 20h6"></path>'),
+  ping: svg('<circle cx="12" cy="12" r="2.5"></circle><circle cx="12" cy="12" r="6.5"></circle><circle cx="12" cy="12" r="10" stroke-dasharray="2 3"></circle>'),
+  zone: svg('<circle cx="12" cy="12" r="9" stroke-dasharray="3 3"></circle><circle cx="12" cy="12" r="4"></circle>'),
+  undo: svg('<path d="M9 14 L4 9 L9 4"></path><path d="M4 9h10a6 6 0 0 1 0 12h-3"></path>'),
+  trash: svg('<path d="M4 7h16"></path><path d="M10 11v6M14 11v6"></path><path d="M6 7l1 13h10l1-13"></path><path d="M9 7V4h6v3"></path>'),
+  trashSm: svg('<path d="M4 7h16"></path><path d="M6 7l1 13h10l1-13"></path><path d="M9 7V4h6v3"></path>', 15),
+  reset: svg('<path d="M3 12a9 9 0 1 0 3-6.7"></path><path d="M3 4v5h5"></path>', 16),
+  chev: svg('<path d="M6 9l6 6 6-6"></path>', 16),
+  check: svg('<path d="M5 12l5 5L20 7"></path>', 16, 'stroke-width="2.4"'),
+  lock: svg('<rect x="5" y="11" width="14" height="10" rx="2"></rect><path d="M8 11V8a4 4 0 0 1 8 0v3"></path>', 14),
+  play: `<svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7 4.5v15a1 1 0 0 0 1.5.86l12.5-7.5a1 1 0 0 0 0-1.72L8.5 3.64A1 1 0 0 0 7 4.5z"></path></svg>`,
+  stop: `<svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><rect x="6" y="6" width="12" height="12" rx="2"></rect></svg>`,
+  playBig: `<svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5.5v13a1 1 0 0 0 1.5.86l10.5-6.5a1 1 0 0 0 0-1.72L9.5 4.64A1 1 0 0 0 8 5.5z"></path></svg>`,
+  send: svg('<path d="M22 2 L11 13"></path><path d="M22 2 L15 22 L11 13 L2 9 Z"></path>'),
+  bookmark: svg('<path d="M6 3h12v18l-6-4-6 4z"></path>'),
+  save: svg('<path d="M5 3h11l3 3v15H5z"></path><path d="M8 3v6h8V3"></path><path d="M8 21v-6h8v6"></path>', 15),
+  share: svg('<circle cx="18" cy="5" r="3"></circle><circle cx="6" cy="12" r="3"></circle><circle cx="18" cy="19" r="3"></circle><path d="M8.6 13.5l6.8 4M15.4 6.5l-6.8 4"></path>', 15),
+  eye: svg('<path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12z"></path><circle cx="12" cy="12" r="3"></circle>'),
+};
