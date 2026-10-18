@@ -1,611 +1,1158 @@
 [
  {
-  "id": "391827",
-  "name": "Арена 391827",
-  "group": "named",
-  "w": 1600,
-  "h": 841
- },
- {
   "id": "entombed-sentinels",
-  "name": "Entombed Sentinels",
-  "group": "named",
   "w": 1600,
-  "h": 900
+  "h": 900,
+  "name": "Entombed Sentinels",
+  "group": "The Venomous Abyss",
+  "expansion": "Midnight",
+  "ow": 2560,
+  "oh": 1440,
+  "cal": {
+   "p1": {
+    "x": 872,
+    "y": 660
+   },
+   "p2": {
+    "x": 872,
+    "y": 845
+   },
+   "yards": 18
+  }
  },
  {
   "id": "soulcoiler",
-  "name": "Soulcoiler",
-  "group": "named",
   "w": 1600,
-  "h": 900
+  "h": 900,
+  "name": "Nek'zali the Soulcoiler",
+  "group": "The Venomous Abyss",
+  "expansion": "Midnight",
+  "ow": 2560,
+  "oh": 1440,
+  "cal": {
+   "p1": {
+    "x": 1267,
+    "y": 626
+   },
+   "p2": {
+    "x": 1271,
+    "y": 858
+   },
+   "yards": 15.5
+  }
  },
  {
   "id": "sszorak",
+  "w": 1600,
+  "h": 900,
   "name": "Sszorak",
-  "group": "named",
-  "w": 1600,
-  "h": 900
- },
- {
-  "id": "twin-fangs-2",
-  "name": "Twin Fangs",
-  "group": "named",
-  "w": 1600,
-  "h": 900
+  "group": "The Venomous Abyss",
+  "expansion": "Midnight",
+  "ow": 2560,
+  "oh": 1440,
+  "cal": {
+   "p1": {
+    "x": 1087,
+    "y": 742
+   },
+   "p2": {
+    "x": 1475,
+    "y": 744
+   },
+   "yards": 40
+  }
  },
  {
   "id": "bargained-crown",
-  "name": "Bargained Crown",
-  "group": "named",
   "w": 1600,
-  "h": 900
- },
- {
-  "id": "bolren-child-of-alar",
-  "name": "Belo'ren, Child of Al'ar",
-  "group": "named",
-  "w": 1600,
-  "h": 900
- },
- {
-  "id": "close",
-  "name": "Крупный план 1",
-  "group": "named",
-  "w": 1301,
-  "h": 732
- },
- {
-  "id": "close-2",
-  "name": "Крупный план 2",
-  "group": "named",
-  "w": 1419,
-  "h": 799
- },
- {
-  "id": "close-3",
-  "name": "Крупный план 3",
-  "group": "named",
-  "w": 1419,
-  "h": 799
- },
- {
-  "id": "close-4",
-  "name": "Крупный план 4",
-  "group": "named",
-  "w": 1419,
-  "h": 799
- },
- {
-  "id": "cosmos",
-  "name": "Cosmos",
-  "group": "named",
-  "w": 1600,
-  "h": 900
- },
- {
-  "id": "dimensius-conquest",
-  "name": "Dimensius · Conquest",
-  "group": "named",
-  "w": 1394,
-  "h": 784
- },
- {
-  "id": "dimensius-entropy",
-  "name": "Dimensius · Entropy",
-  "group": "named",
-  "w": 1394,
-  "h": 784
- },
- {
-  "id": "dimensius-heart",
-  "name": "Dimensius · Heart",
-  "group": "named",
-  "w": 1394,
-  "h": 784
- },
- {
-  "id": "dimensius-seat",
-  "name": "Dimensius · Seat",
-  "group": "named",
-  "w": 1394,
-  "h": 784
- },
- {
-  "id": "dreamrift",
-  "name": "Dreamrift",
-  "group": "named",
-  "w": 1600,
-  "h": 900
- },
- {
-  "id": "arena-x",
-  "name": "Арена без названия",
-  "group": "named",
-  "w": 1600,
-  "h": 895
+  "h": 900,
+  "name": "The Coiled Altar",
+  "group": "The Venomous Abyss",
+  "expansion": "Midnight",
+  "ow": 2560,
+  "oh": 1440,
+  "cal": {
+   "p1": {
+    "x": 1270,
+    "y": 321
+   },
+   "p2": {
+    "x": 1270,
+    "y": 1057
+   },
+   "yards": 57
+  }
  },
  {
   "id": "explorers-1",
-  "name": "Explorers",
-  "group": "named",
   "w": 1600,
-  "h": 900
+  "h": 900,
+  "name": "The Lost Explorers",
+  "group": "The Venomous Abyss",
+  "expansion": "Midnight",
+  "ow": 2560,
+  "oh": 1440,
+  "cal": {
+   "p1": {
+    "x": 1184,
+    "y": 573
+   },
+   "p2": {
+    "x": 1488,
+    "y": 868
+   },
+   "yards": 41
+  }
  },
  {
-  "id": "fallen-king-salhadaar",
-  "name": "Fallen-King Salhadaar",
-  "group": "named",
+  "id": "twin-fangs-2",
   "w": 1600,
-  "h": 900
- },
- {
-  "id": "forgeweaver-araz-phase-1",
-  "name": "Forgeweaver Araz · фаза 1",
-  "group": "named",
-  "w": 1394,
-  "h": 784
- },
- {
-  "id": "fractilus-phase-1",
-  "name": "Fractillus · фаза 1",
-  "group": "named",
-  "w": 1394,
-  "h": 784
- },
- {
-  "id": "imperator-averzian",
-  "name": "Imperator Averzian",
-  "group": "named",
-  "w": 1600,
-  "h": 900
- },
- {
-  "id": "kithix",
-  "name": "Kith'ix",
-  "group": "named",
-  "w": 1600,
-  "h": 900
- },
- {
-  "id": "lighttblinded-vanguard",
-  "name": "Lightblinded Vanguard",
-  "group": "named",
-  "w": 1600,
-  "h": 900
- },
- {
-  "id": "loom-ithar-phase-1",
-  "name": "Loom'ithar · фаза 1",
-  "group": "named",
-  "w": 1394,
-  "h": 784
- },
- {
-  "id": "midnight-falls",
-  "name": "Midnight Falls",
-  "group": "named",
-  "w": 1600,
-  "h": 900
- },
- {
-  "id": "midnight-falls-intermission",
-  "name": "Midnight Falls · интермиссия",
-  "group": "named",
-  "w": 1600,
-  "h": 900
- },
- {
-  "id": "midnight-falls-p2",
-  "name": "Midnight Falls · фаза 2",
-  "group": "named",
-  "w": 1600,
-  "h": 900
- },
- {
-  "id": "midnight-falls-phase3-soaks",
-  "name": "Midnight Falls · фаза 3, соки",
-  "group": "named",
-  "w": 1600,
-  "h": 900
- },
- {
-  "id": "nexus-king-slahadaar-center",
-  "name": "Nexus-King Salhadaar · центр",
-  "group": "named",
-  "w": 1394,
-  "h": 784
- },
- {
-  "id": "nexus-king-slahadaar-full",
-  "name": "Nexus-King Salhadaar · целиком",
-  "group": "named",
-  "w": 1394,
-  "h": 784
- },
- {
-  "id": "nexus-king-slahadaar-left",
-  "name": "Nexus-King Salhadaar · слева",
-  "group": "named",
-  "w": 1394,
-  "h": 784
- },
- {
-  "id": "nexus-king-slahadaar-right",
-  "name": "Nexus-King Salhadaar · справа",
-  "group": "named",
-  "w": 1394,
-  "h": 784
- },
- {
-  "id": "phase-close",
-  "name": "Фаза, крупный план",
-  "group": "named",
-  "w": 1352,
-  "h": 761
- },
- {
-  "id": "plexus-sentinel-phase-1",
-  "name": "Plexus Sentinel · фаза 1",
-  "group": "named",
-  "w": 1394,
-  "h": 784
- },
- {
-  "id": "rotmire-arena",
-  "name": "Rotmire",
-  "group": "named",
-  "w": 1600,
-  "h": 900
- },
- {
-  "id": "souldbinder-naazindhri-phase-1",
-  "name": "Soulbinder Naazindhri · фаза 1",
-  "group": "named",
-  "w": 1394,
-  "h": 784
- },
- {
-  "id": "sporefall-new",
-  "name": "Sporefall",
-  "group": "named",
-  "w": 1600,
-  "h": 838
- },
- {
-  "id": "the-soul-hunters-phase-1",
-  "name": "The Soul Hunters · фаза 1",
-  "group": "named",
-  "w": 1394,
-  "h": 784
- },
- {
-  "id": "ulatek-split",
-  "name": "Ula'tek · разделение",
-  "group": "named",
-  "w": 1600,
-  "h": 900
+  "h": 900,
+  "name": "The Twin Fangs",
+  "group": "The Venomous Abyss",
+  "expansion": "Midnight",
+  "ow": 2560,
+  "oh": 1440,
+  "cal": {
+   "p1": {
+    "x": 1282,
+    "y": 603
+   },
+   "p2": {
+    "x": 1274,
+    "y": 988
+   },
+   "yards": 50
+  }
  },
  {
   "id": "ulatek1",
-  "name": "Ula'tek",
-  "group": "named",
   "w": 1600,
-  "h": 900
+  "h": 900,
+  "name": "Ula'tek · Арена целиком",
+  "group": "The Venomous Abyss",
+  "expansion": "Midnight",
+  "ow": 2560,
+  "oh": 1440,
+  "cal": {
+   "p1": {
+    "x": 1291,
+    "y": 214
+   },
+   "p2": {
+    "x": 1274,
+    "y": 1155
+   },
+   "yards": 75
+  }
  },
  {
   "id": "ulatek-left",
-  "name": "Ula'tek · слева",
-  "group": "named",
   "w": 1600,
-  "h": 781
+  "h": 781,
+  "name": "Ula'tek · Слева",
+  "group": "The Venomous Abyss",
+  "expansion": "Midnight",
+  "ow": 2307,
+  "oh": 1126,
+  "cal": {
+   "p1": {
+    "x": 1163,
+    "y": 622
+   },
+   "p2": {
+    "x": 1175,
+    "y": 961
+   },
+   "yards": 40
+  }
  },
  {
   "id": "ulatek-right",
-  "name": "Ula'tek · справа",
-  "group": "named",
   "w": 1600,
-  "h": 781
+  "h": 781,
+  "name": "Ula'tek · Справа",
+  "group": "The Venomous Abyss",
+  "expansion": "Midnight",
+  "ow": 2307,
+  "oh": 1126,
+  "cal": {
+   "p1": {
+    "x": 1148,
+    "y": 641
+   },
+   "p2": {
+    "x": 1148,
+    "y": 969
+   },
+   "yards": 40
+  }
  },
  {
-  "id": "vaelgor-ezzorak",
-  "name": "Vaelgor & Ezzorak",
-  "group": "named",
+  "id": "ulatek-split",
   "w": 1600,
-  "h": 900
+  "h": 900,
+  "name": "Ula'tek · Фаза 3: разлом",
+  "group": "The Venomous Abyss",
+  "expansion": "Midnight",
+  "ow": 2560,
+  "oh": 1440,
+  "cal": {
+   "p1": {
+    "x": 1270,
+    "y": 124
+   },
+   "p2": {
+    "x": 1274,
+    "y": 1241
+   },
+   "yards": 78
+  }
  },
  {
   "id": "vashnik",
-  "name": "Vashnik",
-  "group": "named",
   "w": 1600,
-  "h": 1422
+  "h": 1422,
+  "name": "Vashnik the Malignant",
+  "group": "The Venomous Abyss",
+  "expansion": "Midnight",
+  "ow": 2880,
+  "oh": 2560,
+  "cal": {
+   "p1": {
+    "x": 1674,
+    "y": 1246
+   },
+   "p2": {
+    "x": 1106,
+    "y": 1242
+   },
+   "yards": 38
+  }
  },
  {
-  "id": "vorasius",
-  "name": "Vorasius",
-  "group": "named",
+  "id": "arena-x",
   "w": 1600,
-  "h": 900
+  "h": 895,
+  "name": "Nymrissa Wavecaller",
+  "group": "Tidebound Grotto",
+  "expansion": "Midnight",
+  "ow": 1676,
+  "oh": 938
+ },
+ {
+  "id": "kithix",
+  "w": 1600,
+  "h": 900,
+  "name": "Kith’ix",
+  "group": "The Unbinding of Kith’ix",
+  "expansion": "Midnight",
+  "ow": 1920,
+  "oh": 1080
+ },
+ {
+  "id": "close-4",
+  "w": 1419,
+  "h": 799,
+  "name": "Crown of the Cosmos · Крупно",
+  "group": "The Voidspire",
+  "expansion": "Midnight",
+  "ow": 1419,
+  "oh": 799,
+  "cal": {
+   "p1": {
+    "x": 1075,
+    "y": 564
+   },
+   "p2": {
+    "x": 909,
+    "y": 464
+   },
+   "yards": 30
+  }
+ },
+ {
+  "id": "cosmos",
+  "w": 1600,
+  "h": 900,
+  "name": "Crown of the Cosmos · Основная",
+  "group": "The Voidspire",
+  "expansion": "Midnight",
+  "ow": 1920,
+  "oh": 1080,
+  "cal": {
+   "p1": {
+    "x": 1236,
+    "y": 740
+   },
+   "p2": {
+    "x": 1085,
+    "y": 641
+   },
+   "yards": 30
+  }
+ },
+ {
+  "id": "close-2",
+  "w": 1419,
+  "h": 799,
+  "name": "Fallen-King Salhadaar · Крупно",
+  "group": "The Voidspire",
+  "expansion": "Midnight",
+  "ow": 1419,
+  "oh": 799,
+  "cal": {
+   "p1": {
+    "x": 953,
+    "y": 591
+   },
+   "p2": {
+    "x": 853,
+    "y": 350
+   },
+   "yards": 30
+  }
+ },
+ {
+  "id": "fallen-king-salhadaar",
+  "w": 1600,
+  "h": 900,
+  "name": "Fallen-King Salhadaar · Основная",
+  "group": "The Voidspire",
+  "expansion": "Midnight",
+  "ow": 1920,
+  "oh": 1080,
+  "cal": {
+   "p1": {
+    "x": 1157,
+    "y": 856
+   },
+   "p2": {
+    "x": 1063,
+    "y": 621
+   },
+   "yards": 30
+  }
+ },
+ {
+  "id": "close",
+  "w": 1301,
+  "h": 732,
+  "name": "Imperator Averzian · Крупно",
+  "group": "The Voidspire",
+  "expansion": "Midnight",
+  "ow": 1301,
+  "oh": 732,
+  "cal": {
+   "p1": {
+    "x": 516,
+    "y": 723
+   },
+   "p2": {
+    "x": 544,
+    "y": 546
+   },
+   "yards": 30
+  }
+ },
+ {
+  "id": "imperator-averzian",
+  "w": 1600,
+  "h": 900,
+  "name": "Imperator Averzian · Основная",
+  "group": "The Voidspire",
+  "expansion": "Midnight",
+  "ow": 1920,
+  "oh": 1080,
+  "cal": {
+   "p1": {
+    "x": 787,
+    "y": 1002
+   },
+   "p2": {
+    "x": 823,
+    "y": 748
+   },
+   "yards": 30
+  }
+ },
+ {
+  "id": "lighttblinded-vanguard",
+  "w": 1600,
+  "h": 900,
+  "name": "Lightblinded Vanguard",
+  "group": "The Voidspire",
+  "expansion": "Midnight",
+  "ow": 1920,
+  "oh": 1080,
+  "cal": {
+   "p1": {
+    "x": 954,
+    "y": 969
+   },
+   "p2": {
+    "x": 963,
+    "y": 699
+   },
+   "yards": 30
+  }
+ },
+ {
+  "id": "close-3",
+  "w": 1419,
+  "h": 799,
+  "name": "Vaelgor & Ezzorak · Крупно",
+  "group": "The Voidspire",
+  "expansion": "Midnight",
+  "ow": 1419,
+  "oh": 799,
+  "cal": {
+   "p1": {
+    "x": 743,
+    "y": 771
+   },
+   "p2": {
+    "x": 747,
+    "y": 612
+   },
+   "yards": 30
+  }
+ },
+ {
+  "id": "vaelgor-ezzorak",
+  "w": 1600,
+  "h": 900,
+  "name": "Vaelgor & Ezzorak · Основная",
+  "group": "The Voidspire",
+  "expansion": "Midnight",
+  "ow": 1920,
+  "oh": 1080,
+  "cal": {
+   "p1": {
+    "x": 941,
+    "y": 950
+   },
+   "p2": {
+    "x": 947,
+    "y": 786
+   },
+   "yards": 30
+  }
  },
  {
   "id": "vorasius-close",
-  "name": "Vorasius · крупный план",
-  "group": "named",
   "w": 1600,
-  "h": 900
+  "h": 900,
+  "name": "Vorasius · Крупно",
+  "group": "The Voidspire",
+  "expansion": "Midnight",
+  "ow": 1920,
+  "oh": 1080,
+  "cal": {
+   "p1": {
+    "x": 266,
+    "y": 549
+   },
+   "p2": {
+    "x": 631,
+    "y": 519
+   },
+   "yards": 30
+  }
+ },
+ {
+  "id": "vorasius",
+  "w": 1600,
+  "h": 900,
+  "name": "Vorasius · Основная",
+  "group": "The Voidspire",
+  "expansion": "Midnight",
+  "ow": 1920,
+  "oh": 1080,
+  "cal": {
+   "p1": {
+    "x": 650,
+    "y": 911
+   },
+   "p2": {
+    "x": 797,
+    "y": 692
+   },
+   "yards": 30
+  }
+ },
+ {
+  "id": "bolren-child-of-alar",
+  "w": 1600,
+  "h": 900,
+  "name": "Belo'ren, Child of Al'ar",
+  "group": "March on Quel'Danas",
+  "expansion": "Midnight",
+  "ow": 1920,
+  "oh": 1080,
+  "cal": {
+   "p1": {
+    "x": 960,
+    "y": 388
+   },
+   "p2": {
+    "x": 957,
+    "y": 569
+   },
+   "yards": 30
+  }
+ },
+ {
+  "id": "midnight-falls-intermission",
+  "w": 1600,
+  "h": 900,
+  "name": "Midnight Falls · Интермиссия",
+  "group": "March on Quel'Danas",
+  "expansion": "Midnight",
+  "ow": 1920,
+  "oh": 1080
+ },
+ {
+  "id": "midnight-falls",
+  "w": 1600,
+  "h": 900,
+  "name": "Midnight Falls · Основная",
+  "group": "March on Quel'Danas",
+  "expansion": "Midnight",
+  "ow": 1920,
+  "oh": 1080,
+  "cal": {
+   "p1": {
+    "x": 960,
+    "y": 1051
+   },
+   "p2": {
+    "x": 966,
+    "y": 892
+   },
+   "yards": 30
+  }
+ },
+ {
+  "id": "midnight-falls-p2",
+  "w": 1600,
+  "h": 900,
+  "name": "Midnight Falls · Фаза 2",
+  "group": "March on Quel'Danas",
+  "expansion": "Midnight",
+  "ow": 1920,
+  "oh": 1080
+ },
+ {
+  "id": "midnight-falls-phase3-soaks",
+  "w": 1600,
+  "h": 900,
+  "name": "Midnight Falls · Фаза 3: соки",
+  "group": "March on Quel'Danas",
+  "expansion": "Midnight",
+  "ow": 1920,
+  "oh": 1080
+ },
+ {
+  "id": "phase-close",
+  "w": 1352,
+  "h": 761,
+  "name": "Chimaerus the Undreamt God · Крупно",
+  "group": "The Dreamrift",
+  "expansion": "Midnight",
+  "ow": 1352,
+  "oh": 761,
+  "cal": {
+   "p1": {
+    "x": 917,
+    "y": 727
+   },
+   "p2": {
+    "x": 1099,
+    "y": 527
+   },
+   "yards": 30
+  }
+ },
+ {
+  "id": "dreamrift",
+  "w": 1600,
+  "h": 900,
+  "name": "Chimaerus the Undreamt God · Основная",
+  "group": "The Dreamrift",
+  "expansion": "Midnight",
+  "ow": 1920,
+  "oh": 1080,
+  "cal": {
+   "p1": {
+    "x": 1139,
+    "y": 982
+   },
+   "p2": {
+    "x": 1309,
+    "y": 792
+   },
+   "yards": 30
+  }
+ },
+ {
+  "id": "rotmire-arena",
+  "w": 1600,
+  "h": 900,
+  "name": "Rotmire · Основная",
+  "group": "Sporefall",
+  "expansion": "Midnight",
+  "ow": 1672,
+  "oh": 941
+ },
+ {
+  "id": "sporefall-new",
+  "w": 1600,
+  "h": 838,
+  "name": "Rotmire · Основная 2",
+  "group": "Sporefall",
+  "expansion": "Midnight",
+  "ow": 2539,
+  "oh": 1330
+ },
+ {
+  "id": "dimensius-conquest",
+  "w": 1394,
+  "h": 784,
+  "name": "Dimensius, the All-Devouring · Conquest",
+  "group": "Manaforge Omega",
+  "expansion": "The War Within",
+  "ow": 1394,
+  "oh": 784
+ },
+ {
+  "id": "dimensius-entropy",
+  "w": 1394,
+  "h": 784,
+  "name": "Dimensius, the All-Devouring · Entropy",
+  "group": "Manaforge Omega",
+  "expansion": "The War Within",
+  "ow": 1394,
+  "oh": 784
+ },
+ {
+  "id": "dimensius-heart",
+  "w": 1394,
+  "h": 784,
+  "name": "Dimensius, the All-Devouring · Heart",
+  "group": "Manaforge Omega",
+  "expansion": "The War Within",
+  "ow": 1394,
+  "oh": 784
+ },
+ {
+  "id": "dimensius-seat",
+  "w": 1394,
+  "h": 784,
+  "name": "Dimensius, the All-Devouring · Seat",
+  "group": "Manaforge Omega",
+  "expansion": "The War Within",
+  "ow": 1394,
+  "oh": 784
+ },
+ {
+  "id": "forgeweaver-araz-phase-1",
+  "w": 1394,
+  "h": 784,
+  "name": "Forgeweaver Araz",
+  "group": "Manaforge Omega",
+  "expansion": "The War Within",
+  "ow": 1394,
+  "oh": 784
+ },
+ {
+  "id": "fractilus-phase-1",
+  "w": 1394,
+  "h": 784,
+  "name": "Fractillus",
+  "group": "Manaforge Omega",
+  "expansion": "The War Within",
+  "ow": 1394,
+  "oh": 784
+ },
+ {
+  "id": "loom-ithar-phase-1",
+  "w": 1394,
+  "h": 784,
+  "name": "Loom'Ithar",
+  "group": "Manaforge Omega",
+  "expansion": "The War Within",
+  "ow": 1394,
+  "oh": 784
+ },
+ {
+  "id": "nexus-king-slahadaar-left",
+  "w": 1394,
+  "h": 784,
+  "name": "Nexus-King Salhadaar · Слева",
+  "group": "Manaforge Omega",
+  "expansion": "The War Within",
+  "ow": 1394,
+  "oh": 784
+ },
+ {
+  "id": "nexus-king-slahadaar-right",
+  "w": 1394,
+  "h": 784,
+  "name": "Nexus-King Salhadaar · Справа",
+  "group": "Manaforge Omega",
+  "expansion": "The War Within",
+  "ow": 1394,
+  "oh": 784
+ },
+ {
+  "id": "nexus-king-slahadaar-full",
+  "w": 1394,
+  "h": 784,
+  "name": "Nexus-King Salhadaar · Целиком",
+  "group": "Manaforge Omega",
+  "expansion": "The War Within",
+  "ow": 1394,
+  "oh": 784
+ },
+ {
+  "id": "nexus-king-slahadaar-center",
+  "w": 1394,
+  "h": 784,
+  "name": "Nexus-King Salhadaar · Центр",
+  "group": "Manaforge Omega",
+  "expansion": "The War Within",
+  "ow": 1394,
+  "oh": 784
+ },
+ {
+  "id": "plexus-sentinel-phase-1",
+  "w": 1394,
+  "h": 784,
+  "name": "Plexus Sentinel",
+  "group": "Manaforge Omega",
+  "expansion": "The War Within",
+  "ow": 1394,
+  "oh": 784
+ },
+ {
+  "id": "souldbinder-naazindhri-phase-1",
+  "w": 1394,
+  "h": 784,
+  "name": "Souldbinder Naazindhri",
+  "group": "Manaforge Omega",
+  "expansion": "The War Within",
+  "ow": 1394,
+  "oh": 784
+ },
+ {
+  "id": "the-soul-hunters-phase-1",
+  "w": 1394,
+  "h": 784,
+  "name": "The Soul Hunters",
+  "group": "Manaforge Omega",
+  "expansion": "The War Within",
+  "ow": 1394,
+  "oh": 784
  },
  {
   "id": "full-arena-1768237075853",
-  "name": "Арена 1 · вариант 1",
-  "group": "arena",
   "w": 1600,
-  "h": 841
- },
- {
-  "id": "full-arena-1768237075859",
-  "name": "Арена 1 · вариант 2",
-  "group": "arena",
-  "w": 1600,
-  "h": 841
- },
- {
-  "id": "full-arena-1768237075864",
-  "name": "Арена 1 · вариант 3",
-  "group": "arena",
-  "w": 1600,
-  "h": 841
- },
- {
-  "id": "full-arena-1768237075868",
-  "name": "Арена 1 · вариант 4",
-  "group": "arena",
-  "w": 1600,
-  "h": 841
- },
- {
-  "id": "full-arena-1768237075874",
-  "name": "Арена 1 · вариант 5",
-  "group": "arena",
-  "w": 1600,
-  "h": 841
- },
- {
-  "id": "full-arena-1768237075880",
-  "name": "Арена 1 · вариант 6",
-  "group": "arena",
-  "w": 1600,
-  "h": 841
- },
- {
-  "id": "full-arena-1768237075885",
-  "name": "Арена 1 · вариант 7",
-  "group": "arena",
-  "w": 1600,
-  "h": 841
+  "h": 841,
+  "name": "Attumen the Huntsman",
+  "group": "Karazhan",
+  "expansion": "Burning Crusade",
+  "ow": 1920,
+  "oh": 1009
  },
  {
   "id": "full-arena-1768237075889",
-  "name": "Арена 1 · вариант 8",
-  "group": "arena",
   "w": 1600,
-  "h": 841
+  "h": 841,
+  "name": "Chess Event",
+  "group": "Karazhan",
+  "expansion": "Burning Crusade",
+  "ow": 1920,
+  "oh": 1009
+ },
+ {
+  "id": "full-arena-1768237075864",
+  "w": 1600,
+  "h": 841,
+  "name": "Maiden of Virtue",
+  "group": "Karazhan",
+  "expansion": "Burning Crusade",
+  "ow": 1920,
+  "oh": 1009
+ },
+ {
+  "id": "full-arena-1768237075859",
+  "w": 1600,
+  "h": 841,
+  "name": "Moroes",
+  "group": "Karazhan",
+  "expansion": "Burning Crusade",
+  "ow": 1920,
+  "oh": 1009
+ },
+ {
+  "id": "full-arena-1768237075885",
+  "w": 1600,
+  "h": 841,
+  "name": "Netherspite",
+  "group": "Karazhan",
+  "expansion": "Burning Crusade",
+  "ow": 1920,
+  "oh": 1009
+ },
+ {
+  "id": "full-arena-1768237075868",
+  "w": 1600,
+  "h": 841,
+  "name": "Opera Hall",
+  "group": "Karazhan",
+  "expansion": "Burning Crusade",
+  "ow": 1920,
+  "oh": 1009
  },
  {
   "id": "full-arena-1768237075894",
-  "name": "Арена 1 · вариант 9",
-  "group": "arena",
   "w": 1600,
-  "h": 841
+  "h": 841,
+  "name": "Prince Malchezaar",
+  "group": "Karazhan",
+  "expansion": "Burning Crusade",
+  "ow": 1920,
+  "oh": 1009
  },
  {
-  "id": "full-arena-1768237133210",
-  "name": "Арена 2 · вариант 1",
-  "group": "arena",
+  "id": "full-arena-1768237075880",
   "w": 1600,
-  "h": 841
+  "h": 841,
+  "name": "Shade of Aran",
+  "group": "Karazhan",
+  "expansion": "Burning Crusade",
+  "ow": 1920,
+  "oh": 1009
+ },
+ {
+  "id": "391827",
+  "w": 1600,
+  "h": 841,
+  "name": "Terestian Illhoof",
+  "group": "Karazhan",
+  "expansion": "Burning Crusade",
+  "ow": 1677,
+  "oh": 881
+ },
+ {
+  "id": "full-arena-1768237075874",
+  "w": 1600,
+  "h": 841,
+  "name": "The Curator",
+  "group": "Karazhan",
+  "expansion": "Burning Crusade",
+  "ow": 1920,
+  "oh": 1009
  },
  {
   "id": "full-arena-1768237133217",
-  "name": "Арена 2 · вариант 2",
-  "group": "arena",
   "w": 1600,
-  "h": 841
+  "h": 841,
+  "name": "Gruul the Dragonkiller",
+  "group": "Gruul's Lair",
+  "expansion": "Burning Crusade",
+  "ow": 1920,
+  "oh": 1009
+ },
+ {
+  "id": "full-arena-1768237133210",
+  "w": 1600,
+  "h": 841,
+  "name": "High King Maulgar",
+  "group": "Gruul's Lair",
+  "expansion": "Burning Crusade",
+  "ow": 1920,
+  "oh": 1009
  },
  {
   "id": "full-arena-1768237148925",
-  "name": "Арена 3",
-  "group": "arena",
   "w": 1600,
-  "h": 841
- },
- {
-  "id": "full-arena-1768237204012",
-  "name": "Арена 4 · вариант 1",
-  "group": "arena",
-  "w": 1600,
-  "h": 841
- },
- {
-  "id": "full-arena-1768237204019",
-  "name": "Арена 4 · вариант 2",
-  "group": "arena",
-  "w": 1600,
-  "h": 841
- },
- {
-  "id": "full-arena-1768237204025",
-  "name": "Арена 4 · вариант 3",
-  "group": "arena",
-  "w": 1600,
-  "h": 841
+  "h": 841,
+  "name": "Magtheridon",
+  "group": "Magtheridon's Lair",
+  "expansion": "Burning Crusade",
+  "ow": 1920,
+  "oh": 1009
  },
  {
   "id": "full-arena-1768237204031",
-  "name": "Арена 4 · вариант 4",
-  "group": "arena",
   "w": 1600,
-  "h": 841
+  "h": 841,
+  "name": "Fathom-Lord Karathress",
+  "group": "Serpentshrine Cavern",
+  "expansion": "Burning Crusade",
+  "ow": 1920,
+  "oh": 1009
  },
  {
-  "id": "full-arena-1768237204040",
-  "name": "Арена 4 · вариант 5",
-  "group": "arena",
+  "id": "full-arena-1768237204012",
   "w": 1600,
-  "h": 841
+  "h": 841,
+  "name": "Hydross the Unstable",
+  "group": "Serpentshrine Cavern",
+  "expansion": "Burning Crusade",
+  "ow": 1920,
+  "oh": 1009
  },
  {
   "id": "full-arena-1768237204047",
-  "name": "Арена 4 · вариант 6",
-  "group": "arena",
   "w": 1600,
-  "h": 841
+  "h": 841,
+  "name": "Lady Vashj",
+  "group": "Serpentshrine Cavern",
+  "expansion": "Burning Crusade",
+  "ow": 1920,
+  "oh": 1009
+ },
+ {
+  "id": "full-arena-1768237204025",
+  "w": 1600,
+  "h": 841,
+  "name": "Leotheras the Blind",
+  "group": "Serpentshrine Cavern",
+  "expansion": "Burning Crusade",
+  "ow": 1920,
+  "oh": 1009
+ },
+ {
+  "id": "full-arena-1768237204040",
+  "w": 1600,
+  "h": 841,
+  "name": "Morogrim Tidewalker",
+  "group": "Serpentshrine Cavern",
+  "expansion": "Burning Crusade",
+  "ow": 1920,
+  "oh": 1009
+ },
+ {
+  "id": "full-arena-1768237204019",
+  "w": 1600,
+  "h": 841,
+  "name": "The Lurker Below",
+  "group": "Serpentshrine Cavern",
+  "expansion": "Burning Crusade",
+  "ow": 1920,
+  "oh": 1009
  },
  {
   "id": "full-arena-1768237251927",
-  "name": "Арена 5 · вариант 1",
-  "group": "arena",
   "w": 1600,
-  "h": 841
- },
- {
-  "id": "full-arena-1768237251933",
-  "name": "Арена 5 · вариант 2",
-  "group": "arena",
-  "w": 1600,
-  "h": 841
+  "h": 841,
+  "name": "Al'ar",
+  "group": "The Eye",
+  "expansion": "Burning Crusade",
+  "ow": 1920,
+  "oh": 1009
  },
  {
   "id": "full-arena-1768237251939",
-  "name": "Арена 5 · вариант 3",
-  "group": "arena",
   "w": 1600,
-  "h": 841
+  "h": 841,
+  "name": "High Astromancer Solarian",
+  "group": "The Eye",
+  "expansion": "Burning Crusade",
+  "ow": 1920,
+  "oh": 1009
  },
  {
   "id": "full-arena-1768237251944",
-  "name": "Арена 5 · вариант 4",
-  "group": "arena",
   "w": 1600,
-  "h": 841
+  "h": 841,
+  "name": "Kael'thas Sunstrider",
+  "group": "The Eye",
+  "expansion": "Burning Crusade",
+  "ow": 1920,
+  "oh": 1009
+ },
+ {
+  "id": "full-arena-1768237251933",
+  "w": 1600,
+  "h": 841,
+  "name": "Void Reaver",
+  "group": "The Eye",
+  "expansion": "Burning Crusade",
+  "ow": 1920,
+  "oh": 1009
  },
  {
   "id": "full-arena-1768237411781",
-  "name": "Арена 6",
-  "group": "arena",
   "w": 1600,
-  "h": 841
- },
- {
-  "id": "full-arena-1768237492041",
-  "name": "Арена 7 · вариант 1",
-  "group": "arena",
-  "w": 1600,
-  "h": 841
- },
- {
-  "id": "full-arena-1768237492048",
-  "name": "Арена 7 · вариант 2",
-  "group": "arena",
-  "w": 1600,
-  "h": 841
- },
- {
-  "id": "full-arena-1768237492058",
-  "name": "Арена 7 · вариант 3",
-  "group": "arena",
-  "w": 1600,
-  "h": 841
- },
- {
-  "id": "full-arena-1768237492063",
-  "name": "Арена 7 · вариант 4",
-  "group": "arena",
-  "w": 1600,
-  "h": 841
- },
- {
-  "id": "full-arena-1768237492068",
-  "name": "Арена 7 · вариант 5",
-  "group": "arena",
-  "w": 1600,
-  "h": 841
- },
- {
-  "id": "full-arena-1768237580694",
-  "name": "Арена 8 · вариант 1",
-  "group": "arena",
-  "w": 1600,
-  "h": 841
+  "h": 841,
+  "name": "Archimonde",
+  "group": "The Battle for Mount Hyjal",
+  "expansion": "Burning Crusade",
+  "ow": 1920,
+  "oh": 1009
  },
  {
   "id": "full-arena-1768237580704",
-  "name": "Арена 8 · вариант 2",
-  "group": "arena",
   "w": 1600,
-  "h": 841
+  "h": 841,
+  "name": "Kaz'rogal",
+  "group": "The Battle for Mount Hyjal",
+  "expansion": "Burning Crusade",
+  "ow": 1920,
+  "oh": 1009
  },
  {
-  "id": "full-arena-1768239815701",
-  "name": "Арена 9 · вариант 1",
-  "group": "arena",
+  "id": "full-arena-1768237580694",
   "w": 1600,
-  "h": 841
- },
- {
-  "id": "full-arena-1768239815707",
-  "name": "Арена 9 · вариант 2",
-  "group": "arena",
-  "w": 1600,
-  "h": 841
- },
- {
-  "id": "full-arena-1768239815710",
-  "name": "Арена 9 · вариант 3",
-  "group": "arena",
-  "w": 1600,
-  "h": 841
- },
- {
-  "id": "full-arena-1768239815715",
-  "name": "Арена 9 · вариант 4",
-  "group": "arena",
-  "w": 1600,
-  "h": 841
+  "h": 841,
+  "name": "Rage Winterchill",
+  "group": "The Battle for Mount Hyjal",
+  "expansion": "Burning Crusade",
+  "ow": 1920,
+  "oh": 1009
  },
  {
   "id": "full-arena-1768239815720",
-  "name": "Арена 9 · вариант 5",
-  "group": "arena",
   "w": 1600,
-  "h": 841
+  "h": 841,
+  "name": "Gurtogg Bloodboil",
+  "group": "Black Temple",
+  "expansion": "Burning Crusade",
+  "ow": 1920,
+  "oh": 1009
  },
  {
-  "id": "full-arena-1768239815726",
-  "name": "Арена 9 · вариант 6",
-  "group": "arena",
+  "id": "full-arena-1768239815701",
   "w": 1600,
-  "h": 841
- },
- {
-  "id": "full-arena-1768239815732",
-  "name": "Арена 9 · вариант 7",
-  "group": "arena",
-  "w": 1600,
-  "h": 841
- },
- {
-  "id": "full-arena-1768239815737",
-  "name": "Арена 9 · вариант 8",
-  "group": "arena",
-  "w": 1600,
-  "h": 841
+  "h": 841,
+  "name": "High Warlord Naj'entus",
+  "group": "Black Temple",
+  "expansion": "Burning Crusade",
+  "ow": 1920,
+  "oh": 1009
  },
  {
   "id": "full-arena-1768239815742",
-  "name": "Арена 9 · вариант 9",
-  "group": "arena",
   "w": 1600,
-  "h": 841
+  "h": 841,
+  "name": "Illidan Stormrage",
+  "group": "Black Temple",
+  "expansion": "Burning Crusade",
+  "ow": 1920,
+  "oh": 1009
+ },
+ {
+  "id": "full-arena-1768239815732",
+  "w": 1600,
+  "h": 841,
+  "name": "Mother Shahraz",
+  "group": "Black Temple",
+  "expansion": "Burning Crusade",
+  "ow": 1920,
+  "oh": 1009
+ },
+ {
+  "id": "full-arena-1768239815726",
+  "w": 1600,
+  "h": 841,
+  "name": "Reliquary of Souls",
+  "group": "Black Temple",
+  "expansion": "Burning Crusade",
+  "ow": 1920,
+  "oh": 1009
+ },
+ {
+  "id": "full-arena-1768239815710",
+  "w": 1600,
+  "h": 841,
+  "name": "Shade of Akama",
+  "group": "Black Temple",
+  "expansion": "Burning Crusade",
+  "ow": 1920,
+  "oh": 1009
+ },
+ {
+  "id": "full-arena-1768239815707",
+  "w": 1600,
+  "h": 841,
+  "name": "Supremus",
+  "group": "Black Temple",
+  "expansion": "Burning Crusade",
+  "ow": 1920,
+  "oh": 1009
+ },
+ {
+  "id": "full-arena-1768239815715",
+  "w": 1600,
+  "h": 841,
+  "name": "Teron Gorefiend",
+  "group": "Black Temple",
+  "expansion": "Burning Crusade",
+  "ow": 1920,
+  "oh": 1009
+ },
+ {
+  "id": "full-arena-1768239815737",
+  "w": 1600,
+  "h": 841,
+  "name": "The Illidari Council",
+  "group": "Black Temple",
+  "expansion": "Burning Crusade",
+  "ow": 1920,
+  "oh": 1009
+ },
+ {
+  "id": "full-arena-1768237492048",
+  "w": 1600,
+  "h": 841,
+  "name": "Brutallus",
+  "group": "Sunwell Plateau",
+  "expansion": "Burning Crusade",
+  "ow": 1920,
+  "oh": 1009
+ },
+ {
+  "id": "full-arena-1768237492041",
+  "w": 1600,
+  "h": 841,
+  "name": "Kalecgos",
+  "group": "Sunwell Plateau",
+  "expansion": "Burning Crusade",
+  "ow": 1920,
+  "oh": 1009
+ },
+ {
+  "id": "full-arena-1768237492068",
+  "w": 1600,
+  "h": 841,
+  "name": "Kil'jaeden",
+  "group": "Sunwell Plateau",
+  "expansion": "Burning Crusade",
+  "ow": 1920,
+  "oh": 1009
+ },
+ {
+  "id": "full-arena-1768237492063",
+  "w": 1600,
+  "h": 841,
+  "name": "M'uru",
+  "group": "Sunwell Plateau",
+  "expansion": "Burning Crusade",
+  "ow": 1920,
+  "oh": 1009
+ },
+ {
+  "id": "full-arena-1768237492058",
+  "w": 1600,
+  "h": 841,
+  "name": "The Eredar Twins",
+  "group": "Sunwell Plateau",
+  "expansion": "Burning Crusade",
+  "ow": 1920,
+  "oh": 1009
  }
 ]

@@ -1,5 +1,6 @@
 import { get, set } from './store.js';
 import { broadcastView } from './session.js';
+import { phases } from './view.js';
 
 // «Проиграть план»: проход по всем фазам с плавным переездом меток
 const STEP = 2600;
@@ -13,7 +14,7 @@ export function stop() {
 
 export function play() {
   stop();
-  const count = get().content.phases.length;
+  const count = phases(get()).length;
   set({ playing: true, phase: 0 });
   broadcastView();
   for (let i = 1; i < count; i++) {

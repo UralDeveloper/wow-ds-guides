@@ -48,17 +48,44 @@ let inputLayer = null;
 let bgLayer = null;
 let bgShown = undefined;
 
-// Фон карты: картинка под всеми слоями. Близкие к 5:3 пропорции заполняют карту, остальные вписываются целиком.
+let chrome = null;
+
+// Фон карты: картинка под всеми слоями (выбор из плана или первый слой карты босса)
 function updateBackground(s) {
-  const id = s.board.bg || null;
+  const m = V.activeMap(s);
+  const id = m ? m.id : null;
   if (id === bgShown) return;
   bgShown = id;
-  const m = id ? s.maps.find((x) => x.id === id) : null;
   root.classList.toggle('has-bg', !!m);
   if (!m) { bgLayer.innerHTML = ''; return; }
-  const ratio = m.w / m.h;
-  const fit = ratio > 1.45 && ratio < 1.95 ? 'cover' : 'contain';
-  bgLayer.innerHTML = `<img src="maps/${esc(m.id)}.webp" alt="${esc(m.name)}" style="object-fit:${fit}"><div class="map-dim"></div>`;
+  bgLayer.innerHTML = `<img src="maps/${esc(m.id)}.webp" alt="${esc(m.name)}" style="object-fit:${V.fitFor(m)}"><div class="map-dim"></div>`;
+}
+
+// Подходящая длина линейки: 5…50 ярдов так, чтобы она занимала 70–170 единиц доски
+function scaleBar(upy) {
+  const steps = [5, 10, 15, 20, 25, 30, 40, 50];
+  const yards = steps.find((y) => y * upy >= 70) || steps[steps.length - 1];
+  return { yards, width: yards * upy };
+}
+
+// Над картой: переключатель слоёв карты босса и линейка в ярдах
+function updateChrome(s) {
+  const b = V.boss(s);
+  const m = V.activeMap(s);
+  const layers = b.layers || [];
+  const viewer = s.mode === 'viewer';
+  let html = '';
+  if (layers.length > 1) {
+    html += `<div class="layers-bar" role="group" aria-label="Слой карты">
+      ${layers.map((l) => `<button class="ph ${m && m.id === l.map ? 'on' : ''}" data-act="layer" data-arg="${esc(l.map)}" ${viewer ? 'disabled' : ''}>${esc(l.name)}</button>`).join('')}
+    </div>`;
+  }
+  const upy = V.unitsPerYard(m);
+  if (upy) {
+    const sb = scaleBar(upy);
+    html += `<div class="scalebar" aria-label="Масштаб: ${sb.yards} ярдов"><span class="sb-line" style="width:${(sb.width / 10).toFixed(2)}cqw"></span><span class="sb-text">${sb.yards} ярдов</span></div>`;
+  }
+  if (chrome.dataset.html !== html) { chrome.dataset.html = html; chrome.innerHTML = html; }
 }
 const els = {};
 const cache = {};
@@ -75,11 +102,13 @@ export function mountMap(container) {
       </div>
       <div class="overlay" aria-label="Карта для рисования"></div>
       <div class="layer" data-layer="input"></div>
+      <div class="map-chrome" data-chrome></div>
     </div>`;
   root = container.querySelector('.map');
   overlay = root.querySelector('.overlay');
   inputLayer = root.querySelector('[data-layer="input"]');
   bgLayer = root.querySelector('[data-bg]');
+  chrome = root.querySelector('[data-chrome]');
   LAYERS.forEach((l) => { els[l] = root.querySelector(`[data-layer="${l}"]`); });
 
   overlay.addEventListener('pointerdown', (e) => onDown(e, overlay));
@@ -99,6 +128,7 @@ export function updateMap(s) {
   if (!root) return;
   root.classList.toggle('playing', s.playing);
   updateBackground(s);
+  updateChrome(s);
   overlay.style.cursor = s.mode === 'viewer' || s.tool === 'ping' ? 'pointer'
     : s.tool === 'pointer' ? (s.drag ? 'grabbing' : 'grab') : 'crosshair';
 
@@ -115,8 +145,14 @@ export function updateMap(s) {
 
   // Опасные зоны и войдзоны
   const zones = ph.zones.map((z) => `<div class="zone" style="left:${X(z.x)};top:${Y(z.y)};width:${X(z.r * 2)};aspect-ratio:1/1"></div>`);
-  const vz = b.vz.map((v, i) => `<div class="vz ${drag.t === 'vz' && drag.i === i ? 'drag' : ''}" style="left:${X(v.x)};top:${Y(v.y)};width:${X(v.r * 2)};aspect-ratio:1/1">${v.r >= 30 ? 'Войд' : ''}</div>`);
-  if (s.zdraft) vz.push(`<div class="vz draft" style="left:${X(s.zdraft.x)};top:${Y(s.zdraft.y)};width:${X(s.zdraft.r * 2)};aspect-ratio:1/1"></div>`);
+  // С калибровкой карты у войдзоны подписан радиус в ярдах
+  const upy = V.unitsPerYard(V.activeMap(s));
+  const vzText = (r) => {
+    if (upy) return r >= 22 ? `${Math.round(r / upy)} яр` : '';
+    return r >= 30 ? 'Войд' : '';
+  };
+  const vz = b.vz.map((v, i) => `<div class="vz ${drag.t === 'vz' && drag.i === i ? 'drag' : ''}" style="left:${X(v.x)};top:${Y(v.y)};width:${X(v.r * 2)};aspect-ratio:1/1">${vzText(v.r)}</div>`);
+  if (s.zdraft) vz.push(`<div class="vz draft" style="left:${X(s.zdraft.x)};top:${Y(s.zdraft.y)};width:${X(s.zdraft.r * 2)};aspect-ratio:1/1">${upy && s.zdraft.r > 4 ? `<span class="vz-live">${Math.round(s.zdraft.r / upy)} яр</span>` : ''}</div>`);
   put('zones', zones.join('') + vz.join(''));
 
   // Игроки: стартовые метки и поставленные группы
@@ -182,12 +218,12 @@ export function updateMap(s) {
       <span class="pr"></span><span class="pr d2"></span><span class="pd"></span>
       <span class="pn" style="background:${g.c}">${esc(g.name)}</span>
     </div>`).join('');
-  const playing = s.playing ? `
+  const runner = s.playing && ph.route && !V.activeMap(s) ? `
     ${SVG_OPEN}
       <circle r="9" fill="#F2EEE4" opacity=".9"><animateMotion dur="2.6s" repeatCount="indefinite" path="${ph.route}"></animateMotion></circle>
       <circle r="18" fill="none" stroke="#F2EEE4" stroke-width="2" opacity=".4"><animateMotion dur="2.6s" repeatCount="indefinite" path="${ph.route}"></animateMotion></circle>
-    </svg>
-    <div class="playbar"></div>` : '';
+    </svg>` : '';
+  const playing = s.playing ? `${runner}<div class="playbar" style="animation-duration:${V.phases(s).length * 2.6}s"></div>` : '';
   put('fx', fx + playing);
 
   put('hint', hintText(s) ? `<div class="map-hint"><div>${hintText(s)}</div></div>` : '');

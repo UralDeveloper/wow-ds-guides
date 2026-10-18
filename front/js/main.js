@@ -38,7 +38,7 @@ async function boot() {
       content, maps, bgOpen: false, bgQuery: '',
       conn: 'connecting', peers: {}, joinedAt: Date.now(),
       mode: 'rl',
-      raidIdx: 0, bossIdx: 1, diff: 2, phase: 0, role: 'all',
+      raidIdx: 0, bossIdx: 0, diff: 2, phase: 0, role: 'all',
       panel: 'tactics', openSec: 0, raidOpen: false,
       tool: 'pointer', color: 'amber', roleKind: 'tank', roleCount: 1, arrowMode: 'end', arrowMid: true,
       board: emptyBoard(),
@@ -160,6 +160,7 @@ const ACTIONS = {
   tool: (a) => selectTool(a),
   'bg-toggle': () => set({ bgOpen: !get().bgOpen }),
   bg: (a) => { setBackground(a || null); set({ bgOpen: false }); },
+  layer: (a) => setBackground(a),
   color: (a) => set({ color: a }),
   undo: () => {
     const s = get();

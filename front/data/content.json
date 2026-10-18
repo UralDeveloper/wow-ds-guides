@@ -1,176 +1,2019 @@
 {
-  "_note": "Демо-контент. Названия рейдов, боссов и механик условные. В рабочей версии этот же формат отдаёт WordPress: GET /wp-json/wow/v1/content",
-  "phases": [
-    {
-      "name": "Фаза 1",
-      "route": "M 300 390 C 330 250, 470 180, 610 205 S 760 330, 715 440",
-      "marks": [
-        { "kind": "tank", "label": "Т1", "x": 445, "y": 300 },
-        { "kind": "tank", "label": "Т2", "x": 555, "y": 300 },
-        { "kind": "heal", "label": "Х", "x": 500, "y": 432 },
-        { "kind": "heal", "label": "Х", "x": 370, "y": 378 },
-        { "kind": "dd", "label": "Д", "x": 500, "y": 186 },
-        { "kind": "stack", "label": "★", "x": 620, "y": 396 }
-      ],
-      "zones": [{ "x": 720, "y": 444, "r": 45 }],
-      "casts": [
-        { "t": 7, "l": "Давление", "kind": "tank" },
-        { "t": 28, "l": "Обвал", "kind": "heal" },
-        { "t": 47, "l": "Воды", "kind": "all" },
-        { "t": 68, "l": "Давление", "kind": "tank" },
-        { "t": 90, "l": "Обвал", "kind": "heal" }
-      ]
-    },
-    {
-      "name": "Переход",
-      "route": "M 500 300 C 580 270, 640 240, 740 168",
-      "marks": [
-        { "kind": "tank", "label": "Т1", "x": 740, "y": 132 },
-        { "kind": "tank", "label": "Т2", "x": 800, "y": 132 },
-        { "kind": "heal", "label": "Х", "x": 770, "y": 186 },
-        { "kind": "heal", "label": "Х", "x": 720, "y": 180 },
-        { "kind": "dd", "label": "Д", "x": 810, "y": 180 },
-        { "kind": "stack", "label": "★", "x": 770, "y": 150 }
-      ],
-      "zones": [{ "x": 500, "y": 300, "r": 190 }],
-      "casts": [
-        { "t": 12, "l": "Зов глубин", "kind": "all" },
-        { "t": 55, "l": "Прилив", "kind": "heal" },
-        { "t": 88, "l": "Возврат", "kind": "all" }
-      ]
-    },
-    {
-      "name": "Фаза 2",
-      "route": "M 380 210 C 300 300, 360 420, 500 450 S 690 360, 620 200",
-      "marks": [
-        { "kind": "tank", "label": "Т1", "x": 500, "y": 252 },
-        { "kind": "tank", "label": "Т2", "x": 500, "y": 348 },
-        { "kind": "heal", "label": "Х", "x": 330, "y": 300 },
-        { "kind": "heal", "label": "Х", "x": 670, "y": 300 },
-        { "kind": "dd", "label": "Д", "x": 380, "y": 180 },
-        { "kind": "dd", "label": "Д", "x": 620, "y": 420 }
-      ],
-      "zones": [{ "x": 260, "y": 168, "r": 40 }, { "x": 740, "y": 432, "r": 40 }],
-      "casts": [
-        { "t": 10, "l": "Порождения", "kind": "dd" },
-        { "t": 30, "l": "Давление", "kind": "tank" },
-        { "t": 50, "l": "Обвал", "kind": "heal" },
-        { "t": 72, "l": "Разлом", "kind": "dd" },
-        { "t": 92, "l": "Порождения", "kind": "dd" }
-      ]
-    }
-  ],
-  "tactics": {
-    "t1": {
-      "summary": "Разминочный бой: один танк держит босса, рейд разбирается с волнами аддов у ворот.",
-      "tags": ["1 фаза", "Адды", "Сбивание кастов"],
-      "mechs": [
-        { "name": "Удар тараном", "role": "tank", "timer": "каждые 18 с", "sev": "важно", "text": "Сильный удар по танку. Держать защитный КД на каждый второй каст." },
-        { "name": "Стража ворот", "role": "dd", "timer": "каждые 40 с", "sev": "крит", "text": "Волна аддов из ворот. Сбивайте лечение у жрецов в первую очередь." },
-        { "name": "Осадный залп", "role": "heal", "timer": "каждые 35 с", "sev": "важно", "text": "Урон по случайным игрокам. Точечное лечение, массовые КД не нужны." },
-        { "name": "Горящая смола", "role": "all", "timer": "постоянно", "sev": "инфо", "text": "Лужи смолы у стен. Держитесь центра арены." }
-      ]
-    },
-    "t2": {
-      "summary": "Бой на выносливость: свап танков по стакам, лужи уводим к краю, на 60% переход на северную платформу.",
-      "tags": ["2 фазы", "Свап танков", "Сейвы рейда"],
-      "mechs": [
-        { "name": "Давление глубины", "role": "tank", "timer": "каждые 20 с", "sev": "крит", "text": "Стакающийся дебафф на текущей цели. Свап на 3 стаке, второй танк забирает босса сразу." },
-        { "name": "Обвал свода", "role": "heal", "timer": "каждые 45 с", "sev": "важно", "text": "Урон по всему рейду, растёт с каждым кастом. Распределите сейвы по таймлайну." },
-        { "name": "Тёмные воды", "role": "all", "timer": "каждые 30 с", "sev": "важно", "text": "Под тремя игроками появляются лужи. Уводите их к краю арены по маршруту на карте." },
-        { "name": "Порождения бездны", "role": "dd", "timer": "фаза 2", "sev": "крит", "text": "Адды с щитом. Сначала сбить каст, затем убить за 40 секунд." },
-        { "name": "Зов глубин", "role": "all", "timer": "на 60%", "sev": "инфо", "text": "Переход: все собираются на северной платформе, пока босс под водой." },
-        { "name": "Разлом", "role": "dd", "timer": "каждые 25 с", "sev": "инфо", "text": "Фронтальный конус. Не стоять перед боссом, бить со спины." }
-      ]
-    },
-    "t3": {
-      "summary": "Бой с контролем освещения: рейд держится в световых кругах, иначе получает урон от тьмы.",
-      "tags": ["3 фазы", "Позиционка", "Разбегание"],
-      "mechs": [
-        { "name": "Затмение", "role": "all", "timer": "каждые 50 с", "sev": "крит", "text": "Свет гаснет. Встать в ближайший световой круг до конца каста." },
-        { "name": "Поглощение", "role": "tank", "timer": "каждые 24 с", "sev": "важно", "text": "Хилы по танку срезаются вдвое на 8 секунд. Используйте личный сейв." },
-        { "name": "Осколки тьмы", "role": "dd", "timer": "фаза 2", "sev": "важно", "text": "Медленные осколки ползут к рейду. Убить до того, как дойдут." },
-        { "name": "Мерцание", "role": "heal", "timer": "каждые 30 с", "sev": "инфо", "text": "Дебафф на хилах: разбежаться на 8 метров, чтобы не задеть других." }
-      ]
-    },
-    "t4": {
-      "summary": "Три босса с общим здоровьем. Убивать одновременно, разница больше 10% даёт усиление выжившим.",
-      "tags": ["3 цели", "Клив", "Синхронный килл"],
-      "mechs": [
-        { "name": "Связь крови", "role": "all", "timer": "постоянно", "sev": "крит", "text": "Боссы делят урон. Держите разницу по здоровью не больше 10%." },
-        { "name": "Теневой выпад", "role": "tank", "timer": "каждые 15 с", "sev": "важно", "text": "Прыжок на дальнюю цель. Танк перехватывает босса после прыжка." },
-        { "name": "Ритуал совета", "role": "dd", "timer": "на 30%", "sev": "крит", "text": "Каст, который нужно сбить у всех трёх боссов в течение 5 секунд." },
-        { "name": "Мор", "role": "heal", "timer": "каждые 40 с", "sev": "важно", "text": "Диспел болезни с двух игроков. Не диспелить, пока они рядом с рейдом." }
-      ]
-    }
+ "_note": "Сгенерировано tools/build_content.py из data-src/. Не править вручную.",
+ "expansions": [
+  {
+   "id": "x2",
+   "name": "Midnight"
   },
-  "guides": {
-    "g1": {
-      "author": "[АВТОР ГАЙДА]",
-      "updated": "[ДАТА]",
-      "videos": [
-        { "title": "{boss} — тактика за 5 минут", "kind": "Обзор", "meta": "[КАНАЛ АВТОРА] · все роли", "dur": "[5:00]", "url": "", "path": "M70 120 C 110 60, 200 40, 250 80" },
-        { "title": "{boss} — взгляд хила", "kind": "Хил", "meta": "[КАНАЛ АВТОРА] · сейвы и позиционка", "dur": "[8:00]", "url": "", "path": "M60 40 C 120 110, 220 120, 270 50" }
-      ],
-      "sections": [
-        { "h": "Подготовка", "p": "Состав и подготовка перед пулом.", "tips": ["Два танка обязательно: бой построен на свапе.", "Минимум 4 хила на героике, 5 на эпохальном.", "Распределите сейвы рейда по таймлайну заранее."] },
-        { "h": "Фаза 1", "p": "Босс в центре, рейд стоит по схеме на карте. Главное — свап танков и вынос луж к краю.", "tips": ["Танки меняются на 3 стаке «Давления глубины».", "Лужи уводить по маршруту, не через центр."] },
-        { "h": "Переход", "p": "На 60% босс уходит под воду, рейд перебегает на северную платформу по мосту.", "tips": ["Не стоять в центре: там зона урона.", "Хилы держат массовые КД на прилив."] },
-        { "h": "Фаза 2", "p": "Появляются адды со щитом, урон по рейду растёт.", "tips": ["ДД сначала сбивают каст аддов, потом фокусят.", "Танки продолжают свап по тем же правилам."] },
-        { "h": "Частые ошибки", "p": "Из-за чего вайпаются чаще всего.", "tips": ["Лужа брошена в центре — рейду некуда встать.", "Свап запоздал на один стак — танк умирает.", "Сейвы потрачены рано, к третьему обвалу нечем прожать."] }
-      ]
-    }
+  {
+   "id": "x1",
+   "name": "The War Within"
   },
-  "raids": [
+  {
+   "id": "x6",
+   "name": "Burning Crusade"
+  },
+  {
+   "id": "demo",
+   "name": "Демо"
+  }
+ ],
+ "phases": [
+  {
+   "name": "Фаза 1",
+   "route": "M 300 390 C 330 250, 470 180, 610 205 S 760 330, 715 440",
+   "marks": [
     {
-      "id": "deep-bastion", "name": "Глубинный бастион", "kind": "raid", "killed": 1,
-      "bosses": [
-        { "id": "gatekeeper", "name": "Хранитель врат", "tactics": "t1", "guide": "g1" },
-        { "id": "deep-warden", "name": "Страж глубин", "tactics": "t2", "guide": "g1" },
-        { "id": "light-eater", "name": "Пожиратель света", "tactics": "t3", "guide": "g1" },
-        { "id": "shadow-council", "name": "Совет теней", "tactics": "t4", "guide": "g1" }
-      ],
-      "locked": ["Плетущая бездну", "Кузнец рун", "Двуликий оракул", "Владыка бастиона"]
+     "kind": "tank",
+     "label": "Т1",
+     "x": 445,
+     "y": 300
     },
     {
-      "id": "eclipse-spire", "name": "Шпиль затмения", "kind": "raid", "killed": 0,
-      "bosses": [
-        { "id": "dusk-keeper", "name": "Привратница сумрака", "tactics": "t1", "guide": "g1" },
-        { "id": "star-eater", "name": "Звёздный пожиратель", "tactics": "t2", "guide": "g1" },
-        { "id": "void-choir", "name": "Хор пустоты", "tactics": "t3", "guide": "g1" },
-        { "id": "eclipsed-king", "name": "Затмённый король", "tactics": "t4", "guide": "g1" }
-      ],
-      "locked": ["Тень шпиля", "Последний свет"]
+     "kind": "tank",
+     "label": "Т2",
+     "x": 555,
+     "y": 300
     },
     {
-      "id": "ash-forge", "name": "Кузня пепла", "kind": "raid", "killed": 3,
-      "bosses": [
-        { "id": "bellows", "name": "Мехи пламени", "tactics": "t1", "guide": "g1" },
-        { "id": "gorn", "name": "Литейщик Горн", "tactics": "t2", "guide": "g1" },
-        { "id": "slag-twins", "name": "Близнецы шлака", "tactics": "t4", "guide": "g1" },
-        { "id": "forge-heart", "name": "Сердце кузни", "tactics": "t3", "guide": "g1" }
-      ],
-      "locked": ["Пепельный страж", "Наковальня", "Повелитель огня"]
+     "kind": "heal",
+     "label": "Х",
+     "x": 500,
+     "y": 432
     },
     {
-      "id": "sunken-harbor", "name": "Затонувшая гавань", "kind": "dungeon", "killed": 0,
-      "bosses": [
-        { "id": "drowned-captain", "name": "Капитан утопленников", "tactics": "t1", "guide": "g1" },
-        { "id": "tide", "name": "Прилив", "tactics": "t2", "guide": "g1" },
-        { "id": "sea-witch", "name": "Морская ведьма", "tactics": "t3", "guide": "g1" },
-        { "id": "lighthouse", "name": "Хозяйка маяка", "tactics": "t4", "guide": "g1" }
-      ],
-      "locked": []
+     "kind": "heal",
+     "label": "Х",
+     "x": 370,
+     "y": 378
     },
     {
-      "id": "thorn-gardens", "name": "Сады шипов", "kind": "dungeon", "killed": 2,
-      "bosses": [
-        { "id": "gardener", "name": "Садовник", "tactics": "t1", "guide": "g1" },
-        { "id": "thorn-mother", "name": "Терновая мать", "tactics": "t3", "guide": "g1" },
-        { "id": "swarm", "name": "Рой", "tactics": "t2", "guide": "g1" },
-        { "id": "heartwood", "name": "Сердцевина", "tactics": "t4", "guide": "g1" }
-      ],
-      "locked": []
+     "kind": "dd",
+     "label": "Д",
+     "x": 500,
+     "y": 186
+    },
+    {
+     "kind": "stack",
+     "label": "★",
+     "x": 620,
+     "y": 396
     }
-  ]
+   ],
+   "zones": [
+    {
+     "x": 720,
+     "y": 444,
+     "r": 45
+    }
+   ],
+   "casts": [
+    {
+     "t": 7,
+     "l": "Давление",
+     "kind": "tank"
+    },
+    {
+     "t": 28,
+     "l": "Обвал",
+     "kind": "heal"
+    },
+    {
+     "t": 47,
+     "l": "Воды",
+     "kind": "all"
+    },
+    {
+     "t": 68,
+     "l": "Давление",
+     "kind": "tank"
+    },
+    {
+     "t": 90,
+     "l": "Обвал",
+     "kind": "heal"
+    }
+   ]
+  },
+  {
+   "name": "Переход",
+   "route": "M 500 300 C 580 270, 640 240, 740 168",
+   "marks": [
+    {
+     "kind": "tank",
+     "label": "Т1",
+     "x": 740,
+     "y": 132
+    },
+    {
+     "kind": "tank",
+     "label": "Т2",
+     "x": 800,
+     "y": 132
+    },
+    {
+     "kind": "heal",
+     "label": "Х",
+     "x": 770,
+     "y": 186
+    },
+    {
+     "kind": "heal",
+     "label": "Х",
+     "x": 720,
+     "y": 180
+    },
+    {
+     "kind": "dd",
+     "label": "Д",
+     "x": 810,
+     "y": 180
+    },
+    {
+     "kind": "stack",
+     "label": "★",
+     "x": 770,
+     "y": 150
+    }
+   ],
+   "zones": [
+    {
+     "x": 500,
+     "y": 300,
+     "r": 190
+    }
+   ],
+   "casts": [
+    {
+     "t": 12,
+     "l": "Зов глубин",
+     "kind": "all"
+    },
+    {
+     "t": 55,
+     "l": "Прилив",
+     "kind": "heal"
+    },
+    {
+     "t": 88,
+     "l": "Возврат",
+     "kind": "all"
+    }
+   ]
+  },
+  {
+   "name": "Фаза 2",
+   "route": "M 380 210 C 300 300, 360 420, 500 450 S 690 360, 620 200",
+   "marks": [
+    {
+     "kind": "tank",
+     "label": "Т1",
+     "x": 500,
+     "y": 252
+    },
+    {
+     "kind": "tank",
+     "label": "Т2",
+     "x": 500,
+     "y": 348
+    },
+    {
+     "kind": "heal",
+     "label": "Х",
+     "x": 330,
+     "y": 300
+    },
+    {
+     "kind": "heal",
+     "label": "Х",
+     "x": 670,
+     "y": 300
+    },
+    {
+     "kind": "dd",
+     "label": "Д",
+     "x": 380,
+     "y": 180
+    },
+    {
+     "kind": "dd",
+     "label": "Д",
+     "x": 620,
+     "y": 420
+    }
+   ],
+   "zones": [
+    {
+     "x": 260,
+     "y": 168,
+     "r": 40
+    },
+    {
+     "x": 740,
+     "y": 432,
+     "r": 40
+    }
+   ],
+   "casts": [
+    {
+     "t": 10,
+     "l": "Порождения",
+     "kind": "dd"
+    },
+    {
+     "t": 30,
+     "l": "Давление",
+     "kind": "tank"
+    },
+    {
+     "t": 50,
+     "l": "Обвал",
+     "kind": "heal"
+    },
+    {
+     "t": 72,
+     "l": "Разлом",
+     "kind": "dd"
+    },
+    {
+     "t": 92,
+     "l": "Порождения",
+     "kind": "dd"
+    }
+   ]
+  }
+ ],
+ "genericPhases": [
+  {
+   "name": "Фаза 1",
+   "route": "",
+   "marks": [
+    {
+     "kind": "tank",
+     "label": "Т1",
+     "x": 445,
+     "y": 300
+    },
+    {
+     "kind": "tank",
+     "label": "Т2",
+     "x": 555,
+     "y": 300
+    },
+    {
+     "kind": "heal",
+     "label": "Х",
+     "x": 500,
+     "y": 432
+    },
+    {
+     "kind": "heal",
+     "label": "Х",
+     "x": 370,
+     "y": 378
+    },
+    {
+     "kind": "dd",
+     "label": "Д",
+     "x": 500,
+     "y": 186
+    },
+    {
+     "kind": "stack",
+     "label": "★",
+     "x": 620,
+     "y": 396
+    }
+   ],
+   "zones": [],
+   "casts": []
+  },
+  {
+   "name": "Фаза 2",
+   "route": "",
+   "marks": [
+    {
+     "kind": "tank",
+     "label": "Т1",
+     "x": 445,
+     "y": 300
+    },
+    {
+     "kind": "tank",
+     "label": "Т2",
+     "x": 555,
+     "y": 300
+    },
+    {
+     "kind": "heal",
+     "label": "Х",
+     "x": 500,
+     "y": 432
+    },
+    {
+     "kind": "heal",
+     "label": "Х",
+     "x": 370,
+     "y": 378
+    },
+    {
+     "kind": "dd",
+     "label": "Д",
+     "x": 500,
+     "y": 186
+    },
+    {
+     "kind": "stack",
+     "label": "★",
+     "x": 620,
+     "y": 396
+    }
+   ],
+   "zones": [],
+   "casts": []
+  },
+  {
+   "name": "Фаза 3",
+   "route": "",
+   "marks": [
+    {
+     "kind": "tank",
+     "label": "Т1",
+     "x": 445,
+     "y": 300
+    },
+    {
+     "kind": "tank",
+     "label": "Т2",
+     "x": 555,
+     "y": 300
+    },
+    {
+     "kind": "heal",
+     "label": "Х",
+     "x": 500,
+     "y": 432
+    },
+    {
+     "kind": "heal",
+     "label": "Х",
+     "x": 370,
+     "y": 378
+    },
+    {
+     "kind": "dd",
+     "label": "Д",
+     "x": 500,
+     "y": 186
+    },
+    {
+     "kind": "stack",
+     "label": "★",
+     "x": 620,
+     "y": 396
+    }
+   ],
+   "zones": [],
+   "casts": []
+  }
+ ],
+ "tactics": {
+  "t1": {
+   "summary": "Разминочный бой: один танк держит босса, рейд разбирается с волнами аддов у ворот.",
+   "tags": [
+    "1 фаза",
+    "Адды",
+    "Сбивание кастов"
+   ],
+   "mechs": [
+    {
+     "name": "Удар тараном",
+     "role": "tank",
+     "timer": "каждые 18 с",
+     "sev": "важно",
+     "text": "Сильный удар по танку. Держать защитный КД на каждый второй каст."
+    },
+    {
+     "name": "Стража ворот",
+     "role": "dd",
+     "timer": "каждые 40 с",
+     "sev": "крит",
+     "text": "Волна аддов из ворот. Сбивайте лечение у жрецов в первую очередь."
+    },
+    {
+     "name": "Осадный залп",
+     "role": "heal",
+     "timer": "каждые 35 с",
+     "sev": "важно",
+     "text": "Урон по случайным игрокам. Точечное лечение, массовые КД не нужны."
+    },
+    {
+     "name": "Горящая смола",
+     "role": "all",
+     "timer": "постоянно",
+     "sev": "инфо",
+     "text": "Лужи смолы у стен. Держитесь центра арены."
+    }
+   ]
+  },
+  "t2": {
+   "summary": "Бой на выносливость: свап танков по стакам, лужи уводим к краю, на 60% переход на северную платформу.",
+   "tags": [
+    "2 фазы",
+    "Свап танков",
+    "Сейвы рейда"
+   ],
+   "mechs": [
+    {
+     "name": "Давление глубины",
+     "role": "tank",
+     "timer": "каждые 20 с",
+     "sev": "крит",
+     "text": "Стакающийся дебафф на текущей цели. Свап на 3 стаке, второй танк забирает босса сразу."
+    },
+    {
+     "name": "Обвал свода",
+     "role": "heal",
+     "timer": "каждые 45 с",
+     "sev": "важно",
+     "text": "Урон по всему рейду, растёт с каждым кастом. Распределите сейвы по таймлайну."
+    },
+    {
+     "name": "Тёмные воды",
+     "role": "all",
+     "timer": "каждые 30 с",
+     "sev": "важно",
+     "text": "Под тремя игроками появляются лужи. Уводите их к краю арены по маршруту на карте."
+    },
+    {
+     "name": "Порождения бездны",
+     "role": "dd",
+     "timer": "фаза 2",
+     "sev": "крит",
+     "text": "Адды с щитом. Сначала сбить каст, затем убить за 40 секунд."
+    },
+    {
+     "name": "Зов глубин",
+     "role": "all",
+     "timer": "на 60%",
+     "sev": "инфо",
+     "text": "Переход: все собираются на северной платформе, пока босс под водой."
+    },
+    {
+     "name": "Разлом",
+     "role": "dd",
+     "timer": "каждые 25 с",
+     "sev": "инфо",
+     "text": "Фронтальный конус. Не стоять перед боссом, бить со спины."
+    }
+   ]
+  },
+  "t3": {
+   "summary": "Бой с контролем освещения: рейд держится в световых кругах, иначе получает урон от тьмы.",
+   "tags": [
+    "3 фазы",
+    "Позиционка",
+    "Разбегание"
+   ],
+   "mechs": [
+    {
+     "name": "Затмение",
+     "role": "all",
+     "timer": "каждые 50 с",
+     "sev": "крит",
+     "text": "Свет гаснет. Встать в ближайший световой круг до конца каста."
+    },
+    {
+     "name": "Поглощение",
+     "role": "tank",
+     "timer": "каждые 24 с",
+     "sev": "важно",
+     "text": "Хилы по танку срезаются вдвое на 8 секунд. Используйте личный сейв."
+    },
+    {
+     "name": "Осколки тьмы",
+     "role": "dd",
+     "timer": "фаза 2",
+     "sev": "важно",
+     "text": "Медленные осколки ползут к рейду. Убить до того, как дойдут."
+    },
+    {
+     "name": "Мерцание",
+     "role": "heal",
+     "timer": "каждые 30 с",
+     "sev": "инфо",
+     "text": "Дебафф на хилах: разбежаться на 8 метров, чтобы не задеть других."
+    }
+   ]
+  },
+  "t4": {
+   "summary": "Три босса с общим здоровьем. Убивать одновременно, разница больше 10% даёт усиление выжившим.",
+   "tags": [
+    "3 цели",
+    "Клив",
+    "Синхронный килл"
+   ],
+   "mechs": [
+    {
+     "name": "Связь крови",
+     "role": "all",
+     "timer": "постоянно",
+     "sev": "крит",
+     "text": "Боссы делят урон. Держите разницу по здоровью не больше 10%."
+    },
+    {
+     "name": "Теневой выпад",
+     "role": "tank",
+     "timer": "каждые 15 с",
+     "sev": "важно",
+     "text": "Прыжок на дальнюю цель. Танк перехватывает босса после прыжка."
+    },
+    {
+     "name": "Ритуал совета",
+     "role": "dd",
+     "timer": "на 30%",
+     "sev": "крит",
+     "text": "Каст, который нужно сбить у всех трёх боссов в течение 5 секунд."
+    },
+    {
+     "name": "Мор",
+     "role": "heal",
+     "timer": "каждые 40 с",
+     "sev": "важно",
+     "text": "Диспел болезни с двух игроков. Не диспелить, пока они рядом с рейдом."
+    }
+   ]
+  }
+ },
+ "guides": {
+  "g1": {
+   "author": "[АВТОР ГАЙДА]",
+   "updated": "[ДАТА]",
+   "videos": [
+    {
+     "title": "{boss} — тактика за 5 минут",
+     "kind": "Обзор",
+     "meta": "[КАНАЛ АВТОРА] · все роли",
+     "dur": "[5:00]",
+     "url": "",
+     "path": "M70 120 C 110 60, 200 40, 250 80"
+    },
+    {
+     "title": "{boss} — взгляд хила",
+     "kind": "Хил",
+     "meta": "[КАНАЛ АВТОРА] · сейвы и позиционка",
+     "dur": "[8:00]",
+     "url": "",
+     "path": "M60 40 C 120 110, 220 120, 270 50"
+    }
+   ],
+   "sections": [
+    {
+     "h": "Подготовка",
+     "p": "Состав и подготовка перед пулом.",
+     "tips": [
+      "Два танка обязательно: бой построен на свапе.",
+      "Минимум 4 хила на героике, 5 на эпохальном.",
+      "Распределите сейвы рейда по таймлайну заранее."
+     ]
+    },
+    {
+     "h": "Фаза 1",
+     "p": "Босс в центре, рейд стоит по схеме на карте. Главное — свап танков и вынос луж к краю.",
+     "tips": [
+      "Танки меняются на 3 стаке «Давления глубины».",
+      "Лужи уводить по маршруту, не через центр."
+     ]
+    },
+    {
+     "h": "Переход",
+     "p": "На 60% босс уходит под воду, рейд перебегает на северную платформу по мосту.",
+     "tips": [
+      "Не стоять в центре: там зона урона.",
+      "Хилы держат массовые КД на прилив."
+     ]
+    },
+    {
+     "h": "Фаза 2",
+     "p": "Появляются адды со щитом, урон по рейду растёт.",
+     "tips": [
+      "ДД сначала сбивают каст аддов, потом фокусят.",
+      "Танки продолжают свап по тем же правилам."
+     ]
+    },
+    {
+     "h": "Частые ошибки",
+     "p": "Из-за чего вайпаются чаще всего.",
+     "tips": [
+      "Лужа брошена в центре — рейду некуда встать.",
+      "Свап запоздал на один стак — танк умирает.",
+      "Сейвы потрачены рано, к третьему обвалу нечем прожать."
+     ]
+    }
+   ]
+  }
+ },
+ "raids": [
+  {
+   "id": "r24",
+   "name": "The Venomous Abyss",
+   "expansion": "Midnight",
+   "season": "Season 2",
+   "current": true,
+   "ptr": false,
+   "bosses": [
+    {
+     "id": "148",
+     "name": "Nek'zali the Soulcoiler",
+     "layers": [
+      {
+       "name": "Арена целиком",
+       "map": "soulcoiler"
+      }
+     ],
+     "trash": [
+      "Raised Armarni",
+      "Latent Cultist",
+      "Echo of Jawae"
+     ],
+     "tactics": null,
+     "guide": null
+    },
+    {
+     "id": "149",
+     "name": "Entombed Sentinels",
+     "layers": [
+      {
+       "name": "Арена целиком",
+       "map": "entombed-sentinels"
+      }
+     ],
+     "trash": [
+      "Blood of Ula'tek",
+      "3 Green 1 Red",
+      "2 Green 2 Red",
+      "3 Red 1 Green",
+      "Wrong move"
+     ],
+     "tactics": null,
+     "guide": null
+    },
+    {
+     "id": "150",
+     "name": "Vashnik the Malignant",
+     "layers": [
+      {
+       "name": "Арена целиком",
+       "map": "vashnik"
+      }
+     ],
+     "trash": [
+      "Clotting Venom",
+      "Burning Venom",
+      "Coagulated Venom",
+      "Desquamating Venom"
+     ],
+     "tactics": null,
+     "guide": null
+    },
+    {
+     "id": "151",
+     "name": "The Lost Explorers",
+     "layers": [
+      {
+       "name": "Арена целиком",
+       "map": "explorers-1"
+      }
+     ],
+     "trash": [
+      "Scrollsage Iku",
+      "Firste Mate Name",
+      "Trader Gebbbo"
+     ],
+     "tactics": null,
+     "guide": null
+    },
+    {
+     "id": "152",
+     "name": "Sszorak",
+     "layers": [
+      {
+       "name": "Арена целиком",
+       "map": "sszorak"
+      }
+     ],
+     "trash": [],
+     "tactics": null,
+     "guide": null
+    },
+    {
+     "id": "153",
+     "name": "The Twin Fangs",
+     "layers": [
+      {
+       "name": "Арена целиком",
+       "map": "twin-fangs-2"
+      }
+     ],
+     "trash": [
+      "Ithraz",
+      "Spawn of Vexhul",
+      "Broodling of Ithraz"
+     ],
+     "tactics": null,
+     "guide": null
+    },
+    {
+     "id": "154",
+     "name": "The Coiled Altar",
+     "layers": [
+      {
+       "name": "Арена целиком",
+       "map": "bargained-crown"
+      }
+     ],
+     "trash": [
+      "Hex lord Malacrass",
+      "Manifistation of Dread",
+      "Abandoned Soulcoiler",
+      "Fragment of Malacrass"
+     ],
+     "tactics": null,
+     "guide": null
+    },
+    {
+     "id": "155",
+     "name": "Ula'tek",
+     "layers": [
+      {
+       "name": "Арена целиком",
+       "map": "ulatek1"
+      },
+      {
+       "name": "Справа",
+       "map": "ulatek-right"
+      },
+      {
+       "name": "Слева",
+       "map": "ulatek-left"
+      },
+      {
+       "name": "Фаза 3: разлом",
+       "map": "ulatek-split"
+      }
+     ],
+     "trash": [
+      "Venomous Birthling",
+      "Blightscale Viper",
+      "Slithering-clutch",
+      "Devourer's Spawn",
+      "Gore Rattle",
+      "Venomous Heart",
+      "Doomscale Warden"
+     ],
+     "tactics": null,
+     "guide": null
+    }
+   ],
+   "locked": []
+  },
+  {
+   "id": "r25",
+   "name": "Tidebound Grotto",
+   "expansion": "Midnight",
+   "season": "Season 2",
+   "current": true,
+   "ptr": false,
+   "bosses": [
+    {
+     "id": "156",
+     "name": "Nymrissa Wavecaller",
+     "layers": [
+      {
+       "name": "Арена",
+       "map": "arena-x"
+      }
+     ],
+     "trash": [
+      "Bubblefin Shorerunner",
+      "Bubblefin Frostscale",
+      "Bubblefin Berserker"
+     ],
+     "tactics": null,
+     "guide": null
+    }
+   ],
+   "locked": []
+  },
+  {
+   "id": "r26",
+   "name": "The Unbinding of Kith’ix",
+   "expansion": "Midnight",
+   "season": "Season 2",
+   "current": false,
+   "ptr": true,
+   "bosses": [
+    {
+     "id": "157",
+     "name": "Kith’ix",
+     "layers": [
+      {
+       "name": "Основная",
+       "map": "kithix"
+      }
+     ],
+     "trash": [
+      "Venomous Hulk",
+      "Voidweaver"
+     ],
+     "tactics": null,
+     "guide": null
+    }
+   ],
+   "locked": []
+  },
+  {
+   "id": "r2",
+   "name": "The Voidspire",
+   "expansion": "Midnight",
+   "season": "Season 1",
+   "current": false,
+   "ptr": false,
+   "bosses": [
+    {
+     "id": "11",
+     "name": "Imperator Averzian",
+     "layers": [
+      {
+       "name": "Основная",
+       "map": "imperator-averzian"
+      },
+      {
+       "name": "Крупно",
+       "map": "close"
+      }
+     ],
+     "trash": [
+      "Abyssal Gatekeeper",
+      "Voidmaw",
+      "Shadowguard Stalwart",
+      "Obscurion Endwalker",
+      "Dark Tear",
+      "Void Rift",
+      "Abyssal Portal",
+      "Voidbound Malus"
+     ],
+     "tactics": null,
+     "guide": null
+    },
+    {
+     "id": "12",
+     "name": "Vorasius",
+     "layers": [
+      {
+       "name": "Основная",
+       "map": "vorasius"
+      },
+      {
+       "name": "Крупно",
+       "map": "vorasius-close"
+      }
+     ],
+     "trash": [
+      "Blistercreep"
+     ],
+     "tactics": null,
+     "guide": null
+    },
+    {
+     "id": "13",
+     "name": "Fallen-King Salhadaar",
+     "layers": [
+      {
+       "name": "Основная",
+       "map": "fallen-king-salhadaar"
+      },
+      {
+       "name": "Крупно",
+       "map": "close-2"
+      }
+     ],
+     "trash": [
+      "Concentrated Void",
+      "Fractured Image"
+     ],
+     "tactics": null,
+     "guide": null
+    },
+    {
+     "id": "14",
+     "name": "Vaelgor & Ezzorak",
+     "layers": [
+      {
+       "name": "Основная",
+       "map": "vaelgor-ezzorak"
+      },
+      {
+       "name": "Крупно",
+       "map": "close-3"
+      }
+     ],
+     "trash": [
+      "Ezzorak"
+     ],
+     "tactics": null,
+     "guide": null
+    },
+    {
+     "id": "15",
+     "name": "Lightblinded Vanguard",
+     "layers": [
+      {
+       "name": "Основная",
+       "map": "lighttblinded-vanguard"
+      }
+     ],
+     "trash": [
+      "General Amias Bellamy",
+      "Commander Venel Lightblood"
+     ],
+     "tactics": null,
+     "guide": null
+    },
+    {
+     "id": "16",
+     "name": "Crown of the Cosmos",
+     "layers": [
+      {
+       "name": "Основная",
+       "map": "cosmos"
+      },
+      {
+       "name": "Крупно",
+       "map": "close-4"
+      }
+     ],
+     "trash": [
+      "Morium",
+      "Demiar",
+      "Vorelus"
+     ],
+     "tactics": null,
+     "guide": null
+    }
+   ],
+   "locked": []
+  },
+  {
+   "id": "r4",
+   "name": "March on Quel'Danas",
+   "expansion": "Midnight",
+   "season": "Season 1",
+   "current": false,
+   "ptr": false,
+   "bosses": [
+    {
+     "id": "17",
+     "name": "Belo'ren, Child of Al'ar",
+     "layers": [
+      {
+       "name": "Основная",
+       "map": "bolren-child-of-alar"
+      }
+     ],
+     "trash": [
+      "Light Ember",
+      "Void Ember",
+      "Stage Two: Ashen Shell"
+     ],
+     "tactics": null,
+     "guide": null
+    },
+    {
+     "id": "18",
+     "name": "Midnight Falls",
+     "layers": [
+      {
+       "name": "Основная",
+       "map": "midnight-falls"
+      },
+      {
+       "name": "Интермиссия",
+       "map": "midnight-falls-intermission"
+      },
+      {
+       "name": "Фаза 2",
+       "map": "midnight-falls-p2"
+      },
+      {
+       "name": "Фаза 3: соки",
+       "map": "midnight-falls-phase3-soaks"
+      }
+     ],
+     "trash": [
+      "Midnight Crystal",
+      "Dusk Crystal",
+      "Dawn Crystal",
+      "Cross-note",
+      "Circle-note",
+      "Diamond-note",
+      "T-note",
+      "Trinagle-note"
+     ],
+     "tactics": null,
+     "guide": null
+    }
+   ],
+   "locked": []
+  },
+  {
+   "id": "r3",
+   "name": "The Dreamrift",
+   "expansion": "Midnight",
+   "season": "Season 1",
+   "current": false,
+   "ptr": false,
+   "bosses": [
+    {
+     "id": "9",
+     "name": "Chimaerus the Undreamt God",
+     "layers": [
+      {
+       "name": "Основная",
+       "map": "dreamrift"
+      },
+      {
+       "name": "Крупно",
+       "map": "phase-close"
+      }
+     ],
+     "trash": [
+      "Colossal Horror",
+      "Haunting Essence",
+      "Swarming Shade"
+     ],
+     "tactics": null,
+     "guide": null
+    }
+   ],
+   "locked": []
+  },
+  {
+   "id": "r23",
+   "name": "Sporefall",
+   "expansion": "Midnight",
+   "season": "Season 1",
+   "current": false,
+   "ptr": false,
+   "bosses": [
+    {
+     "id": "147",
+     "name": "Rotmire",
+     "layers": [
+      {
+       "name": "Основная",
+       "map": "rotmire-arena"
+      },
+      {
+       "name": "Основная 2",
+       "map": "sporefall-new"
+      }
+     ],
+     "trash": [
+      "Sporecap",
+      "Shroomling",
+      "Fungling",
+      "Sporecap (Dead)",
+      "Fungling (Dead)",
+      "Shroomling (Dead)",
+      "Shroom"
+     ],
+     "tactics": null,
+     "guide": null
+    }
+   ],
+   "locked": []
+  },
+  {
+   "id": "r1",
+   "name": "Manaforge Omega",
+   "expansion": "The War Within",
+   "season": "Season 3",
+   "current": false,
+   "ptr": false,
+   "bosses": [
+    {
+     "id": "1",
+     "name": "Plexus Sentinel",
+     "layers": [
+      {
+       "name": "Основная",
+       "map": "plexus-sentinel-phase-1"
+      }
+     ],
+     "trash": [
+      "Plexus Add"
+     ],
+     "tactics": null,
+     "guide": null
+    },
+    {
+     "id": "2",
+     "name": "Loom'Ithar",
+     "layers": [
+      {
+       "name": "Фаза 1",
+       "map": "loom-ithar-phase-1"
+      }
+     ],
+     "trash": [],
+     "tactics": null,
+     "guide": null
+    },
+    {
+     "id": "3",
+     "name": "Souldbinder Naazindhri",
+     "layers": [
+      {
+       "name": "Фаза 1",
+       "map": "souldbinder-naazindhri-phase-1"
+      }
+     ],
+     "trash": [
+      "Shadow Assassin",
+      "Shadow Mage",
+      "Shadow Phaseblade",
+      "Shadow Reaper",
+      "Unholy Assassin",
+      "Unholy Mage",
+      "Unholy Phaseblade"
+     ],
+     "tactics": null,
+     "guide": null
+    },
+    {
+     "id": "4",
+     "name": "Forgeweaver Araz",
+     "layers": [
+      {
+       "name": "Фаза 1",
+       "map": "forgeweaver-araz-phase-1"
+      }
+     ],
+     "trash": [
+      "Araz Attendant",
+      "Arc Collector"
+     ],
+     "tactics": null,
+     "guide": null
+    },
+    {
+     "id": "5",
+     "name": "The Soul Hunters",
+     "layers": [
+      {
+       "name": "Фаза 1",
+       "map": "the-soul-hunters-phase-1"
+      }
+     ],
+     "trash": [
+      "Bloodwrath",
+      "Duskblaze",
+      "Ilyssa",
+      "Internal Hunger",
+      "Internal Pain",
+      "Internal Within"
+     ],
+     "tactics": null,
+     "guide": null
+    },
+    {
+     "id": "6",
+     "name": "Fractillus",
+     "layers": [
+      {
+       "name": "Фаза 1",
+       "map": "fractilus-phase-1"
+      }
+     ],
+     "trash": [],
+     "tactics": null,
+     "guide": null
+    },
+    {
+     "id": "7",
+     "name": "Nexus-King Salhadaar",
+     "layers": [
+      {
+       "name": "Целиком",
+       "map": "nexus-king-slahadaar-full"
+      },
+      {
+       "name": "Центр",
+       "map": "nexus-king-slahadaar-center"
+      },
+      {
+       "name": "Слева",
+       "map": "nexus-king-slahadaar-left"
+      },
+      {
+       "name": "Справа",
+       "map": "nexus-king-slahadaar-right"
+      }
+     ],
+     "trash": [
+      "Kyvor",
+      "Nexus Titan",
+      "Voidwing",
+      "Xevvos"
+     ],
+     "tactics": null,
+     "guide": null
+    },
+    {
+     "id": "8",
+     "name": "Dimensius, the All-Devouring",
+     "layers": [
+      {
+       "name": "Seat",
+       "map": "dimensius-seat"
+      },
+      {
+       "name": "Entropy",
+       "map": "dimensius-entropy"
+      },
+      {
+       "name": "Conquest",
+       "map": "dimensius-conquest"
+      },
+      {
+       "name": "Heart",
+       "map": "dimensius-heart"
+      }
+     ],
+     "trash": [
+      "Artoshion",
+      "Pargoth",
+      "Living Mass",
+      "Voidwarden",
+      "Nullbinder"
+     ],
+     "tactics": null,
+     "guide": null
+    }
+   ],
+   "locked": []
+  },
+  {
+   "id": "r5",
+   "name": "Karazhan",
+   "expansion": "Burning Crusade",
+   "season": null,
+   "current": false,
+   "ptr": false,
+   "bosses": [
+    {
+     "id": "20",
+     "name": "Attumen the Huntsman",
+     "layers": [
+      {
+       "name": "Арена целиком",
+       "map": "full-arena-1768237075853"
+      }
+     ],
+     "trash": [
+      "Midnight"
+     ],
+     "tactics": null,
+     "guide": null
+    },
+    {
+     "id": "21",
+     "name": "Moroes",
+     "layers": [
+      {
+       "name": "Арена целиком",
+       "map": "full-arena-1768237075859"
+      }
+     ],
+     "trash": [],
+     "tactics": null,
+     "guide": null
+    },
+    {
+     "id": "22",
+     "name": "Maiden of Virtue",
+     "layers": [
+      {
+       "name": "Арена целиком",
+       "map": "full-arena-1768237075864"
+      }
+     ],
+     "trash": [],
+     "tactics": null,
+     "guide": null
+    },
+    {
+     "id": "23",
+     "name": "Opera Hall",
+     "layers": [
+      {
+       "name": "Арена целиком",
+       "map": "full-arena-1768237075868"
+      }
+     ],
+     "trash": [
+      "Romulo",
+      "Julianne",
+      "The Crone"
+     ],
+     "tactics": null,
+     "guide": null
+    },
+    {
+     "id": "24",
+     "name": "The Curator",
+     "layers": [
+      {
+       "name": "Арена целиком",
+       "map": "full-arena-1768237075874"
+      }
+     ],
+     "trash": [],
+     "tactics": null,
+     "guide": null
+    },
+    {
+     "id": "25",
+     "name": "Shade of Aran",
+     "layers": [
+      {
+       "name": "Арена целиком",
+       "map": "full-arena-1768237075880"
+      }
+     ],
+     "trash": [],
+     "tactics": null,
+     "guide": null
+    },
+    {
+     "id": "26",
+     "name": "Terestian Illhoof",
+     "layers": [
+      {
+       "name": "Арена целиком",
+       "map": "391827"
+      }
+     ],
+     "trash": [],
+     "tactics": null,
+     "guide": null
+    },
+    {
+     "id": "27",
+     "name": "Netherspite",
+     "layers": [
+      {
+       "name": "Арена целиком",
+       "map": "full-arena-1768237075885"
+      }
+     ],
+     "trash": [],
+     "tactics": null,
+     "guide": null
+    },
+    {
+     "id": "28",
+     "name": "Chess Event",
+     "layers": [
+      {
+       "name": "Арена целиком",
+       "map": "full-arena-1768237075889"
+      }
+     ],
+     "trash": [],
+     "tactics": null,
+     "guide": null
+    },
+    {
+     "id": "29",
+     "name": "Prince Malchezaar",
+     "layers": [
+      {
+       "name": "Арена целиком",
+       "map": "full-arena-1768237075894"
+      }
+     ],
+     "trash": [],
+     "tactics": null,
+     "guide": null
+    }
+   ],
+   "locked": []
+  },
+  {
+   "id": "r6",
+   "name": "Gruul's Lair",
+   "expansion": "Burning Crusade",
+   "season": null,
+   "current": false,
+   "ptr": false,
+   "bosses": [
+    {
+     "id": "30",
+     "name": "High King Maulgar",
+     "layers": [
+      {
+       "name": "Арена целиком",
+       "map": "full-arena-1768237133210"
+      }
+     ],
+     "trash": [
+      "Kiggler the Crazed",
+      "Blindeye the Seer",
+      "Olm the Summoner",
+      "Krosh Firehand"
+     ],
+     "tactics": null,
+     "guide": null
+    },
+    {
+     "id": "31",
+     "name": "Gruul the Dragonkiller",
+     "layers": [
+      {
+       "name": "Арена целиком",
+       "map": "full-arena-1768237133217"
+      }
+     ],
+     "trash": [],
+     "tactics": null,
+     "guide": null
+    }
+   ],
+   "locked": []
+  },
+  {
+   "id": "r7",
+   "name": "Magtheridon's Lair",
+   "expansion": "Burning Crusade",
+   "season": null,
+   "current": false,
+   "ptr": false,
+   "bosses": [
+    {
+     "id": "32",
+     "name": "Magtheridon",
+     "layers": [
+      {
+       "name": "Арена целиком",
+       "map": "full-arena-1768237148925"
+      }
+     ],
+     "trash": [
+      "Hellfire Channeler"
+     ],
+     "tactics": null,
+     "guide": null
+    }
+   ],
+   "locked": []
+  },
+  {
+   "id": "r8",
+   "name": "Serpentshrine Cavern",
+   "expansion": "Burning Crusade",
+   "season": null,
+   "current": false,
+   "ptr": false,
+   "bosses": [
+    {
+     "id": "33",
+     "name": "Hydross the Unstable",
+     "layers": [
+      {
+       "name": "Арена целиком",
+       "map": "full-arena-1768237204012"
+      }
+     ],
+     "trash": [],
+     "tactics": null,
+     "guide": null
+    },
+    {
+     "id": "34",
+     "name": "The Lurker Below",
+     "layers": [
+      {
+       "name": "Арена целиком",
+       "map": "full-arena-1768237204019"
+      }
+     ],
+     "trash": [],
+     "tactics": null,
+     "guide": null
+    },
+    {
+     "id": "35",
+     "name": "Leotheras the Blind",
+     "layers": [
+      {
+       "name": "Арена целиком",
+       "map": "full-arena-1768237204025"
+      }
+     ],
+     "trash": [
+      "Shadow of Leotheras"
+     ],
+     "tactics": null,
+     "guide": null
+    },
+    {
+     "id": "36",
+     "name": "Fathom-Lord Karathress",
+     "layers": [
+      {
+       "name": "Арена целиком",
+       "map": "full-arena-1768237204031"
+      }
+     ],
+     "trash": [
+      "Fathom-Guard Sharkkis",
+      "Fathom-Guard Tidalvess",
+      "Fathom-Guard Caribdis"
+     ],
+     "tactics": null,
+     "guide": null
+    },
+    {
+     "id": "37",
+     "name": "Morogrim Tidewalker",
+     "layers": [
+      {
+       "name": "Арена целиком",
+       "map": "full-arena-1768237204040"
+      }
+     ],
+     "trash": [],
+     "tactics": null,
+     "guide": null
+    },
+    {
+     "id": "38",
+     "name": "Lady Vashj",
+     "layers": [
+      {
+       "name": "Арена целиком",
+       "map": "full-arena-1768237204047"
+      }
+     ],
+     "trash": [],
+     "tactics": null,
+     "guide": null
+    }
+   ],
+   "locked": []
+  },
+  {
+   "id": "r9",
+   "name": "The Eye",
+   "expansion": "Burning Crusade",
+   "season": null,
+   "current": false,
+   "ptr": false,
+   "bosses": [
+    {
+     "id": "39",
+     "name": "Al'ar",
+     "layers": [
+      {
+       "name": "Арена целиком",
+       "map": "full-arena-1768237251927"
+      }
+     ],
+     "trash": [],
+     "tactics": null,
+     "guide": null
+    },
+    {
+     "id": "40",
+     "name": "Void Reaver",
+     "layers": [
+      {
+       "name": "Арена целиком",
+       "map": "full-arena-1768237251933"
+      }
+     ],
+     "trash": [],
+     "tactics": null,
+     "guide": null
+    },
+    {
+     "id": "41",
+     "name": "High Astromancer Solarian",
+     "layers": [
+      {
+       "name": "Арена целиком",
+       "map": "full-arena-1768237251939"
+      }
+     ],
+     "trash": [],
+     "tactics": null,
+     "guide": null
+    },
+    {
+     "id": "42",
+     "name": "Kael'thas Sunstrider",
+     "layers": [
+      {
+       "name": "Арена целиком",
+       "map": "full-arena-1768237251944"
+      }
+     ],
+     "trash": [
+      "Thaladred the Darkener",
+      "Lord Sanguinar",
+      "Grand Astromancer Capernian",
+      "Master Engineer Telonicus"
+     ],
+     "tactics": null,
+     "guide": null
+    }
+   ],
+   "locked": []
+  },
+  {
+   "id": "r10",
+   "name": "The Battle for Mount Hyjal",
+   "expansion": "Burning Crusade",
+   "season": null,
+   "current": false,
+   "ptr": false,
+   "bosses": [
+    {
+     "id": "43",
+     "name": "Rage Winterchill",
+     "layers": [
+      {
+       "name": "Арена целиком",
+       "map": "full-arena-1768237580694"
+      }
+     ],
+     "trash": [],
+     "tactics": null,
+     "guide": null
+    },
+    {
+     "id": "44",
+     "name": "Anetheron",
+     "layers": [
+      {
+       "name": "Арена целиком",
+       "map": "full-arena-1768237580694"
+      }
+     ],
+     "trash": [],
+     "tactics": null,
+     "guide": null
+    },
+    {
+     "id": "45",
+     "name": "Kaz'rogal",
+     "layers": [
+      {
+       "name": "Арена целиком",
+       "map": "full-arena-1768237580704"
+      }
+     ],
+     "trash": [],
+     "tactics": null,
+     "guide": null
+    },
+    {
+     "id": "46",
+     "name": "Azgalor",
+     "layers": [
+      {
+       "name": "Арена целиком",
+       "map": "full-arena-1768237580704"
+      }
+     ],
+     "trash": [],
+     "tactics": null,
+     "guide": null
+    },
+    {
+     "id": "47",
+     "name": "Archimonde",
+     "layers": [
+      {
+       "name": "Арена целиком",
+       "map": "full-arena-1768237411781"
+      }
+     ],
+     "trash": [],
+     "tactics": null,
+     "guide": null
+    }
+   ],
+   "locked": []
+  },
+  {
+   "id": "r11",
+   "name": "Black Temple",
+   "expansion": "Burning Crusade",
+   "season": null,
+   "current": false,
+   "ptr": false,
+   "bosses": [
+    {
+     "id": "48",
+     "name": "High Warlord Naj'entus",
+     "layers": [
+      {
+       "name": "Арена целиком",
+       "map": "full-arena-1768239815701"
+      }
+     ],
+     "trash": [],
+     "tactics": null,
+     "guide": null
+    },
+    {
+     "id": "49",
+     "name": "Supremus",
+     "layers": [
+      {
+       "name": "Арена целиком",
+       "map": "full-arena-1768239815707"
+      }
+     ],
+     "trash": [],
+     "tactics": null,
+     "guide": null
+    },
+    {
+     "id": "50",
+     "name": "Shade of Akama",
+     "layers": [
+      {
+       "name": "Арена целиком",
+       "map": "full-arena-1768239815710"
+      }
+     ],
+     "trash": [
+      "Ashtongue Channeler",
+      "Ashtongue Spiritbinder",
+      "Ashtongue Rogue",
+      "Ashtongue Defender",
+      "Ashtongue Elementalist",
+      "Akama"
+     ],
+     "tactics": null,
+     "guide": null
+    },
+    {
+     "id": "51",
+     "name": "Teron Gorefiend",
+     "layers": [
+      {
+       "name": "Арена целиком",
+       "map": "full-arena-1768239815715"
+      }
+     ],
+     "trash": [
+      "Shadowy Construct",
+      "Vengeful Spirit"
+     ],
+     "tactics": null,
+     "guide": null
+    },
+    {
+     "id": "52",
+     "name": "Gurtogg Bloodboil",
+     "layers": [
+      {
+       "name": "Арена целиком",
+       "map": "full-arena-1768239815720"
+      }
+     ],
+     "trash": [],
+     "tactics": null,
+     "guide": null
+    },
+    {
+     "id": "53",
+     "name": "Reliquary of Souls",
+     "layers": [
+      {
+       "name": "Арена целиком",
+       "map": "full-arena-1768239815726"
+      }
+     ],
+     "trash": [
+      "Essence of Desire",
+      "Essence of Anger",
+      "Enslaved Soul"
+     ],
+     "tactics": null,
+     "guide": null
+    },
+    {
+     "id": "54",
+     "name": "Mother Shahraz",
+     "layers": [
+      {
+       "name": "Арена целиком",
+       "map": "full-arena-1768239815732"
+      }
+     ],
+     "trash": [],
+     "tactics": null,
+     "guide": null
+    },
+    {
+     "id": "55",
+     "name": "The Illidari Council",
+     "layers": [
+      {
+       "name": "Арена целиком",
+       "map": "full-arena-1768239815737"
+      }
+     ],
+     "trash": [
+      "High Nethermancer Zerevor",
+      "Lady Malande",
+      "Veras Darkshadow"
+     ],
+     "tactics": null,
+     "guide": null
+    },
+    {
+     "id": "56",
+     "name": "Illidan Stormrage",
+     "layers": [
+      {
+       "name": "Арена целиком",
+       "map": "full-arena-1768239815742"
+      }
+     ],
+     "trash": [
+      "Maiev Shadowsong",
+      "Flame of Azzinoth"
+     ],
+     "tactics": null,
+     "guide": null
+    }
+   ],
+   "locked": []
+  },
+  {
+   "id": "r12",
+   "name": "Sunwell Plateau",
+   "expansion": "Burning Crusade",
+   "season": null,
+   "current": false,
+   "ptr": false,
+   "bosses": [
+    {
+     "id": "57",
+     "name": "Kalecgos",
+     "layers": [
+      {
+       "name": "Арена целиком",
+       "map": "full-arena-1768237492041"
+      }
+     ],
+     "trash": [
+      "Sathrovarr the Corruptor"
+     ],
+     "tactics": null,
+     "guide": null
+    },
+    {
+     "id": "58",
+     "name": "Brutallus",
+     "layers": [
+      {
+       "name": "Арена целиком",
+       "map": "full-arena-1768237492048"
+      }
+     ],
+     "trash": [],
+     "tactics": null,
+     "guide": null
+    },
+    {
+     "id": "59",
+     "name": "Felmyst",
+     "layers": [
+      {
+       "name": "Арена целиком",
+       "map": "full-arena-1768237492048"
+      }
+     ],
+     "trash": [],
+     "tactics": null,
+     "guide": null
+    },
+    {
+     "id": "60",
+     "name": "The Eredar Twins",
+     "layers": [
+      {
+       "name": "Арена целиком",
+       "map": "full-arena-1768237492058"
+      }
+     ],
+     "trash": [
+      "Lady Sacrolash"
+     ],
+     "tactics": null,
+     "guide": null
+    },
+    {
+     "id": "61",
+     "name": "M'uru",
+     "layers": [
+      {
+       "name": "Арена целиком",
+       "map": "full-arena-1768237492063"
+      }
+     ],
+     "trash": [
+      "Entropius"
+     ],
+     "tactics": null,
+     "guide": null
+    },
+    {
+     "id": "62",
+     "name": "Kil'jaeden",
+     "layers": [
+      {
+       "name": "Арена целиком",
+       "map": "full-arena-1768237492068"
+      }
+     ],
+     "trash": [],
+     "tactics": null,
+     "guide": null
+    }
+   ],
+   "locked": []
+  },
+  {
+   "id": "deep-bastion",
+   "name": "Глубинный бастион",
+   "kind": "raid",
+   "killed": 1,
+   "bosses": [
+    {
+     "id": "gatekeeper",
+     "name": "Хранитель врат",
+     "tactics": "t1",
+     "guide": "g1",
+     "demo": true,
+     "layers": [],
+     "trash": []
+    },
+    {
+     "id": "deep-warden",
+     "name": "Страж глубин",
+     "tactics": "t2",
+     "guide": "g1",
+     "demo": true,
+     "layers": [],
+     "trash": []
+    },
+    {
+     "id": "light-eater",
+     "name": "Пожиратель света",
+     "tactics": "t3",
+     "guide": "g1",
+     "demo": true,
+     "layers": [],
+     "trash": []
+    },
+    {
+     "id": "shadow-council",
+     "name": "Совет теней",
+     "tactics": "t4",
+     "guide": "g1",
+     "demo": true,
+     "layers": [],
+     "trash": []
+    }
+   ],
+   "locked": [
+    "Плетущая бездну",
+    "Кузнец рун",
+    "Двуликий оракул",
+    "Владыка бастиона"
+   ],
+   "expansion": "Демо",
+   "season": "пример",
+   "demo": true
+  }
+ ]
 }

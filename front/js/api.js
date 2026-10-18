@@ -43,7 +43,7 @@ function writeLS(key, value) {
 
 function guildSeed() {
   return [{
-    id: 'g-sample', key: '0:1', name: 'Прогресс-тактика гильдии', updated: Date.now() - 86400000,
+    id: 'g-sample', key: 'deep-bastion:deep-warden', name: 'Прогресс-тактика гильдии', updated: Date.now() - 86400000,
     owner: { id: 'u2', name: 'Максим', initials: 'МК' },
     board: {
       strokes: [], pins: [], groups: [], moved: {},

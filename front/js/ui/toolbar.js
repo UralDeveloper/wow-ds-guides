@@ -1,5 +1,6 @@
 import { esc, COLORS, COLOR_NAMES, ROLES } from '../util.js';
 import { I } from './icons.js';
+import * as V from '../view.js';
 
 const TOOLS = [
   ['pointer', 'Указатель — перетаскивать метки, точки, подписи'],
@@ -14,7 +15,7 @@ const TOOLS = [
 const ARROWS = [['end', '→', 'В конце'], ['both', '↔', 'С двух сторон'], ['none', '—', 'Без стрелки']];
 
 export function renderToolbar(s) {
-  const phases = s.content.phases;
+  const phases = V.phases(s);
   const isRL = s.mode === 'rl';
 
   const tools = `
@@ -78,36 +79,41 @@ export function renderToolbar(s) {
 }
 
 function bgLabel(s) {
-  const m = s.maps.find((x) => x.id === s.board.bg);
-  return m ? `<span class="bg-cur">${esc(m.name)}</span>` : 'Фон';
+  const m = V.activeMap(s);
+  return m ? `<span class="bg-cur">${esc(m.name)}</span>` : 'Фон: схема';
 }
 
 function bgPanel(s) {
   const q = (s.bgQuery || '').trim().toLowerCase();
-  const list = s.maps.filter((m) => !q || m.name.toLowerCase().includes(q));
+  const list = s.maps.filter((m) => !q || (m.name + ' ' + m.group + ' ' + m.expansion).toLowerCase().includes(q));
+  const cur = V.activeMap(s);
   const card = (m) => `
-    <button class="bgcard ${s.board.bg === m.id ? 'on' : ''}" data-act="bg" data-arg="${esc(m.id)}" title="${esc(m.name)}">
+    <button class="bgcard ${cur && cur.id === m.id ? 'on' : ''}" data-act="bg" data-arg="${esc(m.id)}" title="${esc(m.name)}">
       <img src="maps/thumbs/${esc(m.id)}.webp" alt="" loading="lazy" width="180" height="${Math.round((180 * m.h) / m.w)}">
       <span>${esc(m.name)}</span>
     </button>`;
-  const named = list.filter((m) => m.group === 'named');
-  const arenas = list.filter((m) => m.group !== 'named');
+  const groups = [];
+  list.forEach((m) => {
+    const g = groups[groups.length - 1];
+    if (g && g.name === m.group) g.items.push(m); else groups.push({ name: m.group, exp: m.expansion, items: [m] });
+  });
   return `
     <div class="subpanel bgpanel">
       <div class="bg-head">
-        <input class="pinput" type="search" data-input="bgQuery" value="${esc(s.bgQuery || '')}" placeholder="Поиск: Dimensius, Vorasius…" aria-label="Поиск фона">
+        <input class="pinput" type="search" data-input="bgQuery" value="${esc(s.bgQuery || '')}" placeholder="Босс, рейд или дополнение" aria-label="Поиск фона">
         <span class="muted" style="font-size:12px">${list.length} из ${s.maps.length}</span>
         <button class="tool" data-act="bg-toggle" aria-label="Закрыть">${I.close}</button>
       </div>
       <div class="bg-scroll">
         <div class="bg-grid">
-          <button class="bgcard schema ${!s.board.bg ? 'on' : ''}" data-act="bg" data-arg="">
+          <button class="bgcard schema ${!cur ? 'on' : ''}" data-act="bg" data-arg="none">
             <span class="bg-schema-thumb" aria-hidden="true"></span>
             <span>Схема (без фона)</span>
           </button>
-          ${named.map(card).join('')}
         </div>
-        ${arenas.length ? `<div class="dd-group" style="padding-left:2px">Арены без названия</div><div class="bg-grid">${arenas.map(card).join('')}</div>` : ''}
+        ${groups.map((g) => `
+          <div class="dd-group" style="padding-left:2px">${esc(g.name)}<span class="muted" style="text-transform:none;letter-spacing:0"> · ${esc(g.exp)}</span></div>
+          <div class="bg-grid">${g.items.map(card).join('')}</div>`).join('')}
         ${list.length ? '' : '<div class="empty-note">Ничего не найдено</div>'}
       </div>
     </div>`;

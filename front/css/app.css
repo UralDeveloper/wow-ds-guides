@@ -291,3 +291,22 @@ input { font: inherit; }
 .bgcard img, .bg-schema-thumb { display: block; width: 100%; height: auto; aspect-ratio: 16 / 9; object-fit: cover; border-radius: 6px; background: #0D121B; }
 .bgcard span:last-child { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 .bg-schema-thumb { background: radial-gradient(circle at 50% 50%, #FF6B5E 0 6%, transparent 7%), radial-gradient(circle at 50% 50%, transparent 0 30%, #2A3448 31% 33%, #121925 34% 40%, transparent 41%), #0D121B; }
+
+/* ===== Слои карты, линейка, пустые состояния ===== */
+.map { container-type: inline-size; }
+.map-chrome { position: absolute; inset: 0; pointer-events: none; z-index: 4; }
+.layers-bar { position: absolute; top: 12px; left: 12px; display: flex; flex-wrap: wrap; gap: 2px; padding: 4px; border-radius: var(--r-lg); background: rgba(11, 14, 20, .82); border: 1px solid #222B3B; pointer-events: auto; max-width: calc(100% - 24px); backdrop-filter: blur(6px); }
+.layers-bar .ph { padding: 6px 10px; font-size: 12px; }
+.scalebar { position: absolute; right: 14px; bottom: 14px; display: flex; flex-direction: column; align-items: flex-end; gap: 4px; padding: 6px 8px; border-radius: 8px; background: rgba(11, 14, 20, .7); }
+.sb-line { display: block; height: 8px; border: 2px solid var(--text-strong); border-top: 0; border-radius: 0 0 2px 2px; }
+.sb-text { font-family: var(--font-mono); font-size: 11px; color: var(--text-strong); }
+.vz-live { padding: 2px 6px; border-radius: 6px; background: rgba(11, 14, 20, .8); font-family: var(--font-mono); }
+.tag { display: inline-flex; align-items: center; padding: 2px 7px; border-radius: 6px; font-size: 11px; background: #262E3D; color: #D3D8E1; }
+.tag.cur { background: #3A2E12; color: var(--stack-ink); }
+.tag.ptr { background: #2A2042; color: #C9A0FF; }
+.raidcard .chips { margin-top: 2px; }
+.dd-scroll { max-height: min(60vh, 520px); overflow-y: auto; }
+.dd-opt .tag { flex: none; }
+.empty-card { padding: 16px 18px; border-radius: 14px; background: var(--surface-1); border: 1px dashed var(--line-2); }
+.empty-title { font-size: 15px; font-weight: 600; color: var(--text-strong); margin-bottom: 6px; }
+.empty-card p { margin: 0; font-size: 13px; line-height: 1.55; color: var(--text-2); }

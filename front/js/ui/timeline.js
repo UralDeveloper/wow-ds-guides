@@ -3,6 +3,7 @@ import * as V from '../view.js';
 
 export function renderTimeline(s) {
   const ph = V.phase(s);
+  if (!ph.casts.length) return '';
   return `
     <div class="card" aria-label="Таймлайн способностей">
       <div class="tl-head">

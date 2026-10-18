@@ -7,19 +7,44 @@ export function renderPanel(s) {
   const t = V.tactics(s);
   const g = V.guide(s);
 
+  const r = V.raid(s);
+  const tags = t ? t.tags : [r.season, r.ptr ? 'PTR' : '', b.layers.length ? V.nMaps(b.layers.length) : ''].filter(Boolean);
   const head = `
     <div class="boss-card rise">
-      <div class="eyebrow">Босс ${s.bossIdx + 1} из ${V.totalBosses(s)}</div>
+      <div class="eyebrow">${esc(r.name)} · босс ${s.bossIdx + 1} из ${V.totalBosses(s)}</div>
       <h1>${esc(b.name)}</h1>
-      <p>${esc(t.summary)}</p>
-      <div class="chips">${t.tags.map((x) => `<span class="chip all">${esc(x)}</span>`).join('')}</div>
+      ${t ? `<p>${esc(t.summary)}</p>` : ''}
+      <div class="chips">${tags.map((x) => `<span class="chip all">${esc(x)}</span>`).join('')}</div>
     </div>
     <div class="tabs" role="tablist" aria-label="Раздел">
       <button class="seg ${s.panel === 'tactics' ? 'on' : ''}" data-act="panel" data-arg="tactics" role="tab" aria-selected="${s.panel === 'tactics'}">Тактика</button>
-      <button class="seg ${s.panel === 'guide' ? 'on' : ''}" data-act="panel" data-arg="guide" role="tab" aria-selected="${s.panel === 'guide'}">Гайд <span class="cnt">${g.videos.length + g.sections.length}</span></button>
+      <button class="seg ${s.panel === 'guide' ? 'on' : ''}" data-act="panel" data-arg="guide" role="tab" aria-selected="${s.panel === 'guide'}">Гайд <span class="cnt">${g ? g.videos.length + g.sections.length : 0}</span></button>
     </div>`;
 
-  return head + (s.panel === 'guide' ? guideView(s, b, g) : tacticsView(s, t)) + actions();
+  const body = s.panel === 'guide'
+    ? (g ? guideView(s, b, g) : emptyGuide(s))
+    : (t ? tacticsView(s, t) : emptyTactics(b));
+  return head + body + actions();
+}
+
+function emptyTactics(b) {
+  return `
+    <div class="empty-card rise">
+      <div class="empty-title">Тактика пока не написана</div>
+      <p>Разметьте бой на карте: группы по ролям, маршруты, войдзоны и подписи. Сохраните как план и поделитесь с гильдией.</p>
+      ${b.trash.length ? `
+        <div class="eyebrow" style="margin:12px 0 6px">Существа в бою</div>
+        <div class="chips">${b.trash.map((x) => `<span class="chip all">${esc(x)}</span>`).join('')}</div>` : ''}
+    </div>`;
+}
+
+function emptyGuide(s) {
+  return `
+    <div class="empty-card rise">
+      <div class="empty-title">Гайд пока не добавлен</div>
+      <p>Сюда попадут видео и текстовый разбор боя из справочника.</p>
+      ${s.mode === 'rl' ? '<button class="rk" data-act="add-video" style="margin-top:10px">+ Видео</button>' : ''}
+    </div>`;
 }
 
 function tacticsView(s, t) {

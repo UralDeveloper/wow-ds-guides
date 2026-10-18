@@ -5,10 +5,10 @@ import { planKey } from './view.js';
 // Доска — всё, что пользователь нарисовал поверх схемы. Сохраняется в планах и синхронизируется.
 export const emptyBoard = () => ({
   strokes: [], pins: [], routes: [], vz: [], groups: [], labels: [], moved: {}, history: [],
-  bg: null, // id фона из maps/index.json; null — встроенная схема
+  bg: null, // id фона из maps/index.json; null — карта босса по умолчанию; 'none' — встроенная схема
 });
 
-/** Выбрать фон карты (null — схема). Сохраняется в плане и уходит участникам */
+/** Выбрать фон карты (id, 'none' — схема). Сохраняется в плане и уходит участникам */
 export function setBackground(id) {
   commit((b) => { b.bg = id || null; });
 }
