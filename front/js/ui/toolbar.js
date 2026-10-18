@@ -23,6 +23,8 @@ export function renderToolbar(s) {
         <button class="tool ${s.tool === t ? 'on' : ''}" data-act="tool" data-arg="${t}" aria-label="${title}" title="${title}" aria-pressed="${s.tool === t}">${I[t]}</button>
         ${t === 'route' && s.draft ? '<button class="tool wide done" data-act="route-done">Готово</button>' : ''}`).join('')}
       <span class="sep"></span>
+      <button class="tool wide ${s.bgOpen ? 'on' : ''}" data-act="bg-toggle" title="Фон карты" aria-expanded="${s.bgOpen}">${I.image}${bgLabel(s)}</button>
+      <span class="sep"></span>
       ${Object.keys(COLORS).map((c) => `
         <button class="sw ${s.color === c ? 'on' : ''}" data-act="color" data-arg="${c}" aria-label="${COLOR_NAMES[c]}" title="${COLOR_NAMES[c]}"><span class="dot" style="background:${COLORS[c]}"></span></button>`).join('')}
       <span class="sep"></span>
@@ -71,6 +73,42 @@ export function renderToolbar(s) {
   return `
     <div class="tbar-wrap">
       <div class="tbar-row">${isRL ? tools : viewer}${phaseBar}</div>
-      ${roles}${arrows}
+      ${isRL && s.bgOpen ? bgPanel(s) : ''}${roles}${arrows}
+    </div>`;
+}
+
+function bgLabel(s) {
+  const m = s.maps.find((x) => x.id === s.board.bg);
+  return m ? `<span class="bg-cur">${esc(m.name)}</span>` : 'Фон';
+}
+
+function bgPanel(s) {
+  const q = (s.bgQuery || '').trim().toLowerCase();
+  const list = s.maps.filter((m) => !q || m.name.toLowerCase().includes(q));
+  const card = (m) => `
+    <button class="bgcard ${s.board.bg === m.id ? 'on' : ''}" data-act="bg" data-arg="${esc(m.id)}" title="${esc(m.name)}">
+      <img src="maps/thumbs/${esc(m.id)}.webp" alt="" loading="lazy" width="180" height="${Math.round((180 * m.h) / m.w)}">
+      <span>${esc(m.name)}</span>
+    </button>`;
+  const named = list.filter((m) => m.group === 'named');
+  const arenas = list.filter((m) => m.group !== 'named');
+  return `
+    <div class="subpanel bgpanel">
+      <div class="bg-head">
+        <input class="pinput" type="search" data-input="bgQuery" value="${esc(s.bgQuery || '')}" placeholder="Поиск: Dimensius, Vorasius…" aria-label="Поиск фона">
+        <span class="muted" style="font-size:12px">${list.length} из ${s.maps.length}</span>
+        <button class="tool" data-act="bg-toggle" aria-label="Закрыть">${I.close}</button>
+      </div>
+      <div class="bg-scroll">
+        <div class="bg-grid">
+          <button class="bgcard schema ${!s.board.bg ? 'on' : ''}" data-act="bg" data-arg="">
+            <span class="bg-schema-thumb" aria-hidden="true"></span>
+            <span>Схема (без фона)</span>
+          </button>
+          ${named.map(card).join('')}
+        </div>
+        ${arenas.length ? `<div class="dd-group" style="padding-left:2px">Арены без названия</div><div class="bg-grid">${arenas.map(card).join('')}</div>` : ''}
+        ${list.length ? '' : '<div class="empty-note">Ничего не найдено</div>'}
+      </div>
     </div>`;
 }

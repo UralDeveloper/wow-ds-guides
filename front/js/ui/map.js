@@ -45,13 +45,29 @@ const LAYERS = ['preset', 'zones', 'marks', 'strokes', 'routes', 'points', 'fx',
 let root = null;
 let overlay = null;
 let inputLayer = null;
+let bgLayer = null;
+let bgShown = undefined;
+
+// Фон карты: картинка под всеми слоями. Близкие к 5:3 пропорции заполняют карту, остальные вписываются целиком.
+function updateBackground(s) {
+  const id = s.board.bg || null;
+  if (id === bgShown) return;
+  bgShown = id;
+  const m = id ? s.maps.find((x) => x.id === id) : null;
+  root.classList.toggle('has-bg', !!m);
+  if (!m) { bgLayer.innerHTML = ''; return; }
+  const ratio = m.w / m.h;
+  const fit = ratio > 1.45 && ratio < 1.95 ? 'cover' : 'contain';
+  bgLayer.innerHTML = `<img src="maps/${esc(m.id)}.webp" alt="${esc(m.name)}" style="object-fit:${fit}"><div class="map-dim"></div>`;
+}
 const els = {};
 const cache = {};
 
 export function mountMap(container) {
   container.innerHTML = `
     <div class="map" id="map">
-      ${ARENA}
+      <div class="arena">${ARENA}</div>
+      <div class="layer map-bg" data-bg></div>
       ${LAYERS.map((l) => `<div class="layer" data-layer="${l}"></div>`).join('')}
       <div class="legend">
         <span class="chip tank">Т — танк</span><span class="chip heal">Х — хил</span>
@@ -63,6 +79,7 @@ export function mountMap(container) {
   root = container.querySelector('.map');
   overlay = root.querySelector('.overlay');
   inputLayer = root.querySelector('[data-layer="input"]');
+  bgLayer = root.querySelector('[data-bg]');
   LAYERS.forEach((l) => { els[l] = root.querySelector(`[data-layer="${l}"]`); });
 
   overlay.addEventListener('pointerdown', (e) => onDown(e, overlay));
@@ -81,6 +98,7 @@ function put(name, html) {
 export function updateMap(s) {
   if (!root) return;
   root.classList.toggle('playing', s.playing);
+  updateBackground(s);
   overlay.style.cursor = s.mode === 'viewer' || s.tool === 'ping' ? 'pointer'
     : s.tool === 'pointer' ? (s.drag ? 'grabbing' : 'grab') : 'crosshair';
 

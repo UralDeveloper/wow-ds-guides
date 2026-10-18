@@ -5,7 +5,13 @@ import { planKey } from './view.js';
 // Доска — всё, что пользователь нарисовал поверх схемы. Сохраняется в планах и синхронизируется.
 export const emptyBoard = () => ({
   strokes: [], pins: [], routes: [], vz: [], groups: [], labels: [], moved: {}, history: [],
+  bg: null, // id фона из maps/index.json; null — встроенная схема
 });
+
+/** Выбрать фон карты (null — схема). Сохраняется в плане и уходит участникам */
+export function setBackground(id) {
+  commit((b) => { b.bg = id || null; });
+}
 
 const LIST = { stroke: 'strokes', pin: 'pins', route: 'routes', vz: 'vz', label: 'labels' };
 
@@ -36,5 +42,6 @@ export function clearDrawings() {
 }
 
 export function resetBoard() {
-  commit((b) => Object.assign(b, emptyBoard()));
+  // Фон — это выбор карты, а не рисунок: сброс его не трогает
+  commit((b) => Object.assign(b, emptyBoard(), { bg: b.bg }));
 }

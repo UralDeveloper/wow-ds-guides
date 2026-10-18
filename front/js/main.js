@@ -4,7 +4,7 @@ import * as api from './api.js';
 import * as sync from './sync.js';
 import * as plans from './plans.js';
 import * as play from './play.js';
-import { emptyBoard, undo, clearDrawings, resetBoard } from './board.js';
+import { emptyBoard, undo, clearDrawings, resetBoard, setBackground } from './board.js';
 import { handleMessage, broadcastView, broadcastBoard, announce } from './session.js';
 import { selectTool, finishRoute, setArrow, commitText } from './tools.js';
 import { toast } from './toast.js';
@@ -26,12 +26,16 @@ const app = document.getElementById('app');
 
 async function boot() {
   try {
-    const [auth, content] = await Promise.all([authenticate(), api.loadContent()]);
+    const [auth, content, maps] = await Promise.all([
+      authenticate(),
+      api.loadContent(),
+      fetch('maps/index.json').then((r) => (r.ok ? r.json() : [])).catch(() => []),
+    ]);
     api.setToken(auth.accessToken);
 
     init({
       user: auth.user, room: auth.room, guildId: auth.guildId,
-      content,
+      content, maps, bgOpen: false, bgQuery: '',
       conn: 'connecting', peers: {}, joinedAt: Date.now(),
       mode: 'rl',
       raidIdx: 0, bossIdx: 1, diff: 2, phase: 0, role: 'all',
@@ -154,6 +158,8 @@ const ACTIONS = {
   'plan-share': () => plans.share(),
 
   tool: (a) => selectTool(a),
+  'bg-toggle': () => set({ bgOpen: !get().bgOpen }),
+  bg: (a) => { setBackground(a || null); set({ bgOpen: false }); },
   color: (a) => set({ color: a }),
   undo: () => {
     const s = get();
@@ -187,11 +193,13 @@ app.addEventListener('click', (e) => {
     const s = get();
     if (s.raidOpen || s.planOpen) set({ raidOpen: false, planOpen: false });
   }
+  // галерея фонов закрывается кликом по карте
+  if (e.target.closest('.overlay') && get().bgOpen) set({ bgOpen: false });
 });
 
 app.addEventListener('input', (e) => {
   const key = e.target.dataset && e.target.dataset.input;
-  if (key) set({ [key]: e.target.value }, { silent: true });
+  if (key) set({ [key]: e.target.value }, { silent: key !== 'bgQuery' });
 });
 
 app.addEventListener('keydown', (e) => {
@@ -201,7 +209,7 @@ app.addEventListener('keydown', (e) => {
   }
   if (e.key === 'Escape') {
     const s = get();
-    if (s.raidOpen || s.planOpen) set({ raidOpen: false, planOpen: false });
+    if (s.raidOpen || s.planOpen || s.bgOpen) set({ raidOpen: false, planOpen: false, bgOpen: false });
   }
 });
 

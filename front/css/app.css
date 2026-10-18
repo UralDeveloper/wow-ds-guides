@@ -272,3 +272,22 @@ input { font: inherit; }
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition: none !important; }
 }
+
+/* ===== Фон карты ===== */
+.map-bg img { position: absolute; inset: 0; width: 100%; height: 100%; animation: fadein .4s ease both; }
+.map-dim { position: absolute; inset: 0; background: linear-gradient(rgba(11, 14, 20, .18), rgba(11, 14, 20, .32)); }
+.map.has-bg { background: #05070B; }
+.map.has-bg .arena, .map.has-bg [data-layer="preset"], .map.has-bg .zone { display: none; }
+.bg-cur { max-width: 160px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.bgpanel { flex-direction: column; align-items: stretch; gap: 10px; }
+.bg-head { display: flex; align-items: center; gap: 10px; }
+.bg-head .pinput { max-width: 320px; }
+.bg-head .tool { margin-left: auto; }
+.bg-scroll { max-height: 320px; overflow-y: auto; padding-right: 4px; display: flex; flex-direction: column; gap: 8px; }
+.bg-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 8px; }
+.bgcard { display: flex; flex-direction: column; gap: 6px; padding: 6px; border-radius: var(--r-md); border: 1px solid var(--line); background: var(--surface-2); color: var(--text-2); font-size: 12px; text-align: left; transition: border-color .15s, transform .15s, background .15s; }
+.bgcard:hover { border-color: var(--line-3); color: var(--text-strong); transform: translateY(-1px); }
+.bgcard.on { border-color: var(--acc); background: var(--surface-4); color: var(--text-strong); box-shadow: 0 0 0 1px var(--acc); }
+.bgcard img, .bg-schema-thumb { display: block; width: 100%; height: auto; aspect-ratio: 16 / 9; object-fit: cover; border-radius: 6px; background: #0D121B; }
+.bgcard span:last-child { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.bg-schema-thumb { background: radial-gradient(circle at 50% 50%, #FF6B5E 0 6%, transparent 7%), radial-gradient(circle at 50% 50%, transparent 0 30%, #2A3448 31% 33%, #121925 34% 40%, transparent 41%), #0D121B; }

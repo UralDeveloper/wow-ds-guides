@@ -11,6 +11,8 @@ export const I = {
   text: svg('<path d="M5 6V4h14v2"></path><path d="M12 4v16"></path><path d="M9 20h6"></path>'),
   ping: svg('<circle cx="12" cy="12" r="2.5"></circle><circle cx="12" cy="12" r="6.5"></circle><circle cx="12" cy="12" r="10" stroke-dasharray="2 3"></circle>'),
   zone: svg('<circle cx="12" cy="12" r="9" stroke-dasharray="3 3"></circle><circle cx="12" cy="12" r="4"></circle>'),
+  image: svg('<rect x="3" y="4" width="18" height="16" rx="2"></rect><circle cx="9" cy="10" r="2"></circle><path d="M21 16l-5-5-9 9"></path>'),
+  close: svg('<path d="M6 6l12 12M18 6L6 18"></path>', 16),
   undo: svg('<path d="M9 14 L4 9 L9 4"></path><path d="M4 9h10a6 6 0 0 1 0 12h-3"></path>'),
   trash: svg('<path d="M4 7h16"></path><path d="M10 11v6M14 11v6"></path><path d="M6 7l1 13h10l1-13"></path><path d="M9 7V4h6v3"></path>'),
   trashSm: svg('<path d="M4 7h16"></path><path d="M6 7l1 13h10l1-13"></path><path d="M9 7V4h6v3"></path>', 15),

@@ -1,0 +1,611 @@
+[
+ {
+  "id": "391827",
+  "name": "Арена 391827",
+  "group": "named",
+  "w": 1600,
+  "h": 841
+ },
+ {
+  "id": "entombed-sentinels",
+  "name": "Entombed Sentinels",
+  "group": "named",
+  "w": 1600,
+  "h": 900
+ },
+ {
+  "id": "soulcoiler",
+  "name": "Soulcoiler",
+  "group": "named",
+  "w": 1600,
+  "h": 900
+ },
+ {
+  "id": "sszorak",
+  "name": "Sszorak",
+  "group": "named",
+  "w": 1600,
+  "h": 900
+ },
+ {
+  "id": "twin-fangs-2",
+  "name": "Twin Fangs",
+  "group": "named",
+  "w": 1600,
+  "h": 900
+ },
+ {
+  "id": "bargained-crown",
+  "name": "Bargained Crown",
+  "group": "named",
+  "w": 1600,
+  "h": 900
+ },
+ {
+  "id": "bolren-child-of-alar",
+  "name": "Belo'ren, Child of Al'ar",
+  "group": "named",
+  "w": 1600,
+  "h": 900
+ },
+ {
+  "id": "close",
+  "name": "Крупный план 1",
+  "group": "named",
+  "w": 1301,
+  "h": 732
+ },
+ {
+  "id": "close-2",
+  "name": "Крупный план 2",
+  "group": "named",
+  "w": 1419,
+  "h": 799
+ },
+ {
+  "id": "close-3",
+  "name": "Крупный план 3",
+  "group": "named",
+  "w": 1419,
+  "h": 799
+ },
+ {
+  "id": "close-4",
+  "name": "Крупный план 4",
+  "group": "named",
+  "w": 1419,
+  "h": 799
+ },
+ {
+  "id": "cosmos",
+  "name": "Cosmos",
+  "group": "named",
+  "w": 1600,
+  "h": 900
+ },
+ {
+  "id": "dimensius-conquest",
+  "name": "Dimensius · Conquest",
+  "group": "named",
+  "w": 1394,
+  "h": 784
+ },
+ {
+  "id": "dimensius-entropy",
+  "name": "Dimensius · Entropy",
+  "group": "named",
+  "w": 1394,
+  "h": 784
+ },
+ {
+  "id": "dimensius-heart",
+  "name": "Dimensius · Heart",
+  "group": "named",
+  "w": 1394,
+  "h": 784
+ },
+ {
+  "id": "dimensius-seat",
+  "name": "Dimensius · Seat",
+  "group": "named",
+  "w": 1394,
+  "h": 784
+ },
+ {
+  "id": "dreamrift",
+  "name": "Dreamrift",
+  "group": "named",
+  "w": 1600,
+  "h": 900
+ },
+ {
+  "id": "arena-x",
+  "name": "Арена без названия",
+  "group": "named",
+  "w": 1600,
+  "h": 895
+ },
+ {
+  "id": "explorers-1",
+  "name": "Explorers",
+  "group": "named",
+  "w": 1600,
+  "h": 900
+ },
+ {
+  "id": "fallen-king-salhadaar",
+  "name": "Fallen-King Salhadaar",
+  "group": "named",
+  "w": 1600,
+  "h": 900
+ },
+ {
+  "id": "forgeweaver-araz-phase-1",
+  "name": "Forgeweaver Araz · фаза 1",
+  "group": "named",
+  "w": 1394,
+  "h": 784
+ },
+ {
+  "id": "fractilus-phase-1",
+  "name": "Fractillus · фаза 1",
+  "group": "named",
+  "w": 1394,
+  "h": 784
+ },
+ {
+  "id": "imperator-averzian",
+  "name": "Imperator Averzian",
+  "group": "named",
+  "w": 1600,
+  "h": 900
+ },
+ {
+  "id": "kithix",
+  "name": "Kith'ix",
+  "group": "named",
+  "w": 1600,
+  "h": 900
+ },
+ {
+  "id": "lighttblinded-vanguard",
+  "name": "Lightblinded Vanguard",
+  "group": "named",
+  "w": 1600,
+  "h": 900
+ },
+ {
+  "id": "loom-ithar-phase-1",
+  "name": "Loom'ithar · фаза 1",
+  "group": "named",
+  "w": 1394,
+  "h": 784
+ },
+ {
+  "id": "midnight-falls",
+  "name": "Midnight Falls",
+  "group": "named",
+  "w": 1600,
+  "h": 900
+ },
+ {
+  "id": "midnight-falls-intermission",
+  "name": "Midnight Falls · интермиссия",
+  "group": "named",
+  "w": 1600,
+  "h": 900
+ },
+ {
+  "id": "midnight-falls-p2",
+  "name": "Midnight Falls · фаза 2",
+  "group": "named",
+  "w": 1600,
+  "h": 900
+ },
+ {
+  "id": "midnight-falls-phase3-soaks",
+  "name": "Midnight Falls · фаза 3, соки",
+  "group": "named",
+  "w": 1600,
+  "h": 900
+ },
+ {
+  "id": "nexus-king-slahadaar-center",
+  "name": "Nexus-King Salhadaar · центр",
+  "group": "named",
+  "w": 1394,
+  "h": 784
+ },
+ {
+  "id": "nexus-king-slahadaar-full",
+  "name": "Nexus-King Salhadaar · целиком",
+  "group": "named",
+  "w": 1394,
+  "h": 784
+ },
+ {
+  "id": "nexus-king-slahadaar-left",
+  "name": "Nexus-King Salhadaar · слева",
+  "group": "named",
+  "w": 1394,
+  "h": 784
+ },
+ {
+  "id": "nexus-king-slahadaar-right",
+  "name": "Nexus-King Salhadaar · справа",
+  "group": "named",
+  "w": 1394,
+  "h": 784
+ },
+ {
+  "id": "phase-close",
+  "name": "Фаза, крупный план",
+  "group": "named",
+  "w": 1352,
+  "h": 761
+ },
+ {
+  "id": "plexus-sentinel-phase-1",
+  "name": "Plexus Sentinel · фаза 1",
+  "group": "named",
+  "w": 1394,
+  "h": 784
+ },
+ {
+  "id": "rotmire-arena",
+  "name": "Rotmire",
+  "group": "named",
+  "w": 1600,
+  "h": 900
+ },
+ {
+  "id": "souldbinder-naazindhri-phase-1",
+  "name": "Soulbinder Naazindhri · фаза 1",
+  "group": "named",
+  "w": 1394,
+  "h": 784
+ },
+ {
+  "id": "sporefall-new",
+  "name": "Sporefall",
+  "group": "named",
+  "w": 1600,
+  "h": 838
+ },
+ {
+  "id": "the-soul-hunters-phase-1",
+  "name": "The Soul Hunters · фаза 1",
+  "group": "named",
+  "w": 1394,
+  "h": 784
+ },
+ {
+  "id": "ulatek-split",
+  "name": "Ula'tek · разделение",
+  "group": "named",
+  "w": 1600,
+  "h": 900
+ },
+ {
+  "id": "ulatek1",
+  "name": "Ula'tek",
+  "group": "named",
+  "w": 1600,
+  "h": 900
+ },
+ {
+  "id": "ulatek-left",
+  "name": "Ula'tek · слева",
+  "group": "named",
+  "w": 1600,
+  "h": 781
+ },
+ {
+  "id": "ulatek-right",
+  "name": "Ula'tek · справа",
+  "group": "named",
+  "w": 1600,
+  "h": 781
+ },
+ {
+  "id": "vaelgor-ezzorak",
+  "name": "Vaelgor & Ezzorak",
+  "group": "named",
+  "w": 1600,
+  "h": 900
+ },
+ {
+  "id": "vashnik",
+  "name": "Vashnik",
+  "group": "named",
+  "w": 1600,
+  "h": 1422
+ },
+ {
+  "id": "vorasius",
+  "name": "Vorasius",
+  "group": "named",
+  "w": 1600,
+  "h": 900
+ },
+ {
+  "id": "vorasius-close",
+  "name": "Vorasius · крупный план",
+  "group": "named",
+  "w": 1600,
+  "h": 900
+ },
+ {
+  "id": "full-arena-1768237075853",
+  "name": "Арена 1 · вариант 1",
+  "group": "arena",
+  "w": 1600,
+  "h": 841
+ },
+ {
+  "id": "full-arena-1768237075859",
+  "name": "Арена 1 · вариант 2",
+  "group": "arena",
+  "w": 1600,
+  "h": 841
+ },
+ {
+  "id": "full-arena-1768237075864",
+  "name": "Арена 1 · вариант 3",
+  "group": "arena",
+  "w": 1600,
+  "h": 841
+ },
+ {
+  "id": "full-arena-1768237075868",
+  "name": "Арена 1 · вариант 4",
+  "group": "arena",
+  "w": 1600,
+  "h": 841
+ },
+ {
+  "id": "full-arena-1768237075874",
+  "name": "Арена 1 · вариант 5",
+  "group": "arena",
+  "w": 1600,
+  "h": 841
+ },
+ {
+  "id": "full-arena-1768237075880",
+  "name": "Арена 1 · вариант 6",
+  "group": "arena",
+  "w": 1600,
+  "h": 841
+ },
+ {
+  "id": "full-arena-1768237075885",
+  "name": "Арена 1 · вариант 7",
+  "group": "arena",
+  "w": 1600,
+  "h": 841
+ },
+ {
+  "id": "full-arena-1768237075889",
+  "name": "Арена 1 · вариант 8",
+  "group": "arena",
+  "w": 1600,
+  "h": 841
+ },
+ {
+  "id": "full-arena-1768237075894",
+  "name": "Арена 1 · вариант 9",
+  "group": "arena",
+  "w": 1600,
+  "h": 841
+ },
+ {
+  "id": "full-arena-1768237133210",
+  "name": "Арена 2 · вариант 1",
+  "group": "arena",
+  "w": 1600,
+  "h": 841
+ },
+ {
+  "id": "full-arena-1768237133217",
+  "name": "Арена 2 · вариант 2",
+  "group": "arena",
+  "w": 1600,
+  "h": 841
+ },
+ {
+  "id": "full-arena-1768237148925",
+  "name": "Арена 3",
+  "group": "arena",
+  "w": 1600,
+  "h": 841
+ },
+ {
+  "id": "full-arena-1768237204012",
+  "name": "Арена 4 · вариант 1",
+  "group": "arena",
+  "w": 1600,
+  "h": 841
+ },
+ {
+  "id": "full-arena-1768237204019",
+  "name": "Арена 4 · вариант 2",
+  "group": "arena",
+  "w": 1600,
+  "h": 841
+ },
+ {
+  "id": "full-arena-1768237204025",
+  "name": "Арена 4 · вариант 3",
+  "group": "arena",
+  "w": 1600,
+  "h": 841
+ },
+ {
+  "id": "full-arena-1768237204031",
+  "name": "Арена 4 · вариант 4",
+  "group": "arena",
+  "w": 1600,
+  "h": 841
+ },
+ {
+  "id": "full-arena-1768237204040",
+  "name": "Арена 4 · вариант 5",
+  "group": "arena",
+  "w": 1600,
+  "h": 841
+ },
+ {
+  "id": "full-arena-1768237204047",
+  "name": "Арена 4 · вариант 6",
+  "group": "arena",
+  "w": 1600,
+  "h": 841
+ },
+ {
+  "id": "full-arena-1768237251927",
+  "name": "Арена 5 · вариант 1",
+  "group": "arena",
+  "w": 1600,
+  "h": 841
+ },
+ {
+  "id": "full-arena-1768237251933",
+  "name": "Арена 5 · вариант 2",
+  "group": "arena",
+  "w": 1600,
+  "h": 841
+ },
+ {
+  "id": "full-arena-1768237251939",
+  "name": "Арена 5 · вариант 3",
+  "group": "arena",
+  "w": 1600,
+  "h": 841
+ },
+ {
+  "id": "full-arena-1768237251944",
+  "name": "Арена 5 · вариант 4",
+  "group": "arena",
+  "w": 1600,
+  "h": 841
+ },
+ {
+  "id": "full-arena-1768237411781",
+  "name": "Арена 6",
+  "group": "arena",
+  "w": 1600,
+  "h": 841
+ },
+ {
+  "id": "full-arena-1768237492041",
+  "name": "Арена 7 · вариант 1",
+  "group": "arena",
+  "w": 1600,
+  "h": 841
+ },
+ {
+  "id": "full-arena-1768237492048",
+  "name": "Арена 7 · вариант 2",
+  "group": "arena",
+  "w": 1600,
+  "h": 841
+ },
+ {
+  "id": "full-arena-1768237492058",
+  "name": "Арена 7 · вариант 3",
+  "group": "arena",
+  "w": 1600,
+  "h": 841
+ },
+ {
+  "id": "full-arena-1768237492063",
+  "name": "Арена 7 · вариант 4",
+  "group": "arena",
+  "w": 1600,
+  "h": 841
+ },
+ {
+  "id": "full-arena-1768237492068",
+  "name": "Арена 7 · вариант 5",
+  "group": "arena",
+  "w": 1600,
+  "h": 841
+ },
+ {
+  "id": "full-arena-1768237580694",
+  "name": "Арена 8 · вариант 1",
+  "group": "arena",
+  "w": 1600,
+  "h": 841
+ },
+ {
+  "id": "full-arena-1768237580704",
+  "name": "Арена 8 · вариант 2",
+  "group": "arena",
+  "w": 1600,
+  "h": 841
+ },
+ {
+  "id": "full-arena-1768239815701",
+  "name": "Арена 9 · вариант 1",
+  "group": "arena",
+  "w": 1600,
+  "h": 841
+ },
+ {
+  "id": "full-arena-1768239815707",
+  "name": "Арена 9 · вариант 2",
+  "group": "arena",
+  "w": 1600,
+  "h": 841
+ },
+ {
+  "id": "full-arena-1768239815710",
+  "name": "Арена 9 · вариант 3",
+  "group": "arena",
+  "w": 1600,
+  "h": 841
+ },
+ {
+  "id": "full-arena-1768239815715",
+  "name": "Арена 9 · вариант 4",
+  "group": "arena",
+  "w": 1600,
+  "h": 841
+ },
+ {
+  "id": "full-arena-1768239815720",
+  "name": "Арена 9 · вариант 5",
+  "group": "arena",
+  "w": 1600,
+  "h": 841
+ },
+ {
+  "id": "full-arena-1768239815726",
+  "name": "Арена 9 · вариант 6",
+  "group": "arena",
+  "w": 1600,
+  "h": 841
+ },
+ {
+  "id": "full-arena-1768239815732",
+  "name": "Арена 9 · вариант 7",
+  "group": "arena",
+  "w": 1600,
+  "h": 841
+ },
+ {
+  "id": "full-arena-1768239815737",
+  "name": "Арена 9 · вариант 8",
+  "group": "arena",
+  "w": 1600,
+  "h": 841
+ },
+ {
+  "id": "full-arena-1768239815742",
+  "name": "Арена 9 · вариант 9",
+  "group": "arena",
+  "w": 1600,
+  "h": 841
+ }
+]
