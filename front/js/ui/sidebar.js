@@ -10,7 +10,7 @@ export function renderSidebar(s) {
 
   const opt = (x) => `
     <button class="dd-opt ${x.i === s.raidIdx ? 'on' : ''}" data-act="raid" data-arg="${x.i}" role="option">
-      <span style="flex:1 1 auto;min-width:0">${esc(x.name)}</span>
+      <span style="flex:1 1 auto;min-width:0">${esc(x.name)}${x.nameEn ? `<span class="dd-en">${esc(x.nameEn)}</span>` : ''}</span>
       ${x.current ? '<span class="tag cur">сезон</span>' : ''}${x.ptr ? '<span class="tag ptr">PTR</span>' : ''}
       <span class="mono muted" style="font-size:11px">${V.hasProgress(x) ? `${x.killed}/${x.bosses.length + x.locked.length}` : x.bosses.length}</span>
     </button>`;
@@ -29,6 +29,7 @@ export function renderSidebar(s) {
           <span class="chev">${I.chev}</span>
         </span>
         <span class="raid-name">${esc(r.name)}</span>
+        ${r.nameEn ? `<span class="raid-en">${esc(r.nameEn)}</span>` : ''}
         ${progress ? `
           <span style="display:flex;justify-content:space-between;font-size:12px;color:var(--text-3);margin-bottom:6px">
             <span>Прогресс гильдии</span><span class="mono">${r.killed} / ${total}</span>

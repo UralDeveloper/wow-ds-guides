@@ -24,6 +24,27 @@ LAYER_RU = {
 }
 
 
+# Русские названия рейдов (официальная локализация)
+RAID_RU = {
+    'The Venomous Abyss': 'Отравленная бездна',
+    'Tidebound Grotto': 'Приливный грот',
+    "The Unbinding of Kith’ix": 'Освобождение Кит’икса',
+    'The Voidspire': 'Шпиль Бездны',
+    "March on Quel'Danas": "Марш на Кель'Данас",
+    'The Dreamrift': 'Провал снов',
+    'Sporefall': 'Споропад',
+    'Manaforge Omega': 'Манагорн Омега',
+    'Karazhan': 'Каражан',
+    "Gruul's Lair": 'Логово Груула',
+    "Magtheridon's Lair": 'Логово Магтеридона',
+    'Serpentshrine Cavern': 'Змеиное святилище',
+    'The Eye': 'Око',
+    'The Battle for Mount Hyjal': 'Битва за гору Хиджал',
+    'Black Temple': 'Черный храм',
+    'Sunwell Plateau': 'Плато Солнечного Колодца',
+}
+
+
 def load(name):
     with open(os.path.join(SRC, name), encoding='utf-8') as f:
         return json.load(f)
@@ -61,7 +82,8 @@ def main():
                         label += ' ' + str(used[label])
                     layers.append({'name': label, 'map': src['id']})
                     meta.setdefault(src['id'], {
-                        'boss': clean(b['name']), 'layer': label, 'raid': clean(r['name']),
+                        'boss': clean(b['name']), 'layer': label,
+                        'raid': RAID_RU.get(clean(r['name']), clean(r['name'])), 'raidEn': clean(r['name']),
                         'expansion': exp['name'], 'ow': src['ow'], 'oh': src['oh'],
                         'cal': lay.get('yard_calibration'), 'multi': len(b.get('layers', [])) > 1,
                     })
@@ -73,9 +95,13 @@ def main():
                     'tactics': None,
                     'guide': None,
                 })
+            en = clean(r['name'])
+            if en not in RAID_RU:
+                print('нет русского названия для рейда', en)
             raids.append({
                 'id': 'r' + str(r['id']),
-                'name': clean(r['name']),
+                'name': RAID_RU.get(en, en),
+                'nameEn': en,
                 'expansion': exp['name'],
                 'season': r.get('season_name'),
                 'current': bool(r.get('is_current_season')),
@@ -115,6 +141,7 @@ def main():
         if info:
             entry['name'] = info['boss'] + (' · ' + info['layer'] if info['multi'] else '')
             entry['group'] = info['raid']
+            entry['groupEn'] = info['raidEn']
             entry['expansion'] = info['expansion']
             entry['ow'], entry['oh'] = info['ow'], info['oh']
             if info['cal']:

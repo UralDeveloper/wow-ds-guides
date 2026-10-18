@@ -85,7 +85,7 @@ function bgLabel(s) {
 
 function bgPanel(s) {
   const q = (s.bgQuery || '').trim().toLowerCase();
-  const list = s.maps.filter((m) => !q || (m.name + ' ' + m.group + ' ' + m.expansion).toLowerCase().includes(q));
+  const list = s.maps.filter((m) => !q || (m.name + ' ' + m.group + ' ' + (m.groupEn || '') + ' ' + m.expansion).toLowerCase().includes(q));
   const cur = V.activeMap(s);
   const card = (m) => `
     <button class="bgcard ${cur && cur.id === m.id ? 'on' : ''}" data-act="bg" data-arg="${esc(m.id)}" title="${esc(m.name)}">
@@ -100,7 +100,7 @@ function bgPanel(s) {
   return `
     <div class="subpanel bgpanel">
       <div class="bg-head">
-        <input class="pinput" type="search" data-input="bgQuery" value="${esc(s.bgQuery || '')}" placeholder="Босс, рейд или дополнение" aria-label="Поиск фона">
+        <input class="pinput" type="search" data-input="bgQuery" value="${esc(s.bgQuery || '')}" placeholder="Босс или рейд, можно по-английски" aria-label="Поиск фона">
         <span class="muted" style="font-size:12px">${list.length} из ${s.maps.length}</span>
         <button class="tool" data-act="bg-toggle" aria-label="Закрыть">${I.close}</button>
       </div>
