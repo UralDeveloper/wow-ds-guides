@@ -45,6 +45,51 @@ RAID_RU = {
 }
 
 
+# Русские имена боссов (локализация игры; классические рейды — по известным переводам)
+BOSS_RU = {
+    # Отравленная бездна
+    "Nek'zali the Soulcoiler": "Нек'зали Душительница Душ", 'Entombed Sentinels': 'Погребенные стражи',
+    'Vashnik the Malignant': 'Вашник Тлетворный', 'The Lost Explorers': 'Потерявшиеся исследователи',
+    'Sszorak': 'Ссзорак', 'The Twin Fangs': 'Два Клыка', 'The Coiled Altar': 'Спиральный алтарь', "Ula'tek": "Ула'тек",
+    # Приливный грот, Освобождение Кит'икса
+    'Nymrissa Wavecaller': 'Нимрисса Волногон', 'Kith’ix': 'Кит’икс',
+    # Шпиль Бездны
+    'Imperator Averzian': 'Император Аверзиан', 'Vorasius': 'Ненасытникус', 'Fallen-King Salhadaar': 'Павший король Салхадаар',
+    'Vaelgor & Ezzorak': 'Ваэлгор и Эззорак', 'Lightblinded Vanguard': 'Ослепленный авангард', 'Crown of the Cosmos': 'Корона космоса',
+    # Марш на Кель'Данас, Провал снов, Споропад
+    "Belo'ren, Child of Al'ar": "Бело'рен, Дитя Ал'ара", 'Midnight Falls': 'Торжество Полуночи',
+    'Chimaerus the Undreamt God': 'Химерий, Неприснившийся Бог', 'Rotmire': 'Гнилотоп',
+    # Манагорн Омега
+    'Plexus Sentinel': 'Сплетенный страж', "Loom'Ithar": "Ткан'итар", 'Souldbinder Naazindhri': 'Стражница душ Наазиндри',
+    'Forgeweaver Araz': 'Ткач горна Араз', 'The Soul Hunters': 'Ловцы душ', 'Fractillus': 'Разломий',
+    'Nexus-King Salhadaar': 'Соправитель Салхадаар', 'Dimensius, the All-Devouring': 'Пространствус Всепоглощающий',
+    # Каражан
+    'Attumen the Huntsman': 'Ловчий Аттумен', 'Moroes': 'Мороуз', 'Maiden of Virtue': 'Благочестивая дева',
+    'Opera Hall': 'Оперный театр', 'The Curator': 'Смотритель', 'Shade of Aran': 'Тень Арана',
+    'Terestian Illhoof': 'Терестиан Больное Копыто', 'Netherspite': 'Гнев Пустоты', 'Chess Event': 'Шахматная партия',
+    'Prince Malchezaar': 'Принц Малчезар',
+    # Логово Груула, Логово Магтеридона
+    'High King Maulgar': 'Король Молгар', 'Gruul the Dragonkiller': 'Груул Драконобой', 'Magtheridon': 'Магтеридон',
+    # Змеиное святилище
+    'Hydross the Unstable': 'Гидросс Нестабильный', 'The Lurker Below': 'Скрытень из глубин',
+    'Leotheras the Blind': 'Леотерас Слепец', 'Fathom-Lord Karathress': 'Повелитель глубин Каратресс',
+    'Morogrim Tidewalker': 'Морогрим Волноступ', 'Lady Vashj': 'Леди Вайш',
+    # Око
+    "Al'ar": "Ал'ар", 'Void Reaver': 'Страж Бездны', 'High Astromancer Solarian': 'Верховный звездочет Солариан',
+    "Kael'thas Sunstrider": "Кель'тас Солнечный Скиталец",
+    # Битва за гору Хиджал
+    'Rage Winterchill': 'Лютый Хлад', 'Anetheron': 'Анетерон', "Kaz'rogal": "Каз'рогал", 'Azgalor': 'Азгалор',
+    'Archimonde': 'Архимонд',
+    # Черный храм
+    "High Warlord Naj'entus": "Верховный полководец Надж'ентус", 'Supremus': 'Супремус', 'Shade of Akama': 'Тень Акамы',
+    'Teron Gorefiend': 'Терон Кровожад', 'Gurtogg Bloodboil': 'Гуртогг Кипящая Кровь', 'Reliquary of Souls': 'Реликварий душ',
+    'Mother Shahraz': 'Матушка Шахраз', 'The Illidari Council': 'Совет иллидари', 'Illidan Stormrage': 'Иллидан Ярость Бури',
+    # Плато Солнечного Колодца
+    'Kalecgos': 'Калесгос', 'Brutallus': 'Бруталл', 'Felmyst': 'Пророк Скверны', 'The Eredar Twins': 'Эредарские близнецы',
+    "M'uru": "М'ару", "Kil'jaeden": "Кил'джеден",
+}
+
+
 def load(name):
     with open(os.path.join(SRC, name), encoding='utf-8') as f:
         return json.load(f)
@@ -82,14 +127,18 @@ def main():
                         label += ' ' + str(used[label])
                     layers.append({'name': label, 'map': src['id']})
                     meta.setdefault(src['id'], {
-                        'boss': clean(b['name']), 'layer': label,
+                        'boss': BOSS_RU.get(clean(b['name']), clean(b['name'])), 'bossEn': clean(b['name']), 'layer': label,
                         'raid': RAID_RU.get(clean(r['name']), clean(r['name'])), 'raidEn': clean(r['name']),
                         'expansion': exp['name'], 'ow': src['ow'], 'oh': src['oh'],
                         'cal': lay.get('yard_calibration'), 'multi': len(b.get('layers', [])) > 1,
                     })
+                ben = clean(b['name'])
+                if ben not in BOSS_RU:
+                    print('нет русского имени для босса', ben)
                 bosses.append({
                     'id': str(b['id']),
-                    'name': clean(b['name']),
+                    'name': BOSS_RU.get(ben, ben),
+                    'nameEn': ben,
                     'layers': layers,
                     'trash': [clean(t['name']) for t in b.get('trash', [])],
                     'tactics': None,
@@ -142,6 +191,7 @@ def main():
             entry['name'] = info['boss'] + (' · ' + info['layer'] if info['multi'] else '')
             entry['group'] = info['raid']
             entry['groupEn'] = info['raidEn']
+            entry['nameEn'] = info['bossEn']
             entry['expansion'] = info['expansion']
             entry['ow'], entry['oh'] = info['ow'], info['oh']
             if info['cal']:

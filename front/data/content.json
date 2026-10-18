@@ -625,7 +625,8 @@
    "bosses": [
     {
      "id": "148",
-     "name": "Nek'zali the Soulcoiler",
+     "name": "Нек'зали Душительница Душ",
+     "nameEn": "Nek'zali the Soulcoiler",
      "layers": [
       {
        "name": "Арена целиком",
@@ -642,7 +643,8 @@
     },
     {
      "id": "149",
-     "name": "Entombed Sentinels",
+     "name": "Погребенные стражи",
+     "nameEn": "Entombed Sentinels",
      "layers": [
       {
        "name": "Арена целиком",
@@ -661,7 +663,8 @@
     },
     {
      "id": "150",
-     "name": "Vashnik the Malignant",
+     "name": "Вашник Тлетворный",
+     "nameEn": "Vashnik the Malignant",
      "layers": [
       {
        "name": "Арена целиком",
@@ -679,7 +682,8 @@
     },
     {
      "id": "151",
-     "name": "The Lost Explorers",
+     "name": "Потерявшиеся исследователи",
+     "nameEn": "The Lost Explorers",
      "layers": [
       {
        "name": "Арена целиком",
@@ -696,7 +700,8 @@
     },
     {
      "id": "152",
-     "name": "Sszorak",
+     "name": "Ссзорак",
+     "nameEn": "Sszorak",
      "layers": [
       {
        "name": "Арена целиком",
@@ -709,7 +714,8 @@
     },
     {
      "id": "153",
-     "name": "The Twin Fangs",
+     "name": "Два Клыка",
+     "nameEn": "The Twin Fangs",
      "layers": [
       {
        "name": "Арена целиком",
@@ -726,7 +732,8 @@
     },
     {
      "id": "154",
-     "name": "The Coiled Altar",
+     "name": "Спиральный алтарь",
+     "nameEn": "The Coiled Altar",
      "layers": [
       {
        "name": "Арена целиком",
@@ -744,7 +751,8 @@
     },
     {
      "id": "155",
-     "name": "Ula'tek",
+     "name": "Ула'тек",
+     "nameEn": "Ula'tek",
      "layers": [
       {
        "name": "Арена целиком",
@@ -789,7 +797,8 @@
    "bosses": [
     {
      "id": "156",
-     "name": "Nymrissa Wavecaller",
+     "name": "Нимрисса Волногон",
+     "nameEn": "Nymrissa Wavecaller",
      "layers": [
       {
        "name": "Арена",
@@ -818,7 +827,8 @@
    "bosses": [
     {
      "id": "157",
-     "name": "Kith’ix",
+     "name": "Кит’икс",
+     "nameEn": "Kith’ix",
      "layers": [
       {
        "name": "Основная",
@@ -846,7 +856,8 @@
    "bosses": [
     {
      "id": "11",
-     "name": "Imperator Averzian",
+     "name": "Император Аверзиан",
+     "nameEn": "Imperator Averzian",
      "layers": [
       {
        "name": "Основная",
@@ -872,7 +883,8 @@
     },
     {
      "id": "12",
-     "name": "Vorasius",
+     "name": "Ненасытникус",
+     "nameEn": "Vorasius",
      "layers": [
       {
        "name": "Основная",
@@ -891,7 +903,8 @@
     },
     {
      "id": "13",
-     "name": "Fallen-King Salhadaar",
+     "name": "Павший король Салхадаар",
+     "nameEn": "Fallen-King Salhadaar",
      "layers": [
       {
        "name": "Основная",
@@ -911,7 +924,8 @@
     },
     {
      "id": "14",
-     "name": "Vaelgor & Ezzorak",
+     "name": "Ваэлгор и Эззорак",
+     "nameEn": "Vaelgor & Ezzorak",
      "layers": [
       {
        "name": "Основная",
@@ -930,7 +944,8 @@
     },
     {
      "id": "15",
-     "name": "Lightblinded Vanguard",
+     "name": "Ослепленный авангард",
+     "nameEn": "Lightblinded Vanguard",
      "layers": [
       {
        "name": "Основная",
@@ -946,7 +961,8 @@
     },
     {
      "id": "16",
-     "name": "Crown of the Cosmos",
+     "name": "Корона космоса",
+     "nameEn": "Crown of the Cosmos",
      "layers": [
       {
        "name": "Основная",
@@ -979,7 +995,8 @@
    "bosses": [
     {
      "id": "17",
-     "name": "Belo'ren, Child of Al'ar",
+     "name": "Бело'рен, Дитя Ал'ара",
+     "nameEn": "Belo'ren, Child of Al'ar",
      "layers": [
       {
        "name": "Основная",
@@ -996,7 +1013,8 @@
     },
     {
      "id": "18",
-     "name": "Midnight Falls",
+     "name": "Торжество Полуночи",
+     "nameEn": "Midnight Falls",
      "layers": [
       {
        "name": "Основная",
@@ -1042,7 +1060,8 @@
    "bosses": [
     {
      "id": "9",
-     "name": "Chimaerus the Undreamt God",
+     "name": "Химерий, Неприснившийся Бог",
+     "nameEn": "Chimaerus the Undreamt God",
      "layers": [
       {
        "name": "Основная",
@@ -1075,7 +1094,8 @@
    "bosses": [
     {
      "id": "147",
-     "name": "Rotmire",
+     "name": "Гнилотоп",
+     "nameEn": "Rotmire",
      "layers": [
       {
        "name": "Основная",
@@ -1112,7 +1132,8 @@
    "bosses": [
     {
      "id": "1",
-     "name": "Plexus Sentinel",
+     "name": "Сплетенный страж",
+     "nameEn": "Plexus Sentinel",
      "layers": [
       {
        "name": "Основная",
@@ -1127,7 +1148,8 @@
     },
     {
      "id": "2",
-     "name": "Loom'Ithar",
+     "name": "Ткан'итар",
+     "nameEn": "Loom'Ithar",
      "layers": [
       {
        "name": "Фаза 1",
@@ -1140,7 +1162,8 @@
     },
     {
      "id": "3",
-     "name": "Souldbinder Naazindhri",
+     "name": "Стражница душ Наазиндри",
+     "nameEn": "Souldbinder Naazindhri",
      "layers": [
       {
        "name": "Фаза 1",
@@ -1161,7 +1184,8 @@
     },
     {
      "id": "4",
-     "name": "Forgeweaver Araz",
+     "name": "Ткач горна Араз",
+     "nameEn": "Forgeweaver Araz",
      "layers": [
       {
        "name": "Фаза 1",
@@ -1177,7 +1201,8 @@
     },
     {
      "id": "5",
-     "name": "The Soul Hunters",
+     "name": "Ловцы душ",
+     "nameEn": "The Soul Hunters",
      "layers": [
       {
        "name": "Фаза 1",
@@ -1197,7 +1222,8 @@
     },
     {
      "id": "6",
-     "name": "Fractillus",
+     "name": "Разломий",
+     "nameEn": "Fractillus",
      "layers": [
       {
        "name": "Фаза 1",
@@ -1210,7 +1236,8 @@
     },
     {
      "id": "7",
-     "name": "Nexus-King Salhadaar",
+     "name": "Соправитель Салхадаар",
+     "nameEn": "Nexus-King Salhadaar",
      "layers": [
       {
        "name": "Целиком",
@@ -1240,7 +1267,8 @@
     },
     {
      "id": "8",
-     "name": "Dimensius, the All-Devouring",
+     "name": "Пространствус Всепоглощающий",
+     "nameEn": "Dimensius, the All-Devouring",
      "layers": [
       {
        "name": "Seat",
@@ -1283,7 +1311,8 @@
    "bosses": [
     {
      "id": "20",
-     "name": "Attumen the Huntsman",
+     "name": "Ловчий Аттумен",
+     "nameEn": "Attumen the Huntsman",
      "layers": [
       {
        "name": "Арена целиком",
@@ -1298,7 +1327,8 @@
     },
     {
      "id": "21",
-     "name": "Moroes",
+     "name": "Мороуз",
+     "nameEn": "Moroes",
      "layers": [
       {
        "name": "Арена целиком",
@@ -1311,7 +1341,8 @@
     },
     {
      "id": "22",
-     "name": "Maiden of Virtue",
+     "name": "Благочестивая дева",
+     "nameEn": "Maiden of Virtue",
      "layers": [
       {
        "name": "Арена целиком",
@@ -1324,7 +1355,8 @@
     },
     {
      "id": "23",
-     "name": "Opera Hall",
+     "name": "Оперный театр",
+     "nameEn": "Opera Hall",
      "layers": [
       {
        "name": "Арена целиком",
@@ -1341,7 +1373,8 @@
     },
     {
      "id": "24",
-     "name": "The Curator",
+     "name": "Смотритель",
+     "nameEn": "The Curator",
      "layers": [
       {
        "name": "Арена целиком",
@@ -1354,7 +1387,8 @@
     },
     {
      "id": "25",
-     "name": "Shade of Aran",
+     "name": "Тень Арана",
+     "nameEn": "Shade of Aran",
      "layers": [
       {
        "name": "Арена целиком",
@@ -1367,7 +1401,8 @@
     },
     {
      "id": "26",
-     "name": "Terestian Illhoof",
+     "name": "Терестиан Больное Копыто",
+     "nameEn": "Terestian Illhoof",
      "layers": [
       {
        "name": "Арена целиком",
@@ -1380,7 +1415,8 @@
     },
     {
      "id": "27",
-     "name": "Netherspite",
+     "name": "Гнев Пустоты",
+     "nameEn": "Netherspite",
      "layers": [
       {
        "name": "Арена целиком",
@@ -1393,7 +1429,8 @@
     },
     {
      "id": "28",
-     "name": "Chess Event",
+     "name": "Шахматная партия",
+     "nameEn": "Chess Event",
      "layers": [
       {
        "name": "Арена целиком",
@@ -1406,7 +1443,8 @@
     },
     {
      "id": "29",
-     "name": "Prince Malchezaar",
+     "name": "Принц Малчезар",
+     "nameEn": "Prince Malchezaar",
      "layers": [
       {
        "name": "Арена целиком",
@@ -1431,7 +1469,8 @@
    "bosses": [
     {
      "id": "30",
-     "name": "High King Maulgar",
+     "name": "Король Молгар",
+     "nameEn": "High King Maulgar",
      "layers": [
       {
        "name": "Арена целиком",
@@ -1449,7 +1488,8 @@
     },
     {
      "id": "31",
-     "name": "Gruul the Dragonkiller",
+     "name": "Груул Драконобой",
+     "nameEn": "Gruul the Dragonkiller",
      "layers": [
       {
        "name": "Арена целиком",
@@ -1474,7 +1514,8 @@
    "bosses": [
     {
      "id": "32",
-     "name": "Magtheridon",
+     "name": "Магтеридон",
+     "nameEn": "Magtheridon",
      "layers": [
       {
        "name": "Арена целиком",
@@ -1501,7 +1542,8 @@
    "bosses": [
     {
      "id": "33",
-     "name": "Hydross the Unstable",
+     "name": "Гидросс Нестабильный",
+     "nameEn": "Hydross the Unstable",
      "layers": [
       {
        "name": "Арена целиком",
@@ -1514,7 +1556,8 @@
     },
     {
      "id": "34",
-     "name": "The Lurker Below",
+     "name": "Скрытень из глубин",
+     "nameEn": "The Lurker Below",
      "layers": [
       {
        "name": "Арена целиком",
@@ -1527,7 +1570,8 @@
     },
     {
      "id": "35",
-     "name": "Leotheras the Blind",
+     "name": "Леотерас Слепец",
+     "nameEn": "Leotheras the Blind",
      "layers": [
       {
        "name": "Арена целиком",
@@ -1542,7 +1586,8 @@
     },
     {
      "id": "36",
-     "name": "Fathom-Lord Karathress",
+     "name": "Повелитель глубин Каратресс",
+     "nameEn": "Fathom-Lord Karathress",
      "layers": [
       {
        "name": "Арена целиком",
@@ -1559,7 +1604,8 @@
     },
     {
      "id": "37",
-     "name": "Morogrim Tidewalker",
+     "name": "Морогрим Волноступ",
+     "nameEn": "Morogrim Tidewalker",
      "layers": [
       {
        "name": "Арена целиком",
@@ -1572,7 +1618,8 @@
     },
     {
      "id": "38",
-     "name": "Lady Vashj",
+     "name": "Леди Вайш",
+     "nameEn": "Lady Vashj",
      "layers": [
       {
        "name": "Арена целиком",
@@ -1597,7 +1644,8 @@
    "bosses": [
     {
      "id": "39",
-     "name": "Al'ar",
+     "name": "Ал'ар",
+     "nameEn": "Al'ar",
      "layers": [
       {
        "name": "Арена целиком",
@@ -1610,7 +1658,8 @@
     },
     {
      "id": "40",
-     "name": "Void Reaver",
+     "name": "Страж Бездны",
+     "nameEn": "Void Reaver",
      "layers": [
       {
        "name": "Арена целиком",
@@ -1623,7 +1672,8 @@
     },
     {
      "id": "41",
-     "name": "High Astromancer Solarian",
+     "name": "Верховный звездочет Солариан",
+     "nameEn": "High Astromancer Solarian",
      "layers": [
       {
        "name": "Арена целиком",
@@ -1636,7 +1686,8 @@
     },
     {
      "id": "42",
-     "name": "Kael'thas Sunstrider",
+     "name": "Кель'тас Солнечный Скиталец",
+     "nameEn": "Kael'thas Sunstrider",
      "layers": [
       {
        "name": "Арена целиком",
@@ -1666,7 +1717,8 @@
    "bosses": [
     {
      "id": "43",
-     "name": "Rage Winterchill",
+     "name": "Лютый Хлад",
+     "nameEn": "Rage Winterchill",
      "layers": [
       {
        "name": "Арена целиком",
@@ -1679,7 +1731,8 @@
     },
     {
      "id": "44",
-     "name": "Anetheron",
+     "name": "Анетерон",
+     "nameEn": "Anetheron",
      "layers": [
       {
        "name": "Арена целиком",
@@ -1692,7 +1745,8 @@
     },
     {
      "id": "45",
-     "name": "Kaz'rogal",
+     "name": "Каз'рогал",
+     "nameEn": "Kaz'rogal",
      "layers": [
       {
        "name": "Арена целиком",
@@ -1705,7 +1759,8 @@
     },
     {
      "id": "46",
-     "name": "Azgalor",
+     "name": "Азгалор",
+     "nameEn": "Azgalor",
      "layers": [
       {
        "name": "Арена целиком",
@@ -1718,7 +1773,8 @@
     },
     {
      "id": "47",
-     "name": "Archimonde",
+     "name": "Архимонд",
+     "nameEn": "Archimonde",
      "layers": [
       {
        "name": "Арена целиком",
@@ -1743,7 +1799,8 @@
    "bosses": [
     {
      "id": "48",
-     "name": "High Warlord Naj'entus",
+     "name": "Верховный полководец Надж'ентус",
+     "nameEn": "High Warlord Naj'entus",
      "layers": [
       {
        "name": "Арена целиком",
@@ -1756,7 +1813,8 @@
     },
     {
      "id": "49",
-     "name": "Supremus",
+     "name": "Супремус",
+     "nameEn": "Supremus",
      "layers": [
       {
        "name": "Арена целиком",
@@ -1769,7 +1827,8 @@
     },
     {
      "id": "50",
-     "name": "Shade of Akama",
+     "name": "Тень Акамы",
+     "nameEn": "Shade of Akama",
      "layers": [
       {
        "name": "Арена целиком",
@@ -1789,7 +1848,8 @@
     },
     {
      "id": "51",
-     "name": "Teron Gorefiend",
+     "name": "Терон Кровожад",
+     "nameEn": "Teron Gorefiend",
      "layers": [
       {
        "name": "Арена целиком",
@@ -1805,7 +1865,8 @@
     },
     {
      "id": "52",
-     "name": "Gurtogg Bloodboil",
+     "name": "Гуртогг Кипящая Кровь",
+     "nameEn": "Gurtogg Bloodboil",
      "layers": [
       {
        "name": "Арена целиком",
@@ -1818,7 +1879,8 @@
     },
     {
      "id": "53",
-     "name": "Reliquary of Souls",
+     "name": "Реликварий душ",
+     "nameEn": "Reliquary of Souls",
      "layers": [
       {
        "name": "Арена целиком",
@@ -1835,7 +1897,8 @@
     },
     {
      "id": "54",
-     "name": "Mother Shahraz",
+     "name": "Матушка Шахраз",
+     "nameEn": "Mother Shahraz",
      "layers": [
       {
        "name": "Арена целиком",
@@ -1848,7 +1911,8 @@
     },
     {
      "id": "55",
-     "name": "The Illidari Council",
+     "name": "Совет иллидари",
+     "nameEn": "The Illidari Council",
      "layers": [
       {
        "name": "Арена целиком",
@@ -1865,7 +1929,8 @@
     },
     {
      "id": "56",
-     "name": "Illidan Stormrage",
+     "name": "Иллидан Ярость Бури",
+     "nameEn": "Illidan Stormrage",
      "layers": [
       {
        "name": "Арена целиком",
@@ -1893,7 +1958,8 @@
    "bosses": [
     {
      "id": "57",
-     "name": "Kalecgos",
+     "name": "Калесгос",
+     "nameEn": "Kalecgos",
      "layers": [
       {
        "name": "Арена целиком",
@@ -1908,7 +1974,8 @@
     },
     {
      "id": "58",
-     "name": "Brutallus",
+     "name": "Бруталл",
+     "nameEn": "Brutallus",
      "layers": [
       {
        "name": "Арена целиком",
@@ -1921,7 +1988,8 @@
     },
     {
      "id": "59",
-     "name": "Felmyst",
+     "name": "Пророк Скверны",
+     "nameEn": "Felmyst",
      "layers": [
       {
        "name": "Арена целиком",
@@ -1934,7 +2002,8 @@
     },
     {
      "id": "60",
-     "name": "The Eredar Twins",
+     "name": "Эредарские близнецы",
+     "nameEn": "The Eredar Twins",
      "layers": [
       {
        "name": "Арена целиком",
@@ -1949,7 +2018,8 @@
     },
     {
      "id": "61",
-     "name": "M'uru",
+     "name": "М'ару",
+     "nameEn": "M'uru",
      "layers": [
       {
        "name": "Арена целиком",
@@ -1964,7 +2034,8 @@
     },
     {
      "id": "62",
-     "name": "Kil'jaeden",
+     "name": "Кил'джеден",
+     "nameEn": "Kil'jaeden",
      "layers": [
       {
        "name": "Арена целиком",

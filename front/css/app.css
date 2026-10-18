@@ -312,3 +312,6 @@ input { font: inherit; }
 .empty-card p { margin: 0; font-size: 13px; line-height: 1.55; color: var(--text-2); }
 .raid-en { display: block; margin: -6px 0 10px; font-size: 12px; color: var(--text-4); }
 .dd-en { display: block; font-size: 11px; color: var(--text-4); }
+.boss-en { display: block; font-size: 11px; color: var(--text-5); }
+.boss.on .boss-en { color: var(--text-4); }
+.boss-card-en { margin: -4px 0 10px; font-size: 13px; color: var(--text-4); }

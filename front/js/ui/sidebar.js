@@ -55,6 +55,7 @@ export function renderSidebar(s) {
             <span class="num">${i + 1}</span>
             <span style="flex:1 1 auto;min-width:0">
               <span class="boss-name">${esc(b.name)}</span>
+              ${b.nameEn && b.nameEn !== b.name ? `<span class="boss-en">${esc(b.nameEn)}</span>` : ''}
               <span class="boss-sub">${esc(sub)}</span>
             </span>
             ${st.killed ? `<span style="color:var(--heal)" role="img" aria-label="Убит">${I.check}</span>` : ''}

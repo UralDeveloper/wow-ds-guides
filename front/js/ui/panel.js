@@ -13,6 +13,7 @@ export function renderPanel(s) {
     <div class="boss-card rise">
       <div class="eyebrow">${esc(r.name)} · босс ${s.bossIdx + 1} из ${V.totalBosses(s)}</div>
       <h1>${esc(b.name)}</h1>
+      ${b.nameEn && b.nameEn !== b.name ? `<div class="boss-card-en">${esc(b.nameEn)}</div>` : ''}
       ${t ? `<p>${esc(t.summary)}</p>` : ''}
       <div class="chips">${tags.map((x) => `<span class="chip all">${esc(x)}</span>`).join('')}</div>
     </div>

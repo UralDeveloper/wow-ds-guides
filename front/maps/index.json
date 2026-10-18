@@ -1,121 +1,35 @@
 [
  {
-  "id": "entombed-sentinels",
+  "id": "vashnik",
   "w": 1600,
-  "h": 900,
-  "name": "Entombed Sentinels",
+  "h": 1422,
+  "name": "Вашник Тлетворный",
   "group": "Отравленная бездна",
   "groupEn": "The Venomous Abyss",
+  "nameEn": "Vashnik the Malignant",
   "expansion": "Midnight",
-  "ow": 2560,
-  "oh": 1440,
+  "ow": 2880,
+  "oh": 2560,
   "cal": {
    "p1": {
-    "x": 872,
-    "y": 660
+    "x": 1674,
+    "y": 1246
    },
    "p2": {
-    "x": 872,
-    "y": 845
+    "x": 1106,
+    "y": 1242
    },
-   "yards": 18
-  }
- },
- {
-  "id": "soulcoiler",
-  "w": 1600,
-  "h": 900,
-  "name": "Nek'zali the Soulcoiler",
-  "group": "Отравленная бездна",
-  "groupEn": "The Venomous Abyss",
-  "expansion": "Midnight",
-  "ow": 2560,
-  "oh": 1440,
-  "cal": {
-   "p1": {
-    "x": 1267,
-    "y": 626
-   },
-   "p2": {
-    "x": 1271,
-    "y": 858
-   },
-   "yards": 15.5
-  }
- },
- {
-  "id": "sszorak",
-  "w": 1600,
-  "h": 900,
-  "name": "Sszorak",
-  "group": "Отравленная бездна",
-  "groupEn": "The Venomous Abyss",
-  "expansion": "Midnight",
-  "ow": 2560,
-  "oh": 1440,
-  "cal": {
-   "p1": {
-    "x": 1087,
-    "y": 742
-   },
-   "p2": {
-    "x": 1475,
-    "y": 744
-   },
-   "yards": 40
-  }
- },
- {
-  "id": "bargained-crown",
-  "w": 1600,
-  "h": 900,
-  "name": "The Coiled Altar",
-  "group": "Отравленная бездна",
-  "groupEn": "The Venomous Abyss",
-  "expansion": "Midnight",
-  "ow": 2560,
-  "oh": 1440,
-  "cal": {
-   "p1": {
-    "x": 1270,
-    "y": 321
-   },
-   "p2": {
-    "x": 1270,
-    "y": 1057
-   },
-   "yards": 57
-  }
- },
- {
-  "id": "explorers-1",
-  "w": 1600,
-  "h": 900,
-  "name": "The Lost Explorers",
-  "group": "Отравленная бездна",
-  "groupEn": "The Venomous Abyss",
-  "expansion": "Midnight",
-  "ow": 2560,
-  "oh": 1440,
-  "cal": {
-   "p1": {
-    "x": 1184,
-    "y": 573
-   },
-   "p2": {
-    "x": 1488,
-    "y": 868
-   },
-   "yards": 41
+   "yards": 38
   }
  },
  {
   "id": "twin-fangs-2",
   "w": 1600,
   "h": 900,
-  "name": "The Twin Fangs",
+  "name": "Два Клыка",
   "group": "Отравленная бездна",
   "groupEn": "The Venomous Abyss",
+  "nameEn": "The Twin Fangs",
   "expansion": "Midnight",
   "ow": 2560,
   "oh": 1440,
@@ -132,12 +46,128 @@
   }
  },
  {
+  "id": "soulcoiler",
+  "w": 1600,
+  "h": 900,
+  "name": "Нек'зали Душительница Душ",
+  "group": "Отравленная бездна",
+  "groupEn": "The Venomous Abyss",
+  "nameEn": "Nek'zali the Soulcoiler",
+  "expansion": "Midnight",
+  "ow": 2560,
+  "oh": 1440,
+  "cal": {
+   "p1": {
+    "x": 1267,
+    "y": 626
+   },
+   "p2": {
+    "x": 1271,
+    "y": 858
+   },
+   "yards": 15.5
+  }
+ },
+ {
+  "id": "entombed-sentinels",
+  "w": 1600,
+  "h": 900,
+  "name": "Погребенные стражи",
+  "group": "Отравленная бездна",
+  "groupEn": "The Venomous Abyss",
+  "nameEn": "Entombed Sentinels",
+  "expansion": "Midnight",
+  "ow": 2560,
+  "oh": 1440,
+  "cal": {
+   "p1": {
+    "x": 872,
+    "y": 660
+   },
+   "p2": {
+    "x": 872,
+    "y": 845
+   },
+   "yards": 18
+  }
+ },
+ {
+  "id": "explorers-1",
+  "w": 1600,
+  "h": 900,
+  "name": "Потерявшиеся исследователи",
+  "group": "Отравленная бездна",
+  "groupEn": "The Venomous Abyss",
+  "nameEn": "The Lost Explorers",
+  "expansion": "Midnight",
+  "ow": 2560,
+  "oh": 1440,
+  "cal": {
+   "p1": {
+    "x": 1184,
+    "y": 573
+   },
+   "p2": {
+    "x": 1488,
+    "y": 868
+   },
+   "yards": 41
+  }
+ },
+ {
+  "id": "bargained-crown",
+  "w": 1600,
+  "h": 900,
+  "name": "Спиральный алтарь",
+  "group": "Отравленная бездна",
+  "groupEn": "The Venomous Abyss",
+  "nameEn": "The Coiled Altar",
+  "expansion": "Midnight",
+  "ow": 2560,
+  "oh": 1440,
+  "cal": {
+   "p1": {
+    "x": 1270,
+    "y": 321
+   },
+   "p2": {
+    "x": 1270,
+    "y": 1057
+   },
+   "yards": 57
+  }
+ },
+ {
+  "id": "sszorak",
+  "w": 1600,
+  "h": 900,
+  "name": "Ссзорак",
+  "group": "Отравленная бездна",
+  "groupEn": "The Venomous Abyss",
+  "nameEn": "Sszorak",
+  "expansion": "Midnight",
+  "ow": 2560,
+  "oh": 1440,
+  "cal": {
+   "p1": {
+    "x": 1087,
+    "y": 742
+   },
+   "p2": {
+    "x": 1475,
+    "y": 744
+   },
+   "yards": 40
+  }
+ },
+ {
   "id": "ulatek1",
   "w": 1600,
   "h": 900,
-  "name": "Ula'tek · Арена целиком",
+  "name": "Ула'тек · Арена целиком",
   "group": "Отравленная бездна",
   "groupEn": "The Venomous Abyss",
+  "nameEn": "Ula'tek",
   "expansion": "Midnight",
   "ow": 2560,
   "oh": 1440,
@@ -157,9 +187,10 @@
   "id": "ulatek-left",
   "w": 1600,
   "h": 781,
-  "name": "Ula'tek · Слева",
+  "name": "Ула'тек · Слева",
   "group": "Отравленная бездна",
   "groupEn": "The Venomous Abyss",
+  "nameEn": "Ula'tek",
   "expansion": "Midnight",
   "ow": 2307,
   "oh": 1126,
@@ -179,9 +210,10 @@
   "id": "ulatek-right",
   "w": 1600,
   "h": 781,
-  "name": "Ula'tek · Справа",
+  "name": "Ула'тек · Справа",
   "group": "Отравленная бездна",
   "groupEn": "The Venomous Abyss",
+  "nameEn": "Ula'tek",
   "expansion": "Midnight",
   "ow": 2307,
   "oh": 1126,
@@ -201,9 +233,10 @@
   "id": "ulatek-split",
   "w": 1600,
   "h": 900,
-  "name": "Ula'tek · Фаза 3: разлом",
+  "name": "Ула'тек · Фаза 3: разлом",
   "group": "Отравленная бездна",
   "groupEn": "The Venomous Abyss",
+  "nameEn": "Ula'tek",
   "expansion": "Midnight",
   "ow": 2560,
   "oh": 1440,
@@ -220,34 +253,13 @@
   }
  },
  {
-  "id": "vashnik",
-  "w": 1600,
-  "h": 1422,
-  "name": "Vashnik the Malignant",
-  "group": "Отравленная бездна",
-  "groupEn": "The Venomous Abyss",
-  "expansion": "Midnight",
-  "ow": 2880,
-  "oh": 2560,
-  "cal": {
-   "p1": {
-    "x": 1674,
-    "y": 1246
-   },
-   "p2": {
-    "x": 1106,
-    "y": 1242
-   },
-   "yards": 38
-  }
- },
- {
   "id": "arena-x",
   "w": 1600,
   "h": 895,
-  "name": "Nymrissa Wavecaller",
+  "name": "Нимрисса Волногон",
   "group": "Приливный грот",
   "groupEn": "Tidebound Grotto",
+  "nameEn": "Nymrissa Wavecaller",
   "expansion": "Midnight",
   "ow": 1676,
   "oh": 938
@@ -256,174 +268,22 @@
   "id": "kithix",
   "w": 1600,
   "h": 900,
-  "name": "Kith’ix",
+  "name": "Кит’икс",
   "group": "Освобождение Кит’икса",
   "groupEn": "The Unbinding of Kith’ix",
+  "nameEn": "Kith’ix",
   "expansion": "Midnight",
   "ow": 1920,
   "oh": 1080
  },
  {
-  "id": "close-4",
-  "w": 1419,
-  "h": 799,
-  "name": "Crown of the Cosmos · Крупно",
-  "group": "Шпиль Бездны",
-  "groupEn": "The Voidspire",
-  "expansion": "Midnight",
-  "ow": 1419,
-  "oh": 799,
-  "cal": {
-   "p1": {
-    "x": 1075,
-    "y": 564
-   },
-   "p2": {
-    "x": 909,
-    "y": 464
-   },
-   "yards": 30
-  }
- },
- {
-  "id": "cosmos",
-  "w": 1600,
-  "h": 900,
-  "name": "Crown of the Cosmos · Основная",
-  "group": "Шпиль Бездны",
-  "groupEn": "The Voidspire",
-  "expansion": "Midnight",
-  "ow": 1920,
-  "oh": 1080,
-  "cal": {
-   "p1": {
-    "x": 1236,
-    "y": 740
-   },
-   "p2": {
-    "x": 1085,
-    "y": 641
-   },
-   "yards": 30
-  }
- },
- {
-  "id": "close-2",
-  "w": 1419,
-  "h": 799,
-  "name": "Fallen-King Salhadaar · Крупно",
-  "group": "Шпиль Бездны",
-  "groupEn": "The Voidspire",
-  "expansion": "Midnight",
-  "ow": 1419,
-  "oh": 799,
-  "cal": {
-   "p1": {
-    "x": 953,
-    "y": 591
-   },
-   "p2": {
-    "x": 853,
-    "y": 350
-   },
-   "yards": 30
-  }
- },
- {
-  "id": "fallen-king-salhadaar",
-  "w": 1600,
-  "h": 900,
-  "name": "Fallen-King Salhadaar · Основная",
-  "group": "Шпиль Бездны",
-  "groupEn": "The Voidspire",
-  "expansion": "Midnight",
-  "ow": 1920,
-  "oh": 1080,
-  "cal": {
-   "p1": {
-    "x": 1157,
-    "y": 856
-   },
-   "p2": {
-    "x": 1063,
-    "y": 621
-   },
-   "yards": 30
-  }
- },
- {
-  "id": "close",
-  "w": 1301,
-  "h": 732,
-  "name": "Imperator Averzian · Крупно",
-  "group": "Шпиль Бездны",
-  "groupEn": "The Voidspire",
-  "expansion": "Midnight",
-  "ow": 1301,
-  "oh": 732,
-  "cal": {
-   "p1": {
-    "x": 516,
-    "y": 723
-   },
-   "p2": {
-    "x": 544,
-    "y": 546
-   },
-   "yards": 30
-  }
- },
- {
-  "id": "imperator-averzian",
-  "w": 1600,
-  "h": 900,
-  "name": "Imperator Averzian · Основная",
-  "group": "Шпиль Бездны",
-  "groupEn": "The Voidspire",
-  "expansion": "Midnight",
-  "ow": 1920,
-  "oh": 1080,
-  "cal": {
-   "p1": {
-    "x": 787,
-    "y": 1002
-   },
-   "p2": {
-    "x": 823,
-    "y": 748
-   },
-   "yards": 30
-  }
- },
- {
-  "id": "lighttblinded-vanguard",
-  "w": 1600,
-  "h": 900,
-  "name": "Lightblinded Vanguard",
-  "group": "Шпиль Бездны",
-  "groupEn": "The Voidspire",
-  "expansion": "Midnight",
-  "ow": 1920,
-  "oh": 1080,
-  "cal": {
-   "p1": {
-    "x": 954,
-    "y": 969
-   },
-   "p2": {
-    "x": 963,
-    "y": 699
-   },
-   "yards": 30
-  }
- },
- {
   "id": "close-3",
   "w": 1419,
   "h": 799,
-  "name": "Vaelgor & Ezzorak · Крупно",
+  "name": "Ваэлгор и Эззорак · Крупно",
   "group": "Шпиль Бездны",
   "groupEn": "The Voidspire",
+  "nameEn": "Vaelgor & Ezzorak",
   "expansion": "Midnight",
   "ow": 1419,
   "oh": 799,
@@ -443,9 +303,10 @@
   "id": "vaelgor-ezzorak",
   "w": 1600,
   "h": 900,
-  "name": "Vaelgor & Ezzorak · Основная",
+  "name": "Ваэлгор и Эззорак · Основная",
   "group": "Шпиль Бездны",
   "groupEn": "The Voidspire",
+  "nameEn": "Vaelgor & Ezzorak",
   "expansion": "Midnight",
   "ow": 1920,
   "oh": 1080,
@@ -462,12 +323,105 @@
   }
  },
  {
+  "id": "close",
+  "w": 1301,
+  "h": 732,
+  "name": "Император Аверзиан · Крупно",
+  "group": "Шпиль Бездны",
+  "groupEn": "The Voidspire",
+  "nameEn": "Imperator Averzian",
+  "expansion": "Midnight",
+  "ow": 1301,
+  "oh": 732,
+  "cal": {
+   "p1": {
+    "x": 516,
+    "y": 723
+   },
+   "p2": {
+    "x": 544,
+    "y": 546
+   },
+   "yards": 30
+  }
+ },
+ {
+  "id": "imperator-averzian",
+  "w": 1600,
+  "h": 900,
+  "name": "Император Аверзиан · Основная",
+  "group": "Шпиль Бездны",
+  "groupEn": "The Voidspire",
+  "nameEn": "Imperator Averzian",
+  "expansion": "Midnight",
+  "ow": 1920,
+  "oh": 1080,
+  "cal": {
+   "p1": {
+    "x": 787,
+    "y": 1002
+   },
+   "p2": {
+    "x": 823,
+    "y": 748
+   },
+   "yards": 30
+  }
+ },
+ {
+  "id": "close-4",
+  "w": 1419,
+  "h": 799,
+  "name": "Корона космоса · Крупно",
+  "group": "Шпиль Бездны",
+  "groupEn": "The Voidspire",
+  "nameEn": "Crown of the Cosmos",
+  "expansion": "Midnight",
+  "ow": 1419,
+  "oh": 799,
+  "cal": {
+   "p1": {
+    "x": 1075,
+    "y": 564
+   },
+   "p2": {
+    "x": 909,
+    "y": 464
+   },
+   "yards": 30
+  }
+ },
+ {
+  "id": "cosmos",
+  "w": 1600,
+  "h": 900,
+  "name": "Корона космоса · Основная",
+  "group": "Шпиль Бездны",
+  "groupEn": "The Voidspire",
+  "nameEn": "Crown of the Cosmos",
+  "expansion": "Midnight",
+  "ow": 1920,
+  "oh": 1080,
+  "cal": {
+   "p1": {
+    "x": 1236,
+    "y": 740
+   },
+   "p2": {
+    "x": 1085,
+    "y": 641
+   },
+   "yards": 30
+  }
+ },
+ {
   "id": "vorasius-close",
   "w": 1600,
   "h": 900,
-  "name": "Vorasius · Крупно",
+  "name": "Ненасытникус · Крупно",
   "group": "Шпиль Бездны",
   "groupEn": "The Voidspire",
+  "nameEn": "Vorasius",
   "expansion": "Midnight",
   "ow": 1920,
   "oh": 1080,
@@ -487,9 +441,10 @@
   "id": "vorasius",
   "w": 1600,
   "h": 900,
-  "name": "Vorasius · Основная",
+  "name": "Ненасытникус · Основная",
   "group": "Шпиль Бездны",
   "groupEn": "The Voidspire",
+  "nameEn": "Vorasius",
   "expansion": "Midnight",
   "ow": 1920,
   "oh": 1080,
@@ -506,12 +461,82 @@
   }
  },
  {
+  "id": "lighttblinded-vanguard",
+  "w": 1600,
+  "h": 900,
+  "name": "Ослепленный авангард",
+  "group": "Шпиль Бездны",
+  "groupEn": "The Voidspire",
+  "nameEn": "Lightblinded Vanguard",
+  "expansion": "Midnight",
+  "ow": 1920,
+  "oh": 1080,
+  "cal": {
+   "p1": {
+    "x": 954,
+    "y": 969
+   },
+   "p2": {
+    "x": 963,
+    "y": 699
+   },
+   "yards": 30
+  }
+ },
+ {
+  "id": "close-2",
+  "w": 1419,
+  "h": 799,
+  "name": "Павший король Салхадаар · Крупно",
+  "group": "Шпиль Бездны",
+  "groupEn": "The Voidspire",
+  "nameEn": "Fallen-King Salhadaar",
+  "expansion": "Midnight",
+  "ow": 1419,
+  "oh": 799,
+  "cal": {
+   "p1": {
+    "x": 953,
+    "y": 591
+   },
+   "p2": {
+    "x": 853,
+    "y": 350
+   },
+   "yards": 30
+  }
+ },
+ {
+  "id": "fallen-king-salhadaar",
+  "w": 1600,
+  "h": 900,
+  "name": "Павший король Салхадаар · Основная",
+  "group": "Шпиль Бездны",
+  "groupEn": "The Voidspire",
+  "nameEn": "Fallen-King Salhadaar",
+  "expansion": "Midnight",
+  "ow": 1920,
+  "oh": 1080,
+  "cal": {
+   "p1": {
+    "x": 1157,
+    "y": 856
+   },
+   "p2": {
+    "x": 1063,
+    "y": 621
+   },
+   "yards": 30
+  }
+ },
+ {
   "id": "bolren-child-of-alar",
   "w": 1600,
   "h": 900,
-  "name": "Belo'ren, Child of Al'ar",
+  "name": "Бело'рен, Дитя Ал'ара",
   "group": "Марш на Кель'Данас",
   "groupEn": "March on Quel'Danas",
+  "nameEn": "Belo'ren, Child of Al'ar",
   "expansion": "Midnight",
   "ow": 1920,
   "oh": 1080,
@@ -531,9 +556,10 @@
   "id": "midnight-falls-intermission",
   "w": 1600,
   "h": 900,
-  "name": "Midnight Falls · Интермиссия",
+  "name": "Торжество Полуночи · Интермиссия",
   "group": "Марш на Кель'Данас",
   "groupEn": "March on Quel'Danas",
+  "nameEn": "Midnight Falls",
   "expansion": "Midnight",
   "ow": 1920,
   "oh": 1080
@@ -542,9 +568,10 @@
   "id": "midnight-falls",
   "w": 1600,
   "h": 900,
-  "name": "Midnight Falls · Основная",
+  "name": "Торжество Полуночи · Основная",
   "group": "Марш на Кель'Данас",
   "groupEn": "March on Quel'Danas",
+  "nameEn": "Midnight Falls",
   "expansion": "Midnight",
   "ow": 1920,
   "oh": 1080,
@@ -564,9 +591,10 @@
   "id": "midnight-falls-p2",
   "w": 1600,
   "h": 900,
-  "name": "Midnight Falls · Фаза 2",
+  "name": "Торжество Полуночи · Фаза 2",
   "group": "Марш на Кель'Данас",
   "groupEn": "March on Quel'Danas",
+  "nameEn": "Midnight Falls",
   "expansion": "Midnight",
   "ow": 1920,
   "oh": 1080
@@ -575,9 +603,10 @@
   "id": "midnight-falls-phase3-soaks",
   "w": 1600,
   "h": 900,
-  "name": "Midnight Falls · Фаза 3: соки",
+  "name": "Торжество Полуночи · Фаза 3: соки",
   "group": "Марш на Кель'Данас",
   "groupEn": "March on Quel'Danas",
+  "nameEn": "Midnight Falls",
   "expansion": "Midnight",
   "ow": 1920,
   "oh": 1080
@@ -586,9 +615,10 @@
   "id": "phase-close",
   "w": 1352,
   "h": 761,
-  "name": "Chimaerus the Undreamt God · Крупно",
+  "name": "Химерий, Неприснившийся Бог · Крупно",
   "group": "Провал снов",
   "groupEn": "The Dreamrift",
+  "nameEn": "Chimaerus the Undreamt God",
   "expansion": "Midnight",
   "ow": 1352,
   "oh": 761,
@@ -608,9 +638,10 @@
   "id": "dreamrift",
   "w": 1600,
   "h": 900,
-  "name": "Chimaerus the Undreamt God · Основная",
+  "name": "Химерий, Неприснившийся Бог · Основная",
   "group": "Провал снов",
   "groupEn": "The Dreamrift",
+  "nameEn": "Chimaerus the Undreamt God",
   "expansion": "Midnight",
   "ow": 1920,
   "oh": 1080,
@@ -630,9 +661,10 @@
   "id": "rotmire-arena",
   "w": 1600,
   "h": 900,
-  "name": "Rotmire · Основная",
+  "name": "Гнилотоп · Основная",
   "group": "Споропад",
   "groupEn": "Sporefall",
+  "nameEn": "Rotmire",
   "expansion": "Midnight",
   "ow": 1672,
   "oh": 941
@@ -641,20 +673,34 @@
   "id": "sporefall-new",
   "w": 1600,
   "h": 838,
-  "name": "Rotmire · Основная 2",
+  "name": "Гнилотоп · Основная 2",
   "group": "Споропад",
   "groupEn": "Sporefall",
+  "nameEn": "Rotmire",
   "expansion": "Midnight",
   "ow": 2539,
   "oh": 1330
  },
  {
+  "id": "the-soul-hunters-phase-1",
+  "w": 1394,
+  "h": 784,
+  "name": "Ловцы душ",
+  "group": "Манагорн Омега",
+  "groupEn": "Manaforge Omega",
+  "nameEn": "The Soul Hunters",
+  "expansion": "The War Within",
+  "ow": 1394,
+  "oh": 784
+ },
+ {
   "id": "dimensius-conquest",
   "w": 1394,
   "h": 784,
-  "name": "Dimensius, the All-Devouring · Conquest",
+  "name": "Пространствус Всепоглощающий · Conquest",
   "group": "Манагорн Омега",
   "groupEn": "Manaforge Omega",
+  "nameEn": "Dimensius, the All-Devouring",
   "expansion": "The War Within",
   "ow": 1394,
   "oh": 784
@@ -663,9 +709,10 @@
   "id": "dimensius-entropy",
   "w": 1394,
   "h": 784,
-  "name": "Dimensius, the All-Devouring · Entropy",
+  "name": "Пространствус Всепоглощающий · Entropy",
   "group": "Манагорн Омега",
   "groupEn": "Manaforge Omega",
+  "nameEn": "Dimensius, the All-Devouring",
   "expansion": "The War Within",
   "ow": 1394,
   "oh": 784
@@ -674,9 +721,10 @@
   "id": "dimensius-heart",
   "w": 1394,
   "h": 784,
-  "name": "Dimensius, the All-Devouring · Heart",
+  "name": "Пространствус Всепоглощающий · Heart",
   "group": "Манагорн Омега",
   "groupEn": "Manaforge Omega",
+  "nameEn": "Dimensius, the All-Devouring",
   "expansion": "The War Within",
   "ow": 1394,
   "oh": 784
@@ -685,20 +733,10 @@
   "id": "dimensius-seat",
   "w": 1394,
   "h": 784,
-  "name": "Dimensius, the All-Devouring · Seat",
+  "name": "Пространствус Всепоглощающий · Seat",
   "group": "Манагорн Омега",
   "groupEn": "Manaforge Omega",
-  "expansion": "The War Within",
-  "ow": 1394,
-  "oh": 784
- },
- {
-  "id": "forgeweaver-araz-phase-1",
-  "w": 1394,
-  "h": 784,
-  "name": "Forgeweaver Araz",
-  "group": "Манагорн Омега",
-  "groupEn": "Manaforge Omega",
+  "nameEn": "Dimensius, the All-Devouring",
   "expansion": "The War Within",
   "ow": 1394,
   "oh": 784
@@ -707,20 +745,10 @@
   "id": "fractilus-phase-1",
   "w": 1394,
   "h": 784,
-  "name": "Fractillus",
+  "name": "Разломий",
   "group": "Манагорн Омега",
   "groupEn": "Manaforge Omega",
-  "expansion": "The War Within",
-  "ow": 1394,
-  "oh": 784
- },
- {
-  "id": "loom-ithar-phase-1",
-  "w": 1394,
-  "h": 784,
-  "name": "Loom'Ithar",
-  "group": "Манагорн Омега",
-  "groupEn": "Manaforge Omega",
+  "nameEn": "Fractillus",
   "expansion": "The War Within",
   "ow": 1394,
   "oh": 784
@@ -729,9 +757,10 @@
   "id": "nexus-king-slahadaar-left",
   "w": 1394,
   "h": 784,
-  "name": "Nexus-King Salhadaar · Слева",
+  "name": "Соправитель Салхадаар · Слева",
   "group": "Манагорн Омега",
   "groupEn": "Manaforge Omega",
+  "nameEn": "Nexus-King Salhadaar",
   "expansion": "The War Within",
   "ow": 1394,
   "oh": 784
@@ -740,9 +769,10 @@
   "id": "nexus-king-slahadaar-right",
   "w": 1394,
   "h": 784,
-  "name": "Nexus-King Salhadaar · Справа",
+  "name": "Соправитель Салхадаар · Справа",
   "group": "Манагорн Омега",
   "groupEn": "Manaforge Omega",
+  "nameEn": "Nexus-King Salhadaar",
   "expansion": "The War Within",
   "ow": 1394,
   "oh": 784
@@ -751,9 +781,10 @@
   "id": "nexus-king-slahadaar-full",
   "w": 1394,
   "h": 784,
-  "name": "Nexus-King Salhadaar · Целиком",
+  "name": "Соправитель Салхадаар · Целиком",
   "group": "Манагорн Омега",
   "groupEn": "Manaforge Omega",
+  "nameEn": "Nexus-King Salhadaar",
   "expansion": "The War Within",
   "ow": 1394,
   "oh": 784
@@ -762,9 +793,10 @@
   "id": "nexus-king-slahadaar-center",
   "w": 1394,
   "h": 784,
-  "name": "Nexus-King Salhadaar · Центр",
+  "name": "Соправитель Салхадаар · Центр",
   "group": "Манагорн Омега",
   "groupEn": "Manaforge Omega",
+  "nameEn": "Nexus-King Salhadaar",
   "expansion": "The War Within",
   "ow": 1394,
   "oh": 784
@@ -773,9 +805,10 @@
   "id": "plexus-sentinel-phase-1",
   "w": 1394,
   "h": 784,
-  "name": "Plexus Sentinel",
+  "name": "Сплетенный страж",
   "group": "Манагорн Омега",
   "groupEn": "Manaforge Omega",
+  "nameEn": "Plexus Sentinel",
   "expansion": "The War Within",
   "ow": 1394,
   "oh": 784
@@ -784,64 +817,46 @@
   "id": "souldbinder-naazindhri-phase-1",
   "w": 1394,
   "h": 784,
-  "name": "Souldbinder Naazindhri",
+  "name": "Стражница душ Наазиндри",
   "group": "Манагорн Омега",
   "groupEn": "Manaforge Omega",
+  "nameEn": "Souldbinder Naazindhri",
   "expansion": "The War Within",
   "ow": 1394,
   "oh": 784
  },
  {
-  "id": "the-soul-hunters-phase-1",
+  "id": "loom-ithar-phase-1",
   "w": 1394,
   "h": 784,
-  "name": "The Soul Hunters",
+  "name": "Ткан'итар",
   "group": "Манагорн Омега",
   "groupEn": "Manaforge Omega",
+  "nameEn": "Loom'Ithar",
   "expansion": "The War Within",
   "ow": 1394,
   "oh": 784
  },
  {
-  "id": "full-arena-1768237075853",
-  "w": 1600,
-  "h": 841,
-  "name": "Attumen the Huntsman",
-  "group": "Каражан",
-  "groupEn": "Karazhan",
-  "expansion": "Burning Crusade",
-  "ow": 1920,
-  "oh": 1009
- },
- {
-  "id": "full-arena-1768237075889",
-  "w": 1600,
-  "h": 841,
-  "name": "Chess Event",
-  "group": "Каражан",
-  "groupEn": "Karazhan",
-  "expansion": "Burning Crusade",
-  "ow": 1920,
-  "oh": 1009
+  "id": "forgeweaver-araz-phase-1",
+  "w": 1394,
+  "h": 784,
+  "name": "Ткач горна Араз",
+  "group": "Манагорн Омега",
+  "groupEn": "Manaforge Omega",
+  "nameEn": "Forgeweaver Araz",
+  "expansion": "The War Within",
+  "ow": 1394,
+  "oh": 784
  },
  {
   "id": "full-arena-1768237075864",
   "w": 1600,
   "h": 841,
-  "name": "Maiden of Virtue",
+  "name": "Благочестивая дева",
   "group": "Каражан",
   "groupEn": "Karazhan",
-  "expansion": "Burning Crusade",
-  "ow": 1920,
-  "oh": 1009
- },
- {
-  "id": "full-arena-1768237075859",
-  "w": 1600,
-  "h": 841,
-  "name": "Moroes",
-  "group": "Каражан",
-  "groupEn": "Karazhan",
+  "nameEn": "Maiden of Virtue",
   "expansion": "Burning Crusade",
   "ow": 1920,
   "oh": 1009
@@ -850,9 +865,34 @@
   "id": "full-arena-1768237075885",
   "w": 1600,
   "h": 841,
-  "name": "Netherspite",
+  "name": "Гнев Пустоты",
   "group": "Каражан",
   "groupEn": "Karazhan",
+  "nameEn": "Netherspite",
+  "expansion": "Burning Crusade",
+  "ow": 1920,
+  "oh": 1009
+ },
+ {
+  "id": "full-arena-1768237075853",
+  "w": 1600,
+  "h": 841,
+  "name": "Ловчий Аттумен",
+  "group": "Каражан",
+  "groupEn": "Karazhan",
+  "nameEn": "Attumen the Huntsman",
+  "expansion": "Burning Crusade",
+  "ow": 1920,
+  "oh": 1009
+ },
+ {
+  "id": "full-arena-1768237075859",
+  "w": 1600,
+  "h": 841,
+  "name": "Мороуз",
+  "group": "Каражан",
+  "groupEn": "Karazhan",
+  "nameEn": "Moroes",
   "expansion": "Burning Crusade",
   "ow": 1920,
   "oh": 1009
@@ -861,9 +901,10 @@
   "id": "full-arena-1768237075868",
   "w": 1600,
   "h": 841,
-  "name": "Opera Hall",
+  "name": "Оперный театр",
   "group": "Каражан",
   "groupEn": "Karazhan",
+  "nameEn": "Opera Hall",
   "expansion": "Burning Crusade",
   "ow": 1920,
   "oh": 1009
@@ -872,9 +913,22 @@
   "id": "full-arena-1768237075894",
   "w": 1600,
   "h": 841,
-  "name": "Prince Malchezaar",
+  "name": "Принц Малчезар",
   "group": "Каражан",
   "groupEn": "Karazhan",
+  "nameEn": "Prince Malchezaar",
+  "expansion": "Burning Crusade",
+  "ow": 1920,
+  "oh": 1009
+ },
+ {
+  "id": "full-arena-1768237075874",
+  "w": 1600,
+  "h": 841,
+  "name": "Смотритель",
+  "group": "Каражан",
+  "groupEn": "Karazhan",
+  "nameEn": "The Curator",
   "expansion": "Burning Crusade",
   "ow": 1920,
   "oh": 1009
@@ -883,9 +937,10 @@
   "id": "full-arena-1768237075880",
   "w": 1600,
   "h": 841,
-  "name": "Shade of Aran",
+  "name": "Тень Арана",
   "group": "Каражан",
   "groupEn": "Karazhan",
+  "nameEn": "Shade of Aran",
   "expansion": "Burning Crusade",
   "ow": 1920,
   "oh": 1009
@@ -894,20 +949,22 @@
   "id": "391827",
   "w": 1600,
   "h": 841,
-  "name": "Terestian Illhoof",
+  "name": "Терестиан Больное Копыто",
   "group": "Каражан",
   "groupEn": "Karazhan",
+  "nameEn": "Terestian Illhoof",
   "expansion": "Burning Crusade",
   "ow": 1677,
   "oh": 881
  },
  {
-  "id": "full-arena-1768237075874",
+  "id": "full-arena-1768237075889",
   "w": 1600,
   "h": 841,
-  "name": "The Curator",
+  "name": "Шахматная партия",
   "group": "Каражан",
   "groupEn": "Karazhan",
+  "nameEn": "Chess Event",
   "expansion": "Burning Crusade",
   "ow": 1920,
   "oh": 1009
@@ -916,9 +973,10 @@
   "id": "full-arena-1768237133217",
   "w": 1600,
   "h": 841,
-  "name": "Gruul the Dragonkiller",
+  "name": "Груул Драконобой",
   "group": "Логово Груула",
   "groupEn": "Gruul's Lair",
+  "nameEn": "Gruul the Dragonkiller",
   "expansion": "Burning Crusade",
   "ow": 1920,
   "oh": 1009
@@ -927,9 +985,10 @@
   "id": "full-arena-1768237133210",
   "w": 1600,
   "h": 841,
-  "name": "High King Maulgar",
+  "name": "Король Молгар",
   "group": "Логово Груула",
   "groupEn": "Gruul's Lair",
+  "nameEn": "High King Maulgar",
   "expansion": "Burning Crusade",
   "ow": 1920,
   "oh": 1009
@@ -938,20 +997,10 @@
   "id": "full-arena-1768237148925",
   "w": 1600,
   "h": 841,
-  "name": "Magtheridon",
+  "name": "Магтеридон",
   "group": "Логово Магтеридона",
   "groupEn": "Magtheridon's Lair",
-  "expansion": "Burning Crusade",
-  "ow": 1920,
-  "oh": 1009
- },
- {
-  "id": "full-arena-1768237204031",
-  "w": 1600,
-  "h": 841,
-  "name": "Fathom-Lord Karathress",
-  "group": "Змеиное святилище",
-  "groupEn": "Serpentshrine Cavern",
+  "nameEn": "Magtheridon",
   "expansion": "Burning Crusade",
   "ow": 1920,
   "oh": 1009
@@ -960,9 +1009,10 @@
   "id": "full-arena-1768237204012",
   "w": 1600,
   "h": 841,
-  "name": "Hydross the Unstable",
+  "name": "Гидросс Нестабильный",
   "group": "Змеиное святилище",
   "groupEn": "Serpentshrine Cavern",
+  "nameEn": "Hydross the Unstable",
   "expansion": "Burning Crusade",
   "ow": 1920,
   "oh": 1009
@@ -971,9 +1021,10 @@
   "id": "full-arena-1768237204047",
   "w": 1600,
   "h": 841,
-  "name": "Lady Vashj",
+  "name": "Леди Вайш",
   "group": "Змеиное святилище",
   "groupEn": "Serpentshrine Cavern",
+  "nameEn": "Lady Vashj",
   "expansion": "Burning Crusade",
   "ow": 1920,
   "oh": 1009
@@ -982,9 +1033,10 @@
   "id": "full-arena-1768237204025",
   "w": 1600,
   "h": 841,
-  "name": "Leotheras the Blind",
+  "name": "Леотерас Слепец",
   "group": "Змеиное святилище",
   "groupEn": "Serpentshrine Cavern",
+  "nameEn": "Leotheras the Blind",
   "expansion": "Burning Crusade",
   "ow": 1920,
   "oh": 1009
@@ -993,9 +1045,22 @@
   "id": "full-arena-1768237204040",
   "w": 1600,
   "h": 841,
-  "name": "Morogrim Tidewalker",
+  "name": "Морогрим Волноступ",
   "group": "Змеиное святилище",
   "groupEn": "Serpentshrine Cavern",
+  "nameEn": "Morogrim Tidewalker",
+  "expansion": "Burning Crusade",
+  "ow": 1920,
+  "oh": 1009
+ },
+ {
+  "id": "full-arena-1768237204031",
+  "w": 1600,
+  "h": 841,
+  "name": "Повелитель глубин Каратресс",
+  "group": "Змеиное святилище",
+  "groupEn": "Serpentshrine Cavern",
+  "nameEn": "Fathom-Lord Karathress",
   "expansion": "Burning Crusade",
   "ow": 1920,
   "oh": 1009
@@ -1004,9 +1069,10 @@
   "id": "full-arena-1768237204019",
   "w": 1600,
   "h": 841,
-  "name": "The Lurker Below",
+  "name": "Скрытень из глубин",
   "group": "Змеиное святилище",
   "groupEn": "Serpentshrine Cavern",
+  "nameEn": "The Lurker Below",
   "expansion": "Burning Crusade",
   "ow": 1920,
   "oh": 1009
@@ -1015,9 +1081,10 @@
   "id": "full-arena-1768237251927",
   "w": 1600,
   "h": 841,
-  "name": "Al'ar",
+  "name": "Ал'ар",
   "group": "Око",
   "groupEn": "The Eye",
+  "nameEn": "Al'ar",
   "expansion": "Burning Crusade",
   "ow": 1920,
   "oh": 1009
@@ -1026,9 +1093,10 @@
   "id": "full-arena-1768237251939",
   "w": 1600,
   "h": 841,
-  "name": "High Astromancer Solarian",
+  "name": "Верховный звездочет Солариан",
   "group": "Око",
   "groupEn": "The Eye",
+  "nameEn": "High Astromancer Solarian",
   "expansion": "Burning Crusade",
   "ow": 1920,
   "oh": 1009
@@ -1037,9 +1105,10 @@
   "id": "full-arena-1768237251944",
   "w": 1600,
   "h": 841,
-  "name": "Kael'thas Sunstrider",
+  "name": "Кель'тас Солнечный Скиталец",
   "group": "Око",
   "groupEn": "The Eye",
+  "nameEn": "Kael'thas Sunstrider",
   "expansion": "Burning Crusade",
   "ow": 1920,
   "oh": 1009
@@ -1048,9 +1117,10 @@
   "id": "full-arena-1768237251933",
   "w": 1600,
   "h": 841,
-  "name": "Void Reaver",
+  "name": "Страж Бездны",
   "group": "Око",
   "groupEn": "The Eye",
+  "nameEn": "Void Reaver",
   "expansion": "Burning Crusade",
   "ow": 1920,
   "oh": 1009
@@ -1059,9 +1129,10 @@
   "id": "full-arena-1768237411781",
   "w": 1600,
   "h": 841,
-  "name": "Archimonde",
+  "name": "Архимонд",
   "group": "Битва за гору Хиджал",
   "groupEn": "The Battle for Mount Hyjal",
+  "nameEn": "Archimonde",
   "expansion": "Burning Crusade",
   "ow": 1920,
   "oh": 1009
@@ -1070,9 +1141,10 @@
   "id": "full-arena-1768237580704",
   "w": 1600,
   "h": 841,
-  "name": "Kaz'rogal",
+  "name": "Каз'рогал",
   "group": "Битва за гору Хиджал",
   "groupEn": "The Battle for Mount Hyjal",
+  "nameEn": "Kaz'rogal",
   "expansion": "Burning Crusade",
   "ow": 1920,
   "oh": 1009
@@ -1081,20 +1153,10 @@
   "id": "full-arena-1768237580694",
   "w": 1600,
   "h": 841,
-  "name": "Rage Winterchill",
+  "name": "Лютый Хлад",
   "group": "Битва за гору Хиджал",
   "groupEn": "The Battle for Mount Hyjal",
-  "expansion": "Burning Crusade",
-  "ow": 1920,
-  "oh": 1009
- },
- {
-  "id": "full-arena-1768239815720",
-  "w": 1600,
-  "h": 841,
-  "name": "Gurtogg Bloodboil",
-  "group": "Черный храм",
-  "groupEn": "Black Temple",
+  "nameEn": "Rage Winterchill",
   "expansion": "Burning Crusade",
   "ow": 1920,
   "oh": 1009
@@ -1103,9 +1165,22 @@
   "id": "full-arena-1768239815701",
   "w": 1600,
   "h": 841,
-  "name": "High Warlord Naj'entus",
+  "name": "Верховный полководец Надж'ентус",
   "group": "Черный храм",
   "groupEn": "Black Temple",
+  "nameEn": "High Warlord Naj'entus",
+  "expansion": "Burning Crusade",
+  "ow": 1920,
+  "oh": 1009
+ },
+ {
+  "id": "full-arena-1768239815720",
+  "w": 1600,
+  "h": 841,
+  "name": "Гуртогг Кипящая Кровь",
+  "group": "Черный храм",
+  "groupEn": "Black Temple",
+  "nameEn": "Gurtogg Bloodboil",
   "expansion": "Burning Crusade",
   "ow": 1920,
   "oh": 1009
@@ -1114,9 +1189,10 @@
   "id": "full-arena-1768239815742",
   "w": 1600,
   "h": 841,
-  "name": "Illidan Stormrage",
+  "name": "Иллидан Ярость Бури",
   "group": "Черный храм",
   "groupEn": "Black Temple",
+  "nameEn": "Illidan Stormrage",
   "expansion": "Burning Crusade",
   "ow": 1920,
   "oh": 1009
@@ -1125,9 +1201,10 @@
   "id": "full-arena-1768239815732",
   "w": 1600,
   "h": 841,
-  "name": "Mother Shahraz",
+  "name": "Матушка Шахраз",
   "group": "Черный храм",
   "groupEn": "Black Temple",
+  "nameEn": "Mother Shahraz",
   "expansion": "Burning Crusade",
   "ow": 1920,
   "oh": 1009
@@ -1136,42 +1213,10 @@
   "id": "full-arena-1768239815726",
   "w": 1600,
   "h": 841,
-  "name": "Reliquary of Souls",
+  "name": "Реликварий душ",
   "group": "Черный храм",
   "groupEn": "Black Temple",
-  "expansion": "Burning Crusade",
-  "ow": 1920,
-  "oh": 1009
- },
- {
-  "id": "full-arena-1768239815710",
-  "w": 1600,
-  "h": 841,
-  "name": "Shade of Akama",
-  "group": "Черный храм",
-  "groupEn": "Black Temple",
-  "expansion": "Burning Crusade",
-  "ow": 1920,
-  "oh": 1009
- },
- {
-  "id": "full-arena-1768239815707",
-  "w": 1600,
-  "h": 841,
-  "name": "Supremus",
-  "group": "Черный храм",
-  "groupEn": "Black Temple",
-  "expansion": "Burning Crusade",
-  "ow": 1920,
-  "oh": 1009
- },
- {
-  "id": "full-arena-1768239815715",
-  "w": 1600,
-  "h": 841,
-  "name": "Teron Gorefiend",
-  "group": "Черный храм",
-  "groupEn": "Black Temple",
+  "nameEn": "Reliquary of Souls",
   "expansion": "Burning Crusade",
   "ow": 1920,
   "oh": 1009
@@ -1180,9 +1225,46 @@
   "id": "full-arena-1768239815737",
   "w": 1600,
   "h": 841,
-  "name": "The Illidari Council",
+  "name": "Совет иллидари",
   "group": "Черный храм",
   "groupEn": "Black Temple",
+  "nameEn": "The Illidari Council",
+  "expansion": "Burning Crusade",
+  "ow": 1920,
+  "oh": 1009
+ },
+ {
+  "id": "full-arena-1768239815707",
+  "w": 1600,
+  "h": 841,
+  "name": "Супремус",
+  "group": "Черный храм",
+  "groupEn": "Black Temple",
+  "nameEn": "Supremus",
+  "expansion": "Burning Crusade",
+  "ow": 1920,
+  "oh": 1009
+ },
+ {
+  "id": "full-arena-1768239815710",
+  "w": 1600,
+  "h": 841,
+  "name": "Тень Акамы",
+  "group": "Черный храм",
+  "groupEn": "Black Temple",
+  "nameEn": "Shade of Akama",
+  "expansion": "Burning Crusade",
+  "ow": 1920,
+  "oh": 1009
+ },
+ {
+  "id": "full-arena-1768239815715",
+  "w": 1600,
+  "h": 841,
+  "name": "Терон Кровожад",
+  "group": "Черный храм",
+  "groupEn": "Black Temple",
+  "nameEn": "Teron Gorefiend",
   "expansion": "Burning Crusade",
   "ow": 1920,
   "oh": 1009
@@ -1191,9 +1273,10 @@
   "id": "full-arena-1768237492048",
   "w": 1600,
   "h": 841,
-  "name": "Brutallus",
+  "name": "Бруталл",
   "group": "Плато Солнечного Колодца",
   "groupEn": "Sunwell Plateau",
+  "nameEn": "Brutallus",
   "expansion": "Burning Crusade",
   "ow": 1920,
   "oh": 1009
@@ -1202,9 +1285,10 @@
   "id": "full-arena-1768237492041",
   "w": 1600,
   "h": 841,
-  "name": "Kalecgos",
+  "name": "Калесгос",
   "group": "Плато Солнечного Колодца",
   "groupEn": "Sunwell Plateau",
+  "nameEn": "Kalecgos",
   "expansion": "Burning Crusade",
   "ow": 1920,
   "oh": 1009
@@ -1213,9 +1297,10 @@
   "id": "full-arena-1768237492068",
   "w": 1600,
   "h": 841,
-  "name": "Kil'jaeden",
+  "name": "Кил'джеден",
   "group": "Плато Солнечного Колодца",
   "groupEn": "Sunwell Plateau",
+  "nameEn": "Kil'jaeden",
   "expansion": "Burning Crusade",
   "ow": 1920,
   "oh": 1009
@@ -1224,9 +1309,10 @@
   "id": "full-arena-1768237492063",
   "w": 1600,
   "h": 841,
-  "name": "M'uru",
+  "name": "М'ару",
   "group": "Плато Солнечного Колодца",
   "groupEn": "Sunwell Plateau",
+  "nameEn": "M'uru",
   "expansion": "Burning Crusade",
   "ow": 1920,
   "oh": 1009
@@ -1235,9 +1321,10 @@
   "id": "full-arena-1768237492058",
   "w": 1600,
   "h": 841,
-  "name": "The Eredar Twins",
+  "name": "Эредарские близнецы",
   "group": "Плато Солнечного Колодца",
   "groupEn": "Sunwell Plateau",
+  "nameEn": "The Eredar Twins",
   "expansion": "Burning Crusade",
   "ow": 1920,
   "oh": 1009
